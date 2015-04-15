@@ -10,10 +10,11 @@
 		4A15C3DF1ADDD217004EBEC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A15C3DE1ADDD217004EBEC3 /* AppDelegate.swift */; };
 		4A15C3E21ADDD217004EBEC3 /* Zachary_Shakked.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4A15C3E01ADDD217004EBEC3 /* Zachary_Shakked.xcdatamodeld */; };
 		4A15C3E41ADDD217004EBEC3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A15C3E31ADDD217004EBEC3 /* ViewController.swift */; };
-		4A15C3E71ADDD217004EBEC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A15C3E51ADDD217004EBEC3 /* Main.storyboard */; };
 		4A15C3E91ADDD217004EBEC3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A15C3E81ADDD217004EBEC3 /* Images.xcassets */; };
 		4A15C3EC1ADDD217004EBEC3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A15C3EA1ADDD217004EBEC3 /* LaunchScreen.xib */; };
 		4A15C3F81ADDD217004EBEC3 /* Zachary_ShakkedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A15C3F71ADDD217004EBEC3 /* Zachary_ShakkedTests.swift */; };
+		4A15C4021ADDD8FA004EBEC3 /* ZSSHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A15C4011ADDD8FA004EBEC3 /* ZSSHomeViewController.swift */; };
+		4A15C4041ADDD924004EBEC3 /* ZSSBall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A15C4031ADDD924004EBEC3 /* ZSSBall.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,12 +33,13 @@
 		4A15C3DE1ADDD217004EBEC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A15C3E11ADDD217004EBEC3 /* Zachary_Shakked.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Zachary_Shakked.xcdatamodel; sourceTree = "<group>"; };
 		4A15C3E31ADDD217004EBEC3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		4A15C3E61ADDD217004EBEC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4A15C3E81ADDD217004EBEC3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4A15C3EB1ADDD217004EBEC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		4A15C3F11ADDD217004EBEC3 /* Zachary ShakkedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Zachary ShakkedTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A15C3F61ADDD217004EBEC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A15C3F71ADDD217004EBEC3 /* Zachary_ShakkedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zachary_ShakkedTests.swift; sourceTree = "<group>"; };
+		4A15C4011ADDD8FA004EBEC3 /* ZSSHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZSSHomeViewController.swift; sourceTree = "<group>"; };
+		4A15C4031ADDD924004EBEC3 /* ZSSBall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZSSBall.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +83,8 @@
 			children = (
 				4A15C3DE1ADDD217004EBEC3 /* AppDelegate.swift */,
 				4A15C3E31ADDD217004EBEC3 /* ViewController.swift */,
-				4A15C3E51ADDD217004EBEC3 /* Main.storyboard */,
+				4A15C4011ADDD8FA004EBEC3 /* ZSSHomeViewController.swift */,
+				4A15C4031ADDD924004EBEC3 /* ZSSBall.swift */,
 				4A15C3E81ADDD217004EBEC3 /* Images.xcassets */,
 				4A15C3EA1ADDD217004EBEC3 /* LaunchScreen.xib */,
 				4A15C3E01ADDD217004EBEC3 /* Zachary_Shakked.xcdatamodeld */,
@@ -195,7 +198,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A15C3E71ADDD217004EBEC3 /* Main.storyboard in Resources */,
 				4A15C3EC1ADDD217004EBEC3 /* LaunchScreen.xib in Resources */,
 				4A15C3E91ADDD217004EBEC3 /* Images.xcassets in Resources */,
 			);
@@ -215,8 +217,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A15C4041ADDD924004EBEC3 /* ZSSBall.swift in Sources */,
 				4A15C3E41ADDD217004EBEC3 /* ViewController.swift in Sources */,
 				4A15C3E21ADDD217004EBEC3 /* Zachary_Shakked.xcdatamodeld in Sources */,
+				4A15C4021ADDD8FA004EBEC3 /* ZSSHomeViewController.swift in Sources */,
 				4A15C3DF1ADDD217004EBEC3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -240,14 +244,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		4A15C3E51ADDD217004EBEC3 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4A15C3E61ADDD217004EBEC3 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		4A15C3EA1ADDD217004EBEC3 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
