@@ -10,6 +10,7 @@ import UIKit
 
 class ZSSBall: UIView {
     var radius : CGFloat = 0;
+    var interactivityEnabled : Bool = false
     
     override func drawRect(rect: CGRect) {
         super.drawRect(rect)
@@ -41,6 +42,15 @@ class ZSSBall: UIView {
         self.init(frame: frame)
         backgroundColor = color
         self.radius = radius
+    }
+    
+    override func touchesMoved(touches: Set<NSObject>, withEvent event: UIEvent) {
+        if interactivityEnabled {
+            var theTouches = touches as NSSet
+            let touch = theTouches.anyObject()! as! UITouch
+            let touchLocation = touch.locationInView(self.superview!)
+            self.center = touchLocation
+        }
     }
 
 }

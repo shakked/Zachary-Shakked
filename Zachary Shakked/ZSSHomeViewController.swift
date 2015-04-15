@@ -24,6 +24,7 @@ class ZSSHomeViewController: UIViewController {
     func showLoadingBalls() -> Void {
         let greenBall = ZSSBall(radius: 10, center: CGPointMake(50, 50), color: UIColor.greenColor())
         let blueBall = ZSSBall(radius: 25, center: CGPointMake(200, 200), color: UIColor.blueColor())
+        blueBall.interactivityEnabled = true
         view.addSubview(greenBall)
         view.addSubview(blueBall)
     }
