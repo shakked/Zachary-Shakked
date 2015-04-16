@@ -10,7 +10,7 @@ import UIKit
 import Darwin
 import CoreMotion
 
-class ZSSHomeViewController: UIViewController {
+class ZSSHomeViewController: UIViewController, UIDynamicAnimatorDelegate {
 
     var animator : UIDynamicAnimator!
     var gravity : UIGravityBehavior!
@@ -64,9 +64,13 @@ class ZSSHomeViewController: UIViewController {
         configureColors()
     }
     
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+    }
+    
     func configureColors() -> Void {
 
-        self.colors = [UIColor(rgba:"#66CDE2"),UIColor(rgba:"#A7DBDB"), UIColor(rgba: "#E0E4CC"), UIColor(rgba: "#F38630"), UIColor(rgba: "#FA6900")]
+        self.colors = [UIColor(rgba:"#66CDE2"),UIColor(rgba:"#A7DBDB"), UIColor(rgba: "#E0E4CC")]//, UIColor(rgba: "#F38630"), UIColor(rgba: "#FA6900")]
         
     }
     
@@ -105,6 +109,7 @@ class ZSSHomeViewController: UIViewController {
     
     func configureAnimators() -> Void {
         animator = UIDynamicAnimator(referenceView: view)
+        animator.delegate = self
         
         gravity = UIGravityBehavior()
         gravity.magnitude = 0.5
@@ -114,11 +119,23 @@ class ZSSHomeViewController: UIViewController {
 
         itemBehavior = UIDynamicItemBehavior()
         itemBehavior.elasticity = 0.9
+        itemBehavior.friction = 0
+        
         itemBehavior.allowsRotation = false
         
         animator.addBehavior(gravity)
         animator.addBehavior(collision)
         animator.addBehavior(itemBehavior)
+    }
+    
+    func dynamicAnimatorDidPause(animator: UIDynamicAnimator) {
+        for ball in self.balls {
+            ball.removeFromSuperview()
+        }
+        
+        self.balls = []
+        println(self.balls.count)
+        showBalls()
     }
 
     override func didReceiveMemoryWarning() {
@@ -128,7 +145,7 @@ class ZSSHomeViewController: UIViewController {
     func showBalls() -> Void {
         var ball : ZSSBall
         for color in self.colors {
-            ball = ZSSBall(radius: 25, center: CGPointMake(CGFloat(20 + arc4random() % 280), CGFloat(20 + arc4random() % 550)), color: color)
+            ball = ZSSBall(radius: 50, center: CGPointMake(CGFloat(20 + arc4random() % 280), CGFloat(20 + arc4random() % 550)), color: color)
             view.addSubview(ball)
             ball.configurePhysics(gravity: gravity, dynamics: itemBehavior, collision: collision)
             ball.gravity!.action = { () -> (Void) in
@@ -137,7 +154,6 @@ class ZSSHomeViewController: UIViewController {
                     ball.lastPoint = ball.center
                 }
             }
-            ball.interactivityEnabled = false
             self.balls.append(ball)
         }
     }
@@ -146,7 +162,6 @@ class ZSSHomeViewController: UIViewController {
         UIGraphicsBeginImageContext(view.frame.size)
         let context = UIGraphicsGetCurrentContext()
         tempImageView.image?.drawInRect(CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height))
-        
         
         let colorConverted = CIColor(color: color)!
         
@@ -169,6 +184,12 @@ class ZSSHomeViewController: UIViewController {
         tempImageView.alpha = opacity
         UIGraphicsEndImageContext()
     }
+    
+    func loadTranslucense() -> Void {
+        
+    }
+    
+    
 
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
