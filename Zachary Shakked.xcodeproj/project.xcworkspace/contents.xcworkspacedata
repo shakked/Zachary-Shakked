@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:../UIColor+Hex.swift">
+   </FileRef>
+   <FileRef
       location = "self:Zachary Shakked.xcodeproj">
    </FileRef>
 </Workspace>

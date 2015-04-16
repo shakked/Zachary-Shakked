@@ -15,6 +15,7 @@
 		4A15C3F81ADDD217004EBEC3 /* Zachary_ShakkedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A15C3F71ADDD217004EBEC3 /* Zachary_ShakkedTests.swift */; };
 		4A15C4021ADDD8FA004EBEC3 /* ZSSHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A15C4011ADDD8FA004EBEC3 /* ZSSHomeViewController.swift */; };
 		4A15C4041ADDD924004EBEC3 /* ZSSBall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A15C4031ADDD924004EBEC3 /* ZSSBall.swift */; };
+		4A668BE61ADF25E10093CBF7 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A668BE51ADF25E10093CBF7 /* UIColor+Hex.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		4A15C3F71ADDD217004EBEC3 /* Zachary_ShakkedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zachary_ShakkedTests.swift; sourceTree = "<group>"; };
 		4A15C4011ADDD8FA004EBEC3 /* ZSSHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZSSHomeViewController.swift; sourceTree = "<group>"; };
 		4A15C4031ADDD924004EBEC3 /* ZSSBall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZSSBall.swift; sourceTree = "<group>"; };
+		4A668BE51ADF25E10093CBF7 /* UIColor+Hex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+Hex.swift"; path = "Zachary Shakked.xcodeproj/../UIColor+Hex.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 			children = (
 				4A15C3DE1ADDD217004EBEC3 /* AppDelegate.swift */,
 				4A15C3E31ADDD217004EBEC3 /* ViewController.swift */,
+				4A668BE51ADF25E10093CBF7 /* UIColor+Hex.swift */,
 				4A15C4011ADDD8FA004EBEC3 /* ZSSHomeViewController.swift */,
 				4A15C4031ADDD924004EBEC3 /* ZSSBall.swift */,
 				4A15C3E81ADDD217004EBEC3 /* Images.xcassets */,
@@ -220,6 +223,7 @@
 				4A15C4041ADDD924004EBEC3 /* ZSSBall.swift in Sources */,
 				4A15C3E41ADDD217004EBEC3 /* ViewController.swift in Sources */,
 				4A15C3E21ADDD217004EBEC3 /* Zachary_Shakked.xcdatamodeld in Sources */,
+				4A668BE61ADF25E10093CBF7 /* UIColor+Hex.swift in Sources */,
 				4A15C4021ADDD8FA004EBEC3 /* ZSSHomeViewController.swift in Sources */,
 				4A15C3DF1ADDD217004EBEC3 /* AppDelegate.swift in Sources */,
 			);
@@ -409,6 +413,7 @@
 				4A15C3FD1ADDD217004EBEC3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4A15C3FE1ADDD217004EBEC3 /* Build configuration list for PBXNativeTarget "Zachary ShakkedTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +422,7 @@
 				4A15C4001ADDD217004EBEC3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
