@@ -41,6 +41,8 @@ class ZSSHomeViewController: UIViewController, UIDynamicAnimatorDelegate {
     var opacity: CGFloat = 1.0
     var swiped = false
     
+    var welcomeView : WelcomeView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureAnimators()
@@ -62,6 +64,14 @@ class ZSSHomeViewController: UIViewController, UIDynamicAnimatorDelegate {
         tempImageView = UIImageView(frame: self.view.frame)
         self.view.addSubview(tempImageView)
         configureColors()
+        configureTimers()
+    }
+    
+    func configureTimers() -> Void {
+
+        let timer = NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: Selector("configureWelcomeView"), userInfo: nil, repeats: false)
+        let timer2 = NSTimer.scheduledTimerWithTimeInterval(4.0, target: self, selector: Selector("collapseWelcomeView"), userInfo: nil, repeats: false)
+
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -69,8 +79,63 @@ class ZSSHomeViewController: UIViewController, UIDynamicAnimatorDelegate {
     }
     
     func configureColors() -> Void {
+        self.colors = [UIColor(rgba:"#66CDE2"),UIColor(rgba:"#A7DBDB"), UIColor(rgba: "#E0E4CC"), UIColor(rgba: "#F38630"), UIColor(rgba: "#FA6900")]
+    }
+    
+    func configureWelcomeView() -> Void {
+        welcomeView = NSBundle.mainBundle().loadNibNamed("WelcomeView", owner: self, options: nil)[0] as! WelcomeView
+        welcomeView.frame = CGRectMake(-300, 20, self.view.frame.size.width - 40, 200)
+        welcomeView.layer.zPosition = 1
+        welcomeView.layer.cornerRadius = 15
+        
+        
 
-        self.colors = [UIColor(rgba:"#66CDE2"),UIColor(rgba:"#A7DBDB"), UIColor(rgba: "#E0E4CC")]//, UIColor(rgba: "#F38630"), UIColor(rgba: "#FA6900")]
+
+        self.view.addSubview(welcomeView)
+        
+        let snap = UISnapBehavior(item: welcomeView, snapToPoint: CGPointMake(welcomeView.center.x + 320, welcomeView.center.y))
+        snap.damping = 1.0
+        animator.addBehavior(snap)
+        
+        let timer = NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: Selector("collapseWelcomeView"), userInfo: nil, repeats: false)
+        
+    }
+    
+    func collapseWelcomeView() -> Void {
+        
+        UIView.animateKeyframesWithDuration(1.0, delay: 0, options: nil, animations: { () -> Void in
+            self.welcomeView.backgroundColor = UIColor.clearColor()
+            }) { (completed: Bool) -> Void in
+        
+        }
+        
+        gravity.addItem(welcomeView.hLabel)
+        gravity.addItem(welcomeView.eLabel)
+        gravity.addItem(welcomeView.l1Label)
+        gravity.addItem(welcomeView.l2Label)
+        gravity.addItem(welcomeView.oLabel)
+        gravity.addItem(welcomeView.periodLabel)
+        gravity.addItem(welcomeView.iLabel)
+        gravity.addItem(welcomeView.amLabel)
+        gravity.addItem(welcomeView.zacharyLabel)
+        collision.addItem(welcomeView.hLabel)
+        collision.addItem(welcomeView.eLabel)
+        collision.addItem(welcomeView.l1Label)
+        collision.addItem(welcomeView.l2Label)
+        collision.addItem(welcomeView.oLabel)
+        collision.addItem(welcomeView.periodLabel)
+        collision.addItem(welcomeView.iLabel)
+        collision.addItem(welcomeView.amLabel)
+        collision.addItem(welcomeView.zacharyLabel)
+        itemBehavior.addItem(welcomeView.hLabel)
+        itemBehavior.addItem(welcomeView.eLabel)
+        itemBehavior.addItem(welcomeView.l1Label)
+        itemBehavior.addItem(welcomeView.l2Label)
+        itemBehavior.addItem(welcomeView.oLabel)
+        itemBehavior.addItem(welcomeView.periodLabel)
+        itemBehavior.addItem(welcomeView.iLabel)
+        itemBehavior.addItem(welcomeView.amLabel)
+        itemBehavior.addItem(welcomeView.zacharyLabel)
         
     }
     
@@ -112,7 +177,7 @@ class ZSSHomeViewController: UIViewController, UIDynamicAnimatorDelegate {
         animator.delegate = self
         
         gravity = UIGravityBehavior()
-        gravity.magnitude = 0.5
+        gravity.magnitude = 0.0
         
         collision = UICollisionBehavior()
         collision.translatesReferenceBoundsIntoBoundary = true
@@ -127,36 +192,76 @@ class ZSSHomeViewController: UIViewController, UIDynamicAnimatorDelegate {
         animator.addBehavior(collision)
         animator.addBehavior(itemBehavior)
     }
-    
-    func dynamicAnimatorDidPause(animator: UIDynamicAnimator) {
-        for ball in self.balls {
-            ball.removeFromSuperview()
-        }
-        
-        self.balls = []
-        println(self.balls.count)
-        showBalls()
-    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
+    
     func showBalls() -> Void {
+        var frameSixth : CGFloat = CGFloat(self.view.frame.size.width / 6)
+        let frameSixthCentersX : [CGFloat] = [frameSixth, 2 * frameSixth, 3 * frameSixth, 4 * frameSixth, 5 * frameSixth, 6 * frameSixth]
+        
+        var i = 0
         var ball : ZSSBall
-        for color in self.colors {
-            ball = ZSSBall(radius: 50, center: CGPointMake(CGFloat(20 + arc4random() % 280), CGFloat(20 + arc4random() % 550)), color: color)
-            view.addSubview(ball)
+        while ( i <= 4) {
+            let color = self.colors[i]
+            let centerX = frameSixthCentersX[i]
+
+            ball = ZSSBall(radius: frameSixth / 2, center: CGPointMake(centerX, -20), color: color)
+            self.view.addSubview(ball)
             ball.configurePhysics(gravity: gravity, dynamics: itemBehavior, collision: collision)
-            ball.gravity!.action = { () -> (Void) in
-                for ball in self.balls {
-                    self.drawLineFrom(ball.lastPoint, toPoint: ball.center, color: ball.backgroundColor!, brushWidth: ball.radius * 2)
-                    ball.lastPoint = ball.center
+            ball.disableCollision()
+            self.balls.append(ball)
+            i++
+            
+        }
+        
+        
+        
+        gravity.action = { () -> (Void) in
+            for ball in self.balls {
+                self.drawLineFrom(ball.lastPoint, toPoint: ball.center, color: ball.backgroundColor!, brushWidth: ball.radius * 2)
+                ball.lastPoint = ball.center
+                if (ball.center.x < -10 || ball.center.x > self.view.frame.size.width + 20 || ball.center.y > self.view.frame.size.height + 10) {
+                    self.balls.removeObject(ball)
+                    ball.removeFromSuperview()
                 }
             }
-            self.balls.append(ball)
+            
+            if self.balls.count <= 0 {
+                self.showBalls()
+            }
+
         }
+        
+        
+        
+        
+//        for color in self.colors {
+//            ball = ZSSBall(radius: framePadding, center: CGPointMake(CGFloat(20 + arc4random() % 280), CGFloat(-20)), color: color)
+//            view.addSubview(ball)
+//            ball.configurePhysics(gravity: gravity, dynamics: itemBehavior, collision: collision)
+//            ball.disableCollision()
+//            ball.gravity!.action = { () -> (Void) in
+//                for ball in self.balls {
+//                    self.drawLineFrom(ball.lastPoint, toPoint: ball.center, color: ball.backgroundColor!, brushWidth: ball.radius * 2)
+//                    ball.lastPoint = ball.center
+//                }
+//            }
+//            
+//            let timer = NSTimer.scheduledTimerWithTimeInterval(3.0, target: self, selector: Selector("removeBall:"), userInfo: ball, repeats: false)
+//            
+//            self.balls.append(ball)
+//        }
     }
+    
+    func removeBall(timer: NSTimer) -> Void {
+        let ball : ZSSBall = (timer.userInfo as? ZSSBall)!
+        ball.removeFromSuperview()
+
+    }
+    
     
     func drawLineFrom(fromPoint: CGPoint, toPoint: CGPoint, color: UIColor, brushWidth: CGFloat) {
         UIGraphicsBeginImageContext(view.frame.size)

@@ -16,6 +16,9 @@
 		4A15C4021ADDD8FA004EBEC3 /* ZSSHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A15C4011ADDD8FA004EBEC3 /* ZSSHomeViewController.swift */; };
 		4A15C4041ADDD924004EBEC3 /* ZSSBall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A15C4031ADDD924004EBEC3 /* ZSSBall.swift */; };
 		4A668BE61ADF25E10093CBF7 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A668BE51ADF25E10093CBF7 /* UIColor+Hex.swift */; };
+		4A668BE81AE0086D0093CBF7 /* Array+RemoveObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A668BE71AE0086D0093CBF7 /* Array+RemoveObject.swift */; };
+		4A668BEA1AE00CC70093CBF7 /* WelcomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A668BE91AE00CC70093CBF7 /* WelcomeView.xib */; };
+		4A668BEC1AE01E610093CBF7 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A668BEB1AE01E610093CBF7 /* WelcomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +45,9 @@
 		4A15C4011ADDD8FA004EBEC3 /* ZSSHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZSSHomeViewController.swift; sourceTree = "<group>"; };
 		4A15C4031ADDD924004EBEC3 /* ZSSBall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZSSBall.swift; sourceTree = "<group>"; };
 		4A668BE51ADF25E10093CBF7 /* UIColor+Hex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+Hex.swift"; path = "Zachary Shakked.xcodeproj/../UIColor+Hex.swift"; sourceTree = SOURCE_ROOT; };
+		4A668BE71AE0086D0093CBF7 /* Array+RemoveObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+RemoveObject.swift"; sourceTree = "<group>"; };
+		4A668BE91AE00CC70093CBF7 /* WelcomeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WelcomeView.xib; sourceTree = "<group>"; };
+		4A668BEB1AE01E610093CBF7 /* WelcomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +71,7 @@
 		4A15C3D01ADDD217004EBEC3 = {
 			isa = PBXGroup;
 			children = (
+				4A668BE71AE0086D0093CBF7 /* Array+RemoveObject.swift */,
 				4A15C3DB1ADDD217004EBEC3 /* Zachary Shakked */,
 				4A15C3F41ADDD217004EBEC3 /* Zachary ShakkedTests */,
 				4A15C3DA1ADDD217004EBEC3 /* Products */,
@@ -87,6 +94,8 @@
 				4A15C3E31ADDD217004EBEC3 /* ViewController.swift */,
 				4A668BE51ADF25E10093CBF7 /* UIColor+Hex.swift */,
 				4A15C4011ADDD8FA004EBEC3 /* ZSSHomeViewController.swift */,
+				4A668BE91AE00CC70093CBF7 /* WelcomeView.xib */,
+				4A668BEB1AE01E610093CBF7 /* WelcomeView.swift */,
 				4A15C4031ADDD924004EBEC3 /* ZSSBall.swift */,
 				4A15C3E81ADDD217004EBEC3 /* Images.xcassets */,
 				4A15C3EA1ADDD217004EBEC3 /* LaunchScreen.xib */,
@@ -202,6 +211,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A15C3EC1ADDD217004EBEC3 /* LaunchScreen.xib in Resources */,
+				4A668BEA1AE00CC70093CBF7 /* WelcomeView.xib in Resources */,
 				4A15C3E91ADDD217004EBEC3 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -223,8 +233,10 @@
 				4A15C4041ADDD924004EBEC3 /* ZSSBall.swift in Sources */,
 				4A15C3E41ADDD217004EBEC3 /* ViewController.swift in Sources */,
 				4A15C3E21ADDD217004EBEC3 /* Zachary_Shakked.xcdatamodeld in Sources */,
+				4A668BEC1AE01E610093CBF7 /* WelcomeView.swift in Sources */,
 				4A668BE61ADF25E10093CBF7 /* UIColor+Hex.swift in Sources */,
 				4A15C4021ADDD8FA004EBEC3 /* ZSSHomeViewController.swift in Sources */,
+				4A668BE81AE0086D0093CBF7 /* Array+RemoveObject.swift in Sources */,
 				4A15C3DF1ADDD217004EBEC3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
