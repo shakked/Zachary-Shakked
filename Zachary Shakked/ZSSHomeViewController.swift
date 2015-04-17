@@ -42,6 +42,7 @@ class ZSSHomeViewController: UIViewController, UIDynamicAnimatorDelegate {
     var swiped = false
     
     var welcomeView : WelcomeView!
+    var coffeeImageView : UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,12 +66,12 @@ class ZSSHomeViewController: UIViewController, UIDynamicAnimatorDelegate {
         self.view.addSubview(tempImageView)
         configureColors()
         configureTimers()
+        configureCoffeeView()
     }
     
     func configureTimers() -> Void {
 
         let timer = NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: Selector("configureWelcomeView"), userInfo: nil, repeats: false)
-        let timer2 = NSTimer.scheduledTimerWithTimeInterval(4.0, target: self, selector: Selector("collapseWelcomeView"), userInfo: nil, repeats: false)
 
     }
     
@@ -82,22 +83,64 @@ class ZSSHomeViewController: UIViewController, UIDynamicAnimatorDelegate {
         self.colors = [UIColor(rgba:"#66CDE2"),UIColor(rgba:"#A7DBDB"), UIColor(rgba: "#E0E4CC"), UIColor(rgba: "#F38630"), UIColor(rgba: "#FA6900")]
     }
     
+    func tadaCoffee(timer: NSTimer) -> Void {
+        coffeeImageView.tada { () -> Void in
+        }
+    }
+    
+    func configureCoffeeView() -> Void {
+        coffeeImageView = UIImageView(image: UIImage(named: "Mug"))
+        coffeeImageView.frame = CGRectMake(30, self.view.frame.size.height - 100, 70, 70)
+        self.view.addSubview(coffeeImageView)
+        coffeeImageView.backgroundColor = UIColor.whiteColor()
+        coffeeImageView.layer.cornerRadius = 35
+        coffeeImageView.layer.zPosition = 1
+        coffeeImageView.layer.shadowColor = UIColor.grayColor().CGColor;
+        coffeeImageView.layer.shadowOffset = CGSizeMake(0, 2);
+        coffeeImageView.layer.shadowOpacity = 1;
+        coffeeImageView.layer.shadowRadius = 4.0;
+        coffeeImageView.clipsToBounds = false;
+        
+        
+        NSTimer.scheduledTimerWithTimeInterval(3.0, target: self, selector: Selector("tadaCoffee:"), userInfo: coffeeImageView, repeats: true)
+        //invalidate this... after some event
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: "coffeeImageViewTapped")
+        tapGesture.numberOfTapsRequired = 1
+        
+        coffeeImageView.addGestureRecognizer(tapGesture)
+        coffeeImageView.userInteractionEnabled = true
+        
+    }
+    
+    func coffeeImageViewTapped() -> Void {
+        
+        
+        //changeColorScheme("Coffee")
+        launchCoffeeImageView()
+        collapseWelcomeView()
+    }
+    
+    func launchCoffeeImageView() -> Void {
+        itemBehavior.addItem(coffeeImageView)
+        itemBehavior.addLinearVelocity(CGPointMake(300, -1000), forItem: coffeeImageView)
+    }
+    
+    func changeColorScheme(colorScheme: String) -> Void {
+        //if color scheme is equal..
+    }
+    
     func configureWelcomeView() -> Void {
         welcomeView = NSBundle.mainBundle().loadNibNamed("WelcomeView", owner: self, options: nil)[0] as! WelcomeView
         welcomeView.frame = CGRectMake(-300, 20, self.view.frame.size.width - 40, 200)
         welcomeView.layer.zPosition = 1
         welcomeView.layer.cornerRadius = 15
         
-        
-
-
         self.view.addSubview(welcomeView)
         
         let snap = UISnapBehavior(item: welcomeView, snapToPoint: CGPointMake(welcomeView.center.x + 320, welcomeView.center.y))
         snap.damping = 1.0
         animator.addBehavior(snap)
-        
-        let timer = NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: Selector("collapseWelcomeView"), userInfo: nil, repeats: false)
         
     }
     

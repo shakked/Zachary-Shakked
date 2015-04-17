@@ -19,6 +19,14 @@
 		4A668BE81AE0086D0093CBF7 /* Array+RemoveObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A668BE71AE0086D0093CBF7 /* Array+RemoveObject.swift */; };
 		4A668BEA1AE00CC70093CBF7 /* WelcomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A668BE91AE00CC70093CBF7 /* WelcomeView.xib */; };
 		4A668BEC1AE01E610093CBF7 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A668BEB1AE01E610093CBF7 /* WelcomeView.swift */; };
+		4A668BEE1AE048970093CBF7 /* coffee.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A668BED1AE048970093CBF7 /* coffee.png */; };
+		4AC7AF831AE08B4F0066D93D /* Cup Filled-99.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AC7AF801AE08B4F0066D93D /* Cup Filled-99.png */; };
+		4AC7AF841AE08B4F0066D93D /* Cup Filled-66.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AC7AF811AE08B4F0066D93D /* Cup Filled-66.png */; };
+		4AC7AF851AE08B4F0066D93D /* Cup Filled-33.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AC7AF821AE08B4F0066D93D /* Cup Filled-33.png */; };
+		4AC7AF891AE08D160066D93D /* Mug.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AC7AF861AE08D160066D93D /* Mug.png */; };
+		4AC7AF8A1AE08D160066D93D /* Mug@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AC7AF871AE08D160066D93D /* Mug@2x.png */; };
+		4AC7AF8B1AE08D160066D93D /* Mug@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AC7AF881AE08D160066D93D /* Mug@3x.png */; };
+		D3EC2F7D88200F4674CC10E8 /* libPods-Zachary Shakked.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB814F1535BC868EEBD480E /* libPods-Zachary Shakked.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		07A20B5116CF71A2D1F89C2D /* Pods-Zachary Shakked.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zachary Shakked.release.xcconfig"; path = "Pods/Target Support Files/Pods-Zachary Shakked/Pods-Zachary Shakked.release.xcconfig"; sourceTree = "<group>"; };
 		4A15C3D91ADDD217004EBEC3 /* Zachary Shakked.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Zachary Shakked.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A15C3DD1ADDD217004EBEC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A15C3DE1ADDD217004EBEC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -44,10 +53,20 @@
 		4A15C3F71ADDD217004EBEC3 /* Zachary_ShakkedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zachary_ShakkedTests.swift; sourceTree = "<group>"; };
 		4A15C4011ADDD8FA004EBEC3 /* ZSSHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZSSHomeViewController.swift; sourceTree = "<group>"; };
 		4A15C4031ADDD924004EBEC3 /* ZSSBall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZSSBall.swift; sourceTree = "<group>"; };
+		4A2BE7261AE051C400C9F09F /* Zachary Shakked-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Zachary Shakked-Bridging-Header.h"; sourceTree = "<group>"; };
 		4A668BE51ADF25E10093CBF7 /* UIColor+Hex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+Hex.swift"; path = "Zachary Shakked.xcodeproj/../UIColor+Hex.swift"; sourceTree = SOURCE_ROOT; };
 		4A668BE71AE0086D0093CBF7 /* Array+RemoveObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+RemoveObject.swift"; sourceTree = "<group>"; };
 		4A668BE91AE00CC70093CBF7 /* WelcomeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WelcomeView.xib; sourceTree = "<group>"; };
 		4A668BEB1AE01E610093CBF7 /* WelcomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		4A668BED1AE048970093CBF7 /* coffee.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = coffee.png; path = images/coffee.png; sourceTree = "<group>"; };
+		4AC7AF801AE08B4F0066D93D /* Cup Filled-99.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Cup Filled-99.png"; path = "../../../../Downloads/Cup Filled-99.png"; sourceTree = "<group>"; };
+		4AC7AF811AE08B4F0066D93D /* Cup Filled-66.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Cup Filled-66.png"; path = "../../../../Downloads/Cup Filled-66.png"; sourceTree = "<group>"; };
+		4AC7AF821AE08B4F0066D93D /* Cup Filled-33.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Cup Filled-33.png"; path = "../../../../Downloads/Cup Filled-33.png"; sourceTree = "<group>"; };
+		4AC7AF861AE08D160066D93D /* Mug.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Mug.png; path = images/Mug.png; sourceTree = "<group>"; };
+		4AC7AF871AE08D160066D93D /* Mug@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Mug@2x.png"; path = "images/Mug@2x.png"; sourceTree = "<group>"; };
+		4AC7AF881AE08D160066D93D /* Mug@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Mug@3x.png"; path = "images/Mug@3x.png"; sourceTree = "<group>"; };
+		9AB814F1535BC868EEBD480E /* libPods-Zachary Shakked.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Zachary Shakked.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4B689C2922F317C38B3A6D3 /* Pods-Zachary Shakked.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zachary Shakked.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Zachary Shakked/Pods-Zachary Shakked.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3EC2F7D88200F4674CC10E8 /* libPods-Zachary Shakked.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,13 +88,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A0B5EABBDB9CC061CA5E8C6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9AB814F1535BC868EEBD480E /* libPods-Zachary Shakked.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		4A15C3D01ADDD217004EBEC3 = {
 			isa = PBXGroup;
 			children = (
+				4A2BE7261AE051C400C9F09F /* Zachary Shakked-Bridging-Header.h */,
 				4A668BE71AE0086D0093CBF7 /* Array+RemoveObject.swift */,
 				4A15C3DB1ADDD217004EBEC3 /* Zachary Shakked */,
 				4A15C3F41ADDD217004EBEC3 /* Zachary ShakkedTests */,
 				4A15C3DA1ADDD217004EBEC3 /* Products */,
+				4AE490E6163CE62D8E2FC718 /* Pods */,
+				2A0B5EABBDB9CC061CA5E8C6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -90,6 +121,7 @@
 		4A15C3DB1ADDD217004EBEC3 /* Zachary Shakked */ = {
 			isa = PBXGroup;
 			children = (
+				4A668BED1AE048970093CBF7 /* coffee.png */,
 				4A15C3DE1ADDD217004EBEC3 /* AppDelegate.swift */,
 				4A15C3E31ADDD217004EBEC3 /* ViewController.swift */,
 				4A668BE51ADF25E10093CBF7 /* UIColor+Hex.swift */,
@@ -98,6 +130,12 @@
 				4A668BEB1AE01E610093CBF7 /* WelcomeView.swift */,
 				4A15C4031ADDD924004EBEC3 /* ZSSBall.swift */,
 				4A15C3E81ADDD217004EBEC3 /* Images.xcassets */,
+				4AC7AF861AE08D160066D93D /* Mug.png */,
+				4AC7AF871AE08D160066D93D /* Mug@2x.png */,
+				4AC7AF881AE08D160066D93D /* Mug@3x.png */,
+				4AC7AF801AE08B4F0066D93D /* Cup Filled-99.png */,
+				4AC7AF811AE08B4F0066D93D /* Cup Filled-66.png */,
+				4AC7AF821AE08B4F0066D93D /* Cup Filled-33.png */,
 				4A15C3EA1ADDD217004EBEC3 /* LaunchScreen.xib */,
 				4A15C3E01ADDD217004EBEC3 /* Zachary_Shakked.xcdatamodeld */,
 				4A15C3DC1ADDD217004EBEC3 /* Supporting Files */,
@@ -130,6 +168,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		4AE490E6163CE62D8E2FC718 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F4B689C2922F317C38B3A6D3 /* Pods-Zachary Shakked.debug.xcconfig */,
+				07A20B5116CF71A2D1F89C2D /* Pods-Zachary Shakked.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,9 +184,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4A15C3FB1ADDD217004EBEC3 /* Build configuration list for PBXNativeTarget "Zachary Shakked" */;
 			buildPhases = (
+				C69676203CBB5180581C68BC /* Check Pods Manifest.lock */,
 				4A15C3D51ADDD217004EBEC3 /* Sources */,
 				4A15C3D61ADDD217004EBEC3 /* Frameworks */,
 				4A15C3D71ADDD217004EBEC3 /* Resources */,
+				B7B583EEB57B8ED186D78BF6 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -210,8 +259,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AC7AF8A1AE08D160066D93D /* Mug@2x.png in Resources */,
 				4A15C3EC1ADDD217004EBEC3 /* LaunchScreen.xib in Resources */,
+				4AC7AF841AE08B4F0066D93D /* Cup Filled-66.png in Resources */,
+				4AC7AF8B1AE08D160066D93D /* Mug@3x.png in Resources */,
+				4A668BEE1AE048970093CBF7 /* coffee.png in Resources */,
+				4AC7AF891AE08D160066D93D /* Mug.png in Resources */,
+				4AC7AF851AE08B4F0066D93D /* Cup Filled-33.png in Resources */,
 				4A668BEA1AE00CC70093CBF7 /* WelcomeView.xib in Resources */,
+				4AC7AF831AE08B4F0066D93D /* Cup Filled-99.png in Resources */,
 				4A15C3E91ADDD217004EBEC3 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -224,6 +280,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B7B583EEB57B8ED186D78BF6 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Zachary Shakked/Pods-Zachary Shakked-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C69676203CBB5180581C68BC /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4A15C3D51ADDD217004EBEC3 /* Sources */ = {
@@ -354,21 +443,25 @@
 		};
 		4A15C3FC1ADDD217004EBEC3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F4B689C2922F317C38B3A6D3 /* Pods-Zachary Shakked.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Zachary Shakked/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Zachary Shakked-Bridging-Header.h";
 			};
 			name = Debug;
 		};
 		4A15C3FD1ADDD217004EBEC3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07A20B5116CF71A2D1F89C2D /* Pods-Zachary Shakked.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Zachary Shakked/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Zachary Shakked-Bridging-Header.h";
 			};
 			name = Release;
 		};
