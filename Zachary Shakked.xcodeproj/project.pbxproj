@@ -20,6 +20,8 @@
 		4A668BEA1AE00CC70093CBF7 /* WelcomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A668BE91AE00CC70093CBF7 /* WelcomeView.xib */; };
 		4A668BEC1AE01E610093CBF7 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A668BEB1AE01E610093CBF7 /* WelcomeView.swift */; };
 		4A668BEE1AE048970093CBF7 /* coffee.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A668BED1AE048970093CBF7 /* coffee.png */; };
+		4A7ECC101AE0C5A900D60BFD /* ZSSCoffeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7ECC0E1AE0C5A900D60BFD /* ZSSCoffeeViewController.swift */; };
+		4A7ECC111AE0C5A900D60BFD /* ZSSCoffeeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A7ECC0F1AE0C5A900D60BFD /* ZSSCoffeeViewController.xib */; };
 		4AC7AF831AE08B4F0066D93D /* Cup Filled-99.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AC7AF801AE08B4F0066D93D /* Cup Filled-99.png */; };
 		4AC7AF841AE08B4F0066D93D /* Cup Filled-66.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AC7AF811AE08B4F0066D93D /* Cup Filled-66.png */; };
 		4AC7AF851AE08B4F0066D93D /* Cup Filled-33.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AC7AF821AE08B4F0066D93D /* Cup Filled-33.png */; };
@@ -59,6 +61,8 @@
 		4A668BE91AE00CC70093CBF7 /* WelcomeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WelcomeView.xib; sourceTree = "<group>"; };
 		4A668BEB1AE01E610093CBF7 /* WelcomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		4A668BED1AE048970093CBF7 /* coffee.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = coffee.png; path = images/coffee.png; sourceTree = "<group>"; };
+		4A7ECC0E1AE0C5A900D60BFD /* ZSSCoffeeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZSSCoffeeViewController.swift; sourceTree = "<group>"; };
+		4A7ECC0F1AE0C5A900D60BFD /* ZSSCoffeeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZSSCoffeeViewController.xib; sourceTree = "<group>"; };
 		4AC7AF801AE08B4F0066D93D /* Cup Filled-99.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Cup Filled-99.png"; path = "../../../../Downloads/Cup Filled-99.png"; sourceTree = "<group>"; };
 		4AC7AF811AE08B4F0066D93D /* Cup Filled-66.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Cup Filled-66.png"; path = "../../../../Downloads/Cup Filled-66.png"; sourceTree = "<group>"; };
 		4AC7AF821AE08B4F0066D93D /* Cup Filled-33.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Cup Filled-33.png"; path = "../../../../Downloads/Cup Filled-33.png"; sourceTree = "<group>"; };
@@ -126,6 +130,8 @@
 				4A15C3E31ADDD217004EBEC3 /* ViewController.swift */,
 				4A668BE51ADF25E10093CBF7 /* UIColor+Hex.swift */,
 				4A15C4011ADDD8FA004EBEC3 /* ZSSHomeViewController.swift */,
+				4A7ECC0E1AE0C5A900D60BFD /* ZSSCoffeeViewController.swift */,
+				4A7ECC0F1AE0C5A900D60BFD /* ZSSCoffeeViewController.xib */,
 				4A668BE91AE00CC70093CBF7 /* WelcomeView.xib */,
 				4A668BEB1AE01E610093CBF7 /* WelcomeView.swift */,
 				4A15C4031ADDD924004EBEC3 /* ZSSBall.swift */,
@@ -265,6 +271,7 @@
 				4AC7AF8B1AE08D160066D93D /* Mug@3x.png in Resources */,
 				4A668BEE1AE048970093CBF7 /* coffee.png in Resources */,
 				4AC7AF891AE08D160066D93D /* Mug.png in Resources */,
+				4A7ECC111AE0C5A900D60BFD /* ZSSCoffeeViewController.xib in Resources */,
 				4AC7AF851AE08B4F0066D93D /* Cup Filled-33.png in Resources */,
 				4A668BEA1AE00CC70093CBF7 /* WelcomeView.xib in Resources */,
 				4AC7AF831AE08B4F0066D93D /* Cup Filled-99.png in Resources */,
@@ -325,6 +332,7 @@
 				4A668BEC1AE01E610093CBF7 /* WelcomeView.swift in Sources */,
 				4A668BE61ADF25E10093CBF7 /* UIColor+Hex.swift in Sources */,
 				4A15C4021ADDD8FA004EBEC3 /* ZSSHomeViewController.swift in Sources */,
+				4A7ECC101AE0C5A900D60BFD /* ZSSCoffeeViewController.swift in Sources */,
 				4A668BE81AE0086D0093CBF7 /* Array+RemoveObject.swift in Sources */,
 				4A15C3DF1ADDD217004EBEC3 /* AppDelegate.swift in Sources */,
 			);

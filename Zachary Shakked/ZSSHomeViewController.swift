@@ -10,7 +10,7 @@ import UIKit
 import Darwin
 import CoreMotion
 
-class ZSSHomeViewController: UIViewController, UIDynamicAnimatorDelegate {
+class ZSSHomeViewController: UIViewController, UIDynamicAnimatorDelegate, UICollisionBehaviorDelegate {
 
     var animator : UIDynamicAnimator!
     var gravity : UIGravityBehavior!
@@ -43,6 +43,8 @@ class ZSSHomeViewController: UIViewController, UIDynamicAnimatorDelegate {
     
     var welcomeView : WelcomeView!
     var coffeeImageView : UIImageView!
+    
+    var collisionItemsToRemove : [UIDynamicItem] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -116,18 +118,28 @@ class ZSSHomeViewController: UIViewController, UIDynamicAnimatorDelegate {
     func coffeeImageViewTapped() -> Void {
         
         
-        //changeColorScheme("Coffee")
+        changeColorScheme("Coffee")
         launchCoffeeImageView()
         collapseWelcomeView()
     }
     
     func launchCoffeeImageView() -> Void {
+        gravity.addItem(coffeeImageView)
         itemBehavior.addItem(coffeeImageView)
-        itemBehavior.addLinearVelocity(CGPointMake(300, -1000), forItem: coffeeImageView)
+        itemBehavior.addLinearVelocity(CGPointMake(250, -1000), forItem: coffeeImageView)
+        itemBehavior.addAngularVelocity(CGFloat(300), forItem: coffeeImageView)
+        NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: "showCoffeeView", userInfo: nil, repeats: false)
+    }
+    
+    func showCoffeeView() -> Void {
+        let cvc = ZSSCoffeeViewController()
+        presentViewController(cvc, animated: true, completion: nil)
     }
     
     func changeColorScheme(colorScheme: String) -> Void {
-        //if color scheme is equal..
+        if colorScheme == "Coffee" {
+            self.colors = [UIColor(rgba: "#D5C1A9"), UIColor(rgba: "#866633"), UIColor(rgba: "#B18965"), UIColor(rgba: "#683520"), UIColor(rgba: "#442419")]
+        }
     }
     
     func configureWelcomeView() -> Void {
@@ -224,6 +236,7 @@ class ZSSHomeViewController: UIViewController, UIDynamicAnimatorDelegate {
         
         collision = UICollisionBehavior()
         collision.translatesReferenceBoundsIntoBoundary = true
+        collision.collisionDelegate = self
 
         itemBehavior = UIDynamicItemBehavior()
         itemBehavior.elasticity = 0.9
@@ -234,6 +247,21 @@ class ZSSHomeViewController: UIViewController, UIDynamicAnimatorDelegate {
         animator.addBehavior(gravity)
         animator.addBehavior(collision)
         animator.addBehavior(itemBehavior)
+
+    }
+    
+    func collisionBehavior(behavior: UICollisionBehavior, beganContactForItem item: UIDynamicItem, withBoundaryIdentifier identifier: NSCopying, atPoint p: CGPoint) {
+
+        if p.y + 5 >= self.view.frame.size.height {
+            collisionItemsToRemove.append(item)
+        }
+    }
+    
+    func collisionBehavior(behavior: UICollisionBehavior, endedContactForItem item: UIDynamicItem, withBoundaryIdentifier identifier: NSCopying) {
+        for item in collisionItemsToRemove {
+            collision.removeItem(item)
+        }
+        collisionItemsToRemove = []
     }
 
     override func didReceiveMemoryWarning() {

@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>6397423C-403A-4F18-A594-FE4408646924</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>Zachary Shakked</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>C1E8B083F6A8473B6F05F80BDE0DB2A7CD4B03AD</key>
 		<string>https://github.com/shakked/Zachary-Shakked.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Zachary Shakked.xcodeproj/project.xcworkspace</string>
+	<string>Zachary Shakked.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>C1E8B083F6A8473B6F05F80BDE0DB2A7CD4B03AD</key>

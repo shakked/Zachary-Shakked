@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14A343f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ZSSCoffeeViewController" customModule="Zachary_Shakked" customModuleProvider="target">
+            <connections>
+                <outlet property="coffeeBarrierView" destination="uit-X9-Iie" id="RGA-GK-VsJ"/>
+                <outlet property="coffeeLabel" destination="BHA-lH-hjZ" id="Tdi-uB-xkd"/>
+                <outlet property="iBarrierView" destination="0ZN-Ur-v7C" id="pQo-hc-xlV"/>
+                <outlet property="iLabel" destination="JGz-jx-dDv" id="Uke-8D-Z0z"/>
+                <outlet property="loveBarrierView" destination="Kzy-gP-1BI" id="bKC-g4-81d"/>
+                <outlet property="loveLabel" destination="eZU-f6-uHm" id="EFw-Fb-x3t"/>
+                <outlet property="showMeTheLoveButton" destination="dnF-kL-f30" id="iiN-zF-Lo9"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="LOVE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eZU-f6-uHm">
+                    <rect key="frame" x="225" y="-300" width="150" height="60"/>
+                    <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="50"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Coffee" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BHA-lH-hjZ">
+                    <rect key="frame" x="210" y="-300" width="180" height="60"/>
+                    <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="50"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dnF-kL-f30">
+                    <rect key="frame" x="196" y="376" width="208" height="45"/>
+                    <color key="backgroundColor" red="1" green="0.39495804701818249" blue="0.57698182298040002" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="HhB-fK-xEG"/>
+                        <constraint firstAttribute="width" constant="208" id="JNW-kp-fow"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="18"/>
+                    <state key="normal" title="SHOW ME THE LOVE">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="showMeTheLoveButtonPressed:" destination="-1" eventType="touchUpInside" id="VXB-PO-uVV"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="I" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JGz-jx-dDv">
+                    <rect key="frame" x="285" y="-300" width="30" height="60"/>
+                    <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="50"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uit-X9-Iie">
+                    <rect key="frame" x="0.0" y="358" width="600" height="10"/>
+                    <color key="backgroundColor" red="0.77888321049999998" green="0.37816183390000002" blue="0.14314811050000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="10" id="HQg-j6-9Dg"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kzy-gP-1BI">
+                    <rect key="frame" x="0.0" y="288" width="600" height="10"/>
+                    <color key="backgroundColor" red="0.77888321049999998" green="0.37816183390000002" blue="0.14314811050000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="10" id="KWs-PY-Inp"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0ZN-Ur-v7C">
+                    <rect key="frame" x="0.0" y="214" width="600" height="10"/>
+                    <color key="backgroundColor" red="0.77888321049999998" green="0.37816183390000002" blue="0.14314811050000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="10" id="3re-TQ-hML"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.77888321045576414" green="0.37816183388556862" blue="0.14314811053273244" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="uit-X9-Iie" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="24I-Sb-U3Z"/>
+                <constraint firstAttribute="centerY" secondItem="dnF-kL-f30" secondAttribute="centerY" constant="-98.5" id="EHQ-o7-1CV"/>
+                <constraint firstAttribute="centerX" secondItem="BHA-lH-hjZ" secondAttribute="centerX" id="JrZ-bF-K3Y"/>
+                <constraint firstItem="0ZN-Ur-v7C" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="SYu-Lr-IDv"/>
+                <constraint firstAttribute="trailing" secondItem="Kzy-gP-1BI" secondAttribute="trailing" id="Vit-dF-qYk"/>
+                <constraint firstAttribute="trailing" secondItem="uit-X9-Iie" secondAttribute="trailing" id="Wzs-ZI-u7y"/>
+                <constraint firstAttribute="trailing" secondItem="0ZN-Ur-v7C" secondAttribute="trailing" id="cbB-95-O7w"/>
+                <constraint firstItem="Kzy-gP-1BI" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="dv9-8S-gKC"/>
+                <constraint firstAttribute="centerX" secondItem="dnF-kL-f30" secondAttribute="centerX" id="mo1-9b-s3d"/>
+                <constraint firstAttribute="centerX" secondItem="eZU-f6-uHm" secondAttribute="centerX" id="pTj-gP-Uz6"/>
+                <constraint firstAttribute="centerX" secondItem="JGz-jx-dDv" secondAttribute="centerX" id="t2y-I4-LCO"/>
+                <constraint firstItem="dnF-kL-f30" firstAttribute="top" secondItem="uit-X9-Iie" secondAttribute="bottom" constant="8" id="xzw-g2-vdo"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
