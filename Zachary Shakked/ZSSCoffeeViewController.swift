@@ -15,6 +15,7 @@ class ZSSCoffeeViewController: UIViewController, UICollisionBehaviorDelegate {
     @IBOutlet weak var loveLabel: UILabel!
     @IBOutlet weak var coffeeLabel: UILabel!
     @IBOutlet weak var showMeTheLoveButton: UIButton!
+    @IBOutlet weak var returnHomeButton: UIButton!
     
     var animator : UIDynamicAnimator!
     var gravity : UIGravityBehavior!
@@ -45,17 +46,6 @@ class ZSSCoffeeViewController: UIViewController, UICollisionBehaviorDelegate {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func viewDidAppear(animated: Bool) {
-//        let iLabelFrame = iLabel.frame
-//        let loveLabelFrame = loveLabel.frame
-//        let coffeeLabelFrame = coffeeLabel.frame
-//        let showMeTheLoveButtonFrame = showMeTheLoveButton.frame
-//        
-//        iLabel.frame = CGRectMake(iLabelFrame.origin.x, iLabelFrame.origin.y - 500, iLabelFrame.width, iLabelFrame.height)
-//        loveLabel.frame = CGRectMake(loveLabelFrame.origin.x, loveLabelFrame.origin.y - 500, loveLabelFrame.width, loveLabelFrame.height)
-//        coffeeLabel.frame = CGRectMake(coffeeLabelFrame.origin.x, coffeeLabelFrame.origin.y - 500, coffeeLabelFrame.width, coffeeLabelFrame.height)
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureAnimators()
@@ -72,6 +62,9 @@ class ZSSCoffeeViewController: UIViewController, UICollisionBehaviorDelegate {
         coffeeLabel.layer.zPosition = 1
         showMeTheLoveButton.layer.zPosition = 1
         showMeTheLoveButton.layer.cornerRadius = 5
+        returnHomeButton.layer.borderColor = UIColor.whiteColor().CGColor
+        returnHomeButton.layer.borderWidth = 2.0
+        returnHomeButton.layer.cornerRadius = 5
     }
     
     override func viewDidLayoutSubviews() {
@@ -184,9 +177,53 @@ class ZSSCoffeeViewController: UIViewController, UICollisionBehaviorDelegate {
     }
     
     func playCoffeeNoises() -> Void {
+        let utterance = AVSpeechUtterance(string: "Coffee.Coffee.Coffee.Coffee.Coffee.Coffee.Coffee.Coffee.Coffee.Coffee.Coffee.Coffee.Coffee.Coffee.Coffee.Coffee.Coffee.Coffee.Coffee.Coffee.Coffee.Coffee.Coffee.Coffee.Coffee.Coffee.Coffee.Coffee.Coffee.Coffee.Coffee.Coffee.Coffee.Coffee.Coffee.Coffee.Coffee.Coffee.Coffee.Coffee.Coffee.Coffee.Coffee.Coffee.Coffee.Coffee.Coffee.Coffee.Coffee.Coffee.Coffee.Coffee.Coffee.Coffee.Coffee.Coffee.Coffee.Coffee.Coffee.Coffee.Coffee.Coffee.Coffee.Coffee.Coffee.Coffee.Coffee.Coffee.Coffee.Coffee.")
+        let voice = AVSpeechSynthesisVoice(language: "en-gb")
+        utterance.rate = 0.5
+        utterance.voice = voice
+        let speaker = AVSpeechSynthesizer()
+        speaker.speakUtterance(utterance)
+    }
+    
+    @IBAction func returnHomeButtonPressed(sender: AnyObject) {
+        returnHome()
+    }
+    
+    
+    func returnHome() -> Void {
+        collapseViews()
+        UIView.animateKeyframesWithDuration(3.0, delay: 0.0, options: nil, animations: { () -> Void in
+            self.view.backgroundColor = UIColor.whiteColor()
+            self.view.alpha = 0.0
+        }) { (completed: Bool) -> Void in
+            self.dismissViewControllerAnimated(false, completion: { () -> Void in
+                self.setCoffeeAsViewed()
+            })
+        }
         
     }
+    
+    func collapseViews() -> Void {
+        gravity.addItem(iLabel)
+        dynamics.addItem(iLabel)
+        gravity.addItem(loveLabel)
+        dynamics.addItem(loveLabel)
+        gravity.addItem(coffeeLabel)
+        dynamics.addItem(coffeeLabel)
+        gravity.addItem(showMeTheLoveButton)
+        dynamics.addItem(showMeTheLoveButton)
+        
+        dynamics.addAngularVelocity(20, forItem: iLabel)
+        dynamics.addAngularVelocity(-30, forItem: loveLabel)
+        dynamics.addAngularVelocity(30, forItem: coffeeLabel)
+        dynamics.addAngularVelocity(20, forItem: showMeTheLoveButton)
+        dynamics.addLinearVelocity(CGPointMake(300,-700), forItem: showMeTheLoveButton)
+    }
 
-
+    func setCoffeeAsViewed() -> Void {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setBool(true, forKey: "isCoffeeViewed")
+        defaults.synchronize()
+    }
 
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A0315FE1AE55C4000EA4631 /* ZSSPaintBallsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0315FD1AE55C4000EA4631 /* ZSSPaintBallsViewController.swift */; };
 		4A15C3DF1ADDD217004EBEC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A15C3DE1ADDD217004EBEC3 /* AppDelegate.swift */; };
 		4A15C3E21ADDD217004EBEC3 /* Zachary_Shakked.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4A15C3E01ADDD217004EBEC3 /* Zachary_Shakked.xcdatamodeld */; };
 		4A15C3E41ADDD217004EBEC3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A15C3E31ADDD217004EBEC3 /* ViewController.swift */; };
@@ -43,6 +44,8 @@
 
 /* Begin PBXFileReference section */
 		07A20B5116CF71A2D1F89C2D /* Pods-Zachary Shakked.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zachary Shakked.release.xcconfig"; path = "Pods/Target Support Files/Pods-Zachary Shakked/Pods-Zachary Shakked.release.xcconfig"; sourceTree = "<group>"; };
+		4A0315FD1AE55C4000EA4631 /* ZSSPaintBallsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZSSPaintBallsViewController.swift; sourceTree = "<group>"; };
+		4A0315FF1AE5635700EA4631 /* MathTesting.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MathTesting.playground; sourceTree = "<group>"; };
 		4A15C3D91ADDD217004EBEC3 /* Zachary Shakked.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Zachary Shakked.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A15C3DD1ADDD217004EBEC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A15C3DE1ADDD217004EBEC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -130,6 +133,8 @@
 				4A15C3E31ADDD217004EBEC3 /* ViewController.swift */,
 				4A668BE51ADF25E10093CBF7 /* UIColor+Hex.swift */,
 				4A15C4011ADDD8FA004EBEC3 /* ZSSHomeViewController.swift */,
+				4A0315FF1AE5635700EA4631 /* MathTesting.playground */,
+				4A0315FD1AE55C4000EA4631 /* ZSSPaintBallsViewController.swift */,
 				4A7ECC0E1AE0C5A900D60BFD /* ZSSCoffeeViewController.swift */,
 				4A7ECC0F1AE0C5A900D60BFD /* ZSSCoffeeViewController.xib */,
 				4A668BE91AE00CC70093CBF7 /* WelcomeView.xib */,
@@ -327,6 +332,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A15C4041ADDD924004EBEC3 /* ZSSBall.swift in Sources */,
+				4A0315FE1AE55C4000EA4631 /* ZSSPaintBallsViewController.swift in Sources */,
 				4A15C3E41ADDD217004EBEC3 /* ViewController.swift in Sources */,
 				4A15C3E21ADDD217004EBEC3 /* Zachary_Shakked.xcdatamodeld in Sources */,
 				4A668BEC1AE01E610093CBF7 /* WelcomeView.swift in Sources */,

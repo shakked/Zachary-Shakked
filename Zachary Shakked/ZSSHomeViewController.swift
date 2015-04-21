@@ -41,32 +41,42 @@ class ZSSHomeViewController: UIViewController, UIDynamicAnimatorDelegate, UIColl
     var opacity: CGFloat = 1.0
     var swiped = false
     
+    var i : Int = 0
     var welcomeView : WelcomeView!
     var coffeeImageView : UIImageView!
     
     var collisionItemsToRemove : [UIDynamicItem] = []
+    var viewCenters : [String: CGPoint]! = ["test" : CGPointMake(0, 0)]
+    
+    var isFirstTimeViewing : Bool = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureAnimators()
         configureViews()
+        changeColorScheme("Goldfish")
         showBalls()
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         configureMotionManager()
+        changeColorScheme("Goldfish")
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(animated)
+        isFirstTimeViewing = false
     }
     
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
         self.motionManager.stopDeviceMotionUpdates()
     }
-    
+         
     func configureViews() -> Void {
         tempImageView = UIImageView(frame: self.view.frame)
         self.view.addSubview(tempImageView)
-        configureColors()
         configureTimers()
         configureCoffeeView()
     }
@@ -75,14 +85,6 @@ class ZSSHomeViewController: UIViewController, UIDynamicAnimatorDelegate, UIColl
 
         let timer = NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: Selector("configureWelcomeView"), userInfo: nil, repeats: false)
 
-    }
-    
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
-    }
-    
-    func configureColors() -> Void {
-        self.colors = [UIColor(rgba:"#66CDE2"),UIColor(rgba:"#A7DBDB"), UIColor(rgba: "#E0E4CC"), UIColor(rgba: "#F38630"), UIColor(rgba: "#FA6900")]
     }
     
     func tadaCoffee(timer: NSTimer) -> Void {
@@ -103,21 +105,18 @@ class ZSSHomeViewController: UIViewController, UIDynamicAnimatorDelegate, UIColl
         coffeeImageView.layer.shadowRadius = 4.0;
         coffeeImageView.clipsToBounds = false;
         
+        viewCenters["coffeeImageView"] = coffeeImageView.center
         
-        NSTimer.scheduledTimerWithTimeInterval(3.0, target: self, selector: Selector("tadaCoffee:"), userInfo: coffeeImageView, repeats: true)
-        //invalidate this... after some event
+        NSTimer.scheduledTimerWithTimeInterval(6.0, target: self, selector: Selector("tadaCoffee:"), userInfo: coffeeImageView, repeats: false)
         
         let tapGesture = UITapGestureRecognizer(target: self, action: "coffeeImageViewTapped")
         tapGesture.numberOfTapsRequired = 1
-        
         coffeeImageView.addGestureRecognizer(tapGesture)
         coffeeImageView.userInteractionEnabled = true
         
     }
     
     func coffeeImageViewTapped() -> Void {
-        
-        
         changeColorScheme("Coffee")
         launchCoffeeImageView()
         collapseWelcomeView()
@@ -139,6 +138,8 @@ class ZSSHomeViewController: UIViewController, UIDynamicAnimatorDelegate, UIColl
     func changeColorScheme(colorScheme: String) -> Void {
         if colorScheme == "Coffee" {
             self.colors = [UIColor(rgba: "#D5C1A9"), UIColor(rgba: "#866633"), UIColor(rgba: "#B18965"), UIColor(rgba: "#683520"), UIColor(rgba: "#442419")]
+        } else if colorScheme == "Goldfish" {
+           self.colors = [UIColor(rgba:"#66CDE2"),UIColor(rgba:"#A7DBDB"), UIColor(rgba: "#E0E4CC"), UIColor(rgba: "#F38630"), UIColor(rgba: "#FA6900")]
         }
     }
     
@@ -153,7 +154,20 @@ class ZSSHomeViewController: UIViewController, UIDynamicAnimatorDelegate, UIColl
         let snap = UISnapBehavior(item: welcomeView, snapToPoint: CGPointMake(welcomeView.center.x + 320, welcomeView.center.y))
         snap.damping = 1.0
         animator.addBehavior(snap)
-        
+        setWelcomeViewCenters()
+    }
+    
+    func setWelcomeViewCenters() -> Void {
+        viewCenters["welcomeView"] = welcomeView.center
+        viewCenters["hLabel"] = welcomeView.hLabel.center
+        viewCenters["eLabel"] = welcomeView.eLabel.center
+        viewCenters["l1Label"] = welcomeView.l1Label.center
+        viewCenters["l2Label"] = welcomeView.l2Label.center
+        viewCenters["oLabel"] = welcomeView.oLabel.center
+        viewCenters["periodLabel"] = welcomeView.periodLabel.center
+        viewCenters["iLabel"] = welcomeView.iLabel.center
+        viewCenters["amLabel"] = welcomeView.amLabel.center
+        viewCenters["zacharyLabel"] = welcomeView.zacharyLabel.center
     }
     
     func collapseWelcomeView() -> Void {
@@ -291,40 +305,23 @@ class ZSSHomeViewController: UIViewController, UIDynamicAnimatorDelegate, UIColl
         
         
         gravity.action = { () -> (Void) in
-            for ball in self.balls {
-                self.drawLineFrom(ball.lastPoint, toPoint: ball.center, color: ball.backgroundColor!, brushWidth: ball.radius * 2)
-                ball.lastPoint = ball.center
-                if (ball.center.x < -10 || ball.center.x > self.view.frame.size.width + 20 || ball.center.y > self.view.frame.size.height + 10) {
-                    self.balls.removeObject(ball)
-                    ball.removeFromSuperview()
+            if i % 3 == 0 {
+                for ball in self.balls {
+                    self.drawLineFrom(ball.lastPoint, toPoint: ball.center, color: ball.backgroundColor!, brushWidth: ball.radius * 2)
+                    ball.lastPoint = ball.center
+                    if (ball.center.x < -10 || ball.center.x > self.view.frame.size.width + 20 || ball.center.y > self.view.frame.size.height + 10) {
+                        self.balls.removeObject(ball)
+                        ball.removeFromSuperview()
+                    }
+                }
+                
+                if self.balls.count <= 0 {
+                    self.showBalls()
                 }
             }
-            
-            if self.balls.count <= 0 {
-                self.showBalls()
-            }
+            i++
 
         }
-        
-        
-        
-        
-//        for color in self.colors {
-//            ball = ZSSBall(radius: framePadding, center: CGPointMake(CGFloat(20 + arc4random() % 280), CGFloat(-20)), color: color)
-//            view.addSubview(ball)
-//            ball.configurePhysics(gravity: gravity, dynamics: itemBehavior, collision: collision)
-//            ball.disableCollision()
-//            ball.gravity!.action = { () -> (Void) in
-//                for ball in self.balls {
-//                    self.drawLineFrom(ball.lastPoint, toPoint: ball.center, color: ball.backgroundColor!, brushWidth: ball.radius * 2)
-//                    ball.lastPoint = ball.center
-//                }
-//            }
-//            
-//            let timer = NSTimer.scheduledTimerWithTimeInterval(3.0, target: self, selector: Selector("removeBall:"), userInfo: ball, repeats: false)
-//            
-//            self.balls.append(ball)
-//        }
     }
     
     func removeBall(timer: NSTimer) -> Void {
@@ -332,7 +329,6 @@ class ZSSHomeViewController: UIViewController, UIDynamicAnimatorDelegate, UIColl
         ball.removeFromSuperview()
 
     }
-    
     
     func drawLineFrom(fromPoint: CGPoint, toPoint: CGPoint, color: UIColor, brushWidth: CGFloat) {
         UIGraphicsBeginImageContext(view.frame.size)
@@ -360,12 +356,6 @@ class ZSSHomeViewController: UIViewController, UIDynamicAnimatorDelegate, UIColl
         tempImageView.alpha = opacity
         UIGraphicsEndImageContext()
     }
-    
-    func loadTranslucense() -> Void {
-        
-    }
-    
-    
 
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
