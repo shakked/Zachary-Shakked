@@ -26,22 +26,22 @@ class ZSSHomeNavViewController: ZSSPaintBallsViewController {
     @IBOutlet weak var pixableButton: UIButton!
     @IBOutlet weak var nycButton: UIButton!
     
+    
     var buttons : [UIButton]!
 
     override func configureViews() {
         super.configureViews()
-//        self.buttons.append(schoolButton)
-//        self.buttons.append(coffeeButton)
-//        self.buttons.append(appsButton)
-//        self.buttons.append(sportsButton)
-//        self.buttons.append(pixableButton)
-//        self.buttons.append(nycButton)
-
+        self.buttons.append(schoolButton)
+        self.buttons.append(coffeeButton)
+        self.buttons.append(appsButton)
+        self.buttons.append(sportsButton)
+        self.buttons.append(pixableButton)
+        self.buttons.append(nycButton)
         self.buttons = [schoolButton, coffeeButton, appsButton, sportsButton, pixableButton, nycButton]
         
         for button in self.buttons {
             button.transform = CGAffineTransformMakeScale(0.01, 0.01)
-            button.layer.cornerRadius = 30
+            button.layer.cornerRadius = 35
             button.layer.shadowColor = UIColor.blackColor().CGColor
             button.layer.shadowOffset = CGSizeMake(1, 1)
             button.layer.zPosition = 1
@@ -61,15 +61,26 @@ class ZSSHomeNavViewController: ZSSPaintBallsViewController {
 
     
     func showButtons() -> Void {
+        var timerInterval : NSTimeInterval = 0.1
         for button in self.buttons {
-            UIView.animateWithDuration(2.0,
-                delay: 0,
-                usingSpringWithDamping: 0.20,
-                initialSpringVelocity: 6.00,
-                options: UIViewAnimationOptions.AllowUserInteraction,
-                animations: {
-                    button.transform = CGAffineTransformIdentity
-                }, completion: nil)
+            NSTimer.scheduledTimerWithTimeInterval(timerInterval, target: self, selector: "animateButtonAppearence:", userInfo: button, repeats: false)
+            timerInterval += 0.4
         }
+    }
+    
+    func animateButtonAppearence(timer: NSTimer) -> Void {
+        let button = timer.userInfo! as! UIButton
+        UIView.animateWithDuration(2.0,
+            delay: 0,
+            usingSpringWithDamping: 0.20,
+            initialSpringVelocity: 6.00,
+            options: UIViewAnimationOptions.AllowUserInteraction,
+            animations: {
+                button.transform = CGAffineTransformIdentity
+            }, completion: nil)
+    }
+    
+    func configureBallAnimators() -> Void {
+        
     }
 }

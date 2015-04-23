@@ -17,6 +17,7 @@ class ZSSPaintBallsViewController: UIViewController {
     private var animator : UIDynamicAnimator!
     private var gravity : UIGravityBehavior!
     private var dynamics : UIDynamicItemBehavior!
+    private var collision : UICollisionBehavior!
     private var colors : [UIColor] = [UIColor(rgba:"#66CDE2"),UIColor(rgba:"#A7DBDB"), UIColor(rgba: "#E0E4CC"), UIColor(rgba: "#F38630"), UIColor(rgba: "#FA6900")]
     private var paintBalls : [ZSSBall] = []
     private var paintBallsToBeRelocated : [ZSSBall] = []
@@ -31,14 +32,12 @@ class ZSSPaintBallsViewController: UIViewController {
     var timeBetweenDraws : NSTimeInterval = 1/75.0
     var paintBallCenters : [CGPoint] = []
     var i : Int = 0
-    var gravities : [UIGravityBehavior]! = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureAnimators()
         createPaintBalls()
         configureViews()
-        configureGravities()
     }
 
     override func viewDidAppear(animated: Bool) {
@@ -54,28 +53,6 @@ class ZSSPaintBallsViewController: UIViewController {
         paintCanvas = UIImageView(frame: self.view.frame)
         self.view.addSubview(paintCanvas)
     }
-    
-    
-//    func configureGravityAction() -> Void {
-//        gravity.action = { () -> (Void) in
-//            for paintBall in self.paintBalls {
-//                if !contains(self.paintBallsToBeRelocated, paintBall) {
-//                    self.drawLineFrom(paintBall.lastPoint, toPoint: paintBall.center, color: paintBall.backgroundColor!, brushWidth: self.paintBallRadius * 2)
-//                    paintBall.lastPoint = paintBall.center
-//                    
-//                    if self.shouldRelocatePaintBall(paintBall) {
-//
-//                        if !contains(self.paintBallsToBeRelocated, paintBall) {
-//                            self.paintBallsToBeRelocated.append(paintBall)
-//                        }
-//                        if (self.paintBallsToBeRelocated.count == self.paintBalls.count) {
-//                            self.resetPaintBallPositions()
-//                        }
-//                    }
-//                }
-//            }
-//        }
-//    }
     
     func resetPaintBallPositions() -> Void {
         self.paintBallsToBeRelocated = []
@@ -115,16 +92,41 @@ class ZSSPaintBallsViewController: UIViewController {
     }
     
     func createPaintBalls() -> Void {
-        configurePaintBallCenters()
-        var paintBall : ZSSBall
-        for i in 0...(colors.count - 1) {
-            let color : UIColor = colors[i]
-            let center : CGPoint = self.paintBallCenters[i]
-            paintBall = ZSSBall(radius: paintBallRadius, center: center, color: color)
-            paintBall.initialCenter = center
-            self.view.addSubview(paintBall)
-            self.paintBalls.append(paintBall)
-            self.dynamics.addItem(paintBall)
+        var frameSixth : CGFloat = CGFloat(self.view.frame.size.width / 6)
+        let frameSixthCentersX : [CGFloat] = [frameSixth, 2 * frameSixth, 3 * frameSixth, 4 * frameSixth, 5 * frameSixth, 6 * frameSixth]
+        
+        var i = 0
+        var ball : ZSSBall
+        while ( i <= 4) {
+            let color = self.colors[i]
+            let centerX = frameSixthCentersX[i]
+            
+            ball = ZSSBall(radius: frameSixth / 2, center: CGPointMake(centerX, -20), color: color)
+            self.view.addSubview(ball)
+            ball.configurePhysics(gravity: gravity, dynamics: dynamics, collision: collision)
+            ball.disableCollision()
+            self.paintBalls.append(ball)
+            i++
+            
+        }
+        
+        gravity.action = { () -> (Void) in
+            if i % 3 == 0 {
+                for ball in self.paintBalls {
+                    self.drawLineFrom(ball.lastPoint, toPoint: ball.center, color: ball.backgroundColor!, brushWidth: ball.radius * 2)
+                    ball.lastPoint = ball.center
+                    if (ball.center.x < -10 || ball.center.x > self.view.frame.size.width + 20 || ball.center.y > self.view.frame.size.height + 10) {
+                        self.paintBalls.removeObject(ball)
+                        self.gravity.removeItem(ball)
+                        self.dynamics.removeItem(ball)
+                        ball.removeFromSuperview()
+                    }
+                }
+                if self.paintBalls.count <= 0 {
+                    self.createPaintBalls()
+                }
+            }
+            i++
         }
     }
     
@@ -137,8 +139,6 @@ class ZSSPaintBallsViewController: UIViewController {
             self.paintBallCenters.append(CGPointMake(adjustedCenter, -20))
         }
     }
-    
-    
     
     func shouldRelocatePaintBall(paintBall: ZSSBall) -> Bool {
         if (paintBall.center.x < -10 || paintBall.center.x > self.view.frame.size.width + 20 || paintBall.center.y > self.view.frame.size.height + 10) {
@@ -185,9 +185,9 @@ class ZSSPaintBallsViewController: UIViewController {
     }
     
     private func configureAnimators() -> Void {
-
+        collision = UICollisionBehavior()
         animator = UIDynamicAnimator(referenceView: view)
-//        gravity = UIGravityBehavior()
+        gravity = UIGravityBehavior()
         dynamics = UIDynamicItemBehavior()
         dynamics.elasticity = 0.9
         dynamics.friction = 0
@@ -196,29 +196,6 @@ class ZSSPaintBallsViewController: UIViewController {
         animator.addBehavior(dynamics)
     }
     
-    private func configureGravities() -> Void {
-        for paintBall in self.paintBalls {
-            let gravity = UIGravityBehavior()
-            self.gravities.append(gravity)
-            gravity.addItem(paintBall)
-            animator.addBehavior(gravity)
-            paintBall.gravity = gravity
-            
-            gravity.action = { () -> (Void) in
-                if self.shouldRelocatePaintBall(paintBall) {
-                    self.resetPaintBall(paintBall)
-                } else {
-                    self.drawLineFrom(paintBall.lastPoint, toPoint: paintBall.center, color: paintBall.backgroundColor!, brushWidth: self.paintBallRadius * 2)
-                    paintBall.lastPoint = paintBall.center
-                }
-    
-            }
-            
-            
-            
-        }
-        
-    }
     
     private func configureMotionManager() -> Void {
         motionManager.accelerometerUpdateInterval = 1.0/120.0
@@ -249,9 +226,7 @@ class ZSSPaintBallsViewController: UIViewController {
             }
             
             let gravityDirection = CGVectorMake(gravityPoint.x, 0 - gravityPoint.y)
-            for gravity in self.gravities {
-                gravity.gravityDirection = gravityDirection
-            }
+            self.gravity.gravityDirection = gravityDirection
         }
    
     }

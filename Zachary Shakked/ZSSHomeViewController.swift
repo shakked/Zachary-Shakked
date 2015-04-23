@@ -307,6 +307,8 @@ class ZSSHomeViewController: UIViewController, UIDynamicAnimatorDelegate, UIColl
                     ball.lastPoint = ball.center
                     if (ball.center.x < -10 || ball.center.x > self.view.frame.size.width + 20 || ball.center.y > self.view.frame.size.height + 10) {
                         self.balls.removeObject(ball)
+                        self.gravity.removeItem(ball)
+                        self.itemBehavior.removeItem(ball)
                         ball.removeFromSuperview()
                     }
                 }
