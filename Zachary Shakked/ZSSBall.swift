@@ -16,6 +16,7 @@ class ZSSBall: UIView {
     var gravity : UIGravityBehavior?
     var dynamics : UIDynamicItemBehavior?
     var collision : UICollisionBehavior?
+    var initialCenter : CGPoint!
     
     private var lastTouchLocation : CGPoint = CGPoint(x: 0.0, y: 0.0)
     private var lastTouchTime : NSDate = NSDate()

@@ -28,15 +28,17 @@ class ZSSPaintBallsViewController: UIViewController {
     let lastUpdateTime : NSDate = NSDate()
     
     private var timeOfLastDraw : NSDate = NSDate()
-    var timeBetweenDraws : NSTimeInterval = 1/150.0
+    var timeBetweenDraws : NSTimeInterval = 1/75.0
     var paintBallCenters : [CGPoint] = []
+    var i : Int = 0
+    var gravities : [UIGravityBehavior]! = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureAnimators()
         createPaintBalls()
         configureViews()
-        configureGravityAction()
+        configureGravities()
     }
 
     override func viewDidAppear(animated: Bool) {
@@ -54,26 +56,26 @@ class ZSSPaintBallsViewController: UIViewController {
     }
     
     
-    func configureGravityAction() -> Void {
-        gravity.action = { () -> (Void) in
-            for paintBall in self.paintBalls {
-                if !contains(self.paintBallsToBeRelocated, paintBall) {
-                    self.drawLineFrom(paintBall.lastPoint, toPoint: paintBall.center, color: paintBall.backgroundColor!, brushWidth: self.paintBallRadius * 2)
-                    paintBall.lastPoint = paintBall.center
-                    
-                    if self.shouldRelocatePaintBall(paintBall) {
-                        println("attempting relocation")
-                        if !contains(self.paintBallsToBeRelocated, paintBall) {
-                            self.paintBallsToBeRelocated.append(paintBall)
-                        }
-                        if (self.paintBallsToBeRelocated.count == self.paintBalls.count) {
-                            self.resetPaintBallPositions()
-                        }
-                    }
-                }
-            }
-        }
-    }
+//    func configureGravityAction() -> Void {
+//        gravity.action = { () -> (Void) in
+//            for paintBall in self.paintBalls {
+//                if !contains(self.paintBallsToBeRelocated, paintBall) {
+//                    self.drawLineFrom(paintBall.lastPoint, toPoint: paintBall.center, color: paintBall.backgroundColor!, brushWidth: self.paintBallRadius * 2)
+//                    paintBall.lastPoint = paintBall.center
+//                    
+//                    if self.shouldRelocatePaintBall(paintBall) {
+//
+//                        if !contains(self.paintBallsToBeRelocated, paintBall) {
+//                            self.paintBallsToBeRelocated.append(paintBall)
+//                        }
+//                        if (self.paintBallsToBeRelocated.count == self.paintBalls.count) {
+//                            self.resetPaintBallPositions()
+//                        }
+//                    }
+//                }
+//            }
+//        }
+//    }
     
     func resetPaintBallPositions() -> Void {
         self.paintBallsToBeRelocated = []
@@ -82,35 +84,46 @@ class ZSSPaintBallsViewController: UIViewController {
         for i in 0...(self.paintBalls.count - 1) {
             let center : CGPoint = self.paintBallCenters[i]
             let paintBall = self.paintBalls[i]
-            gravity.removeItem(paintBall)
+            paintBall.gravity!.removeItem(paintBall)
             dynamics.removeItem(paintBall)
             paintBall.center = center
             paintBall.lastPoint = center
             
         }
-        
-        NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: "addGravityToBalls", userInfo: nil, repeats: false)
-        
+        NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: "addDynamicsToBalls", userInfo: nil, repeats: false)
     }
     
-    func addGravityToBalls() -> Void {
+    func resetPaintBall(paintBall: ZSSBall) -> Void {
+        paintBall.gravity!.removeItem(paintBall)
+        dynamics.removeItem(paintBall)
+        paintBall.center = paintBall.initialCenter
+        paintBall.lastPoint = paintBall.initialCenter
+        NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: "addDynamicsToBall:", userInfo: paintBall, repeats: false)
+    }
+    
+    func addDynamicsToBall(timer: NSTimer) -> Void {
+        let paintBall : ZSSBall = timer.userInfo! as! ZSSBall
+        paintBall.gravity!.addItem(paintBall)
+        dynamics.addItem(paintBall)
+    }
+    
+    func addDynamicsToBalls() -> Void {
         for paintBall in self.paintBalls {
-            gravity.addItem(paintBall)
             dynamics.addItem(paintBall)
+            paintBall.gravity!.addItem(paintBall)
         }
     }
     
     func createPaintBalls() -> Void {
         configurePaintBallCenters()
-        
         var paintBall : ZSSBall
         for i in 0...(colors.count - 1) {
             let color : UIColor = colors[i]
             let center : CGPoint = self.paintBallCenters[i]
             paintBall = ZSSBall(radius: paintBallRadius, center: center, color: color)
+            paintBall.initialCenter = center
             self.view.addSubview(paintBall)
             self.paintBalls.append(paintBall)
-            self.gravity.addItem(paintBall)
             self.dynamics.addItem(paintBall)
         }
     }
@@ -160,22 +173,51 @@ class ZSSPaintBallsViewController: UIViewController {
     }
     
     func setPaintBallColors(colors: [UIColor]) -> Void {
-        
+        if self.colors.count < 15 && self.colors.count > 0 {
+            self.colors = colors
+        }
     }
     
     func setPaintBallRadius(radius: CGFloat) -> Void {
-        
+        if radius > 0 && radius < self.view.frame.size.width {
+            self.paintBallRadius = radius
+        }
     }
     
     private func configureAnimators() -> Void {
+
         animator = UIDynamicAnimator(referenceView: view)
-        gravity = UIGravityBehavior()
+//        gravity = UIGravityBehavior()
         dynamics = UIDynamicItemBehavior()
         dynamics.elasticity = 0.9
         dynamics.friction = 0
         dynamics.allowsRotation = false
         animator.addBehavior(gravity)
         animator.addBehavior(dynamics)
+    }
+    
+    private func configureGravities() -> Void {
+        for paintBall in self.paintBalls {
+            let gravity = UIGravityBehavior()
+            self.gravities.append(gravity)
+            gravity.addItem(paintBall)
+            animator.addBehavior(gravity)
+            paintBall.gravity = gravity
+            
+            gravity.action = { () -> (Void) in
+                if self.shouldRelocatePaintBall(paintBall) {
+                    self.resetPaintBall(paintBall)
+                } else {
+                    self.drawLineFrom(paintBall.lastPoint, toPoint: paintBall.center, color: paintBall.backgroundColor!, brushWidth: self.paintBallRadius * 2)
+                    paintBall.lastPoint = paintBall.center
+                }
+    
+            }
+            
+            
+            
+        }
+        
     }
     
     private func configureMotionManager() -> Void {
@@ -207,7 +249,9 @@ class ZSSPaintBallsViewController: UIViewController {
             }
             
             let gravityDirection = CGVectorMake(gravityPoint.x, 0 - gravityPoint.y)
-            self.gravity.gravityDirection = gravityDirection
+            for gravity in self.gravities {
+                gravity.gravityDirection = gravityDirection
+            }
         }
    
     }
@@ -221,6 +265,7 @@ class ZSSPaintBallsViewController: UIViewController {
     }
     
     func drawLineFrom(fromPoint: CGPoint, toPoint: CGPoint, color: UIColor, brushWidth: CGFloat) {
+        
         UIGraphicsBeginImageContext(view.frame.size)
         let context = UIGraphicsGetCurrentContext()
         paintCanvas.image?.drawInRect(CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height))
@@ -243,9 +288,8 @@ class ZSSPaintBallsViewController: UIViewController {
         CGContextStrokePath(context)
         
         paintCanvas.image = UIGraphicsGetImageFromCurrentImageContext()
-        paintCanvas.alpha = paintCanvasOpacity
-        UIGraphicsEndImageContext()
-    }
+        paintCanvas.alpha = 1.0
+        UIGraphicsEndImageContext()    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

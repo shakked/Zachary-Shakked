@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.backgroundColor = UIColor.whiteColor()
         self.window?.makeKeyAndVisible()
         
-        let hvc = ZSSPaintBallsViewController()
+        let hvc = ZSSHomeViewController()
         window?.rootViewController = hvc
         
         return true

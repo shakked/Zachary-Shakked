@@ -23,10 +23,6 @@ class ZSSHomeViewController: UIViewController, UIDynamicAnimatorDelegate, UIColl
     let queue : NSOperationQueue = NSOperationQueue()
     let lastUpdateTime : NSDate = NSDate()
     
-    var greenBall : ZSSBall!
-    var blueBall : ZSSBall!
-    var gravityHasBlueBall = false
-    
     var touchVelocityX : Float = 0.0
     var touchVelocityY : Float = 0.0
     var timeOfLastTouch = NSDate(timeIntervalSince1970: 0)
