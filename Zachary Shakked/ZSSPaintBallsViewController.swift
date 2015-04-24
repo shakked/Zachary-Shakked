@@ -22,7 +22,7 @@ class ZSSPaintBallsViewController: UIViewController {
     private var paintBalls : [ZSSBall] = []
     private var paintBallsToBeRelocated : [ZSSBall] = []
     private var paintCanvas : UIImageView!
-    private var paintBallRadius : CGFloat = 35.0
+    private var paintBallRadius : CGFloat = 75.0
     private var paintCanvasOpacity : CGFloat = 1.0
     let motionManager : CMMotionManager = CMMotionManager()
     let queue : NSOperationQueue = NSOperationQueue()
@@ -36,7 +36,7 @@ class ZSSPaintBallsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureAnimators()
-        createPaintBalls()
+        //createPaintBalls()
         configureViews()
     }
 
@@ -101,7 +101,7 @@ class ZSSPaintBallsViewController: UIViewController {
             let color = self.colors[i]
             let centerX = frameSixthCentersX[i]
             
-            ball = ZSSBall(radius: frameSixth / 2, center: CGPointMake(centerX, -20), color: color)
+            ball = ZSSBall(radius: frameSixth / 3, center: CGPointMake(centerX, -20), color: color)
             self.view.addSubview(ball)
             ball.configurePhysics(gravity: gravity, dynamics: dynamics, collision: collision)
             ball.disableCollision()
@@ -148,30 +148,6 @@ class ZSSPaintBallsViewController: UIViewController {
         }
     }
     
-    func enableGyroscope() -> Void {
-        
-    }
-    
-    func disableGyroscope() -> Void {
-        
-    }
-    
-    func enableBallsWillFall() -> Void {
-        
-    }
-    
-    func disableBallsWillFall() -> Void {
-        
-    }
-    
-    func enableBallsWillPaint() -> Void {
-        
-    }
-    
-    func disableBallsWillPaint() -> Void {
-        
-    }
-    
     func setPaintBallColors(colors: [UIColor]) -> Void {
         if self.colors.count < 15 && self.colors.count > 0 {
             self.colors = colors
@@ -198,7 +174,7 @@ class ZSSPaintBallsViewController: UIViewController {
     
     
     private func configureMotionManager() -> Void {
-        motionManager.accelerometerUpdateInterval = 1.0/120.0
+        motionManager.accelerometerUpdateInterval = 1.0/60.0
         motionManager.startDeviceMotionUpdatesToQueue(queue) { (motion: CMDeviceMotion!, error: NSError!) -> Void in
             if error != nil {
                 println(error)

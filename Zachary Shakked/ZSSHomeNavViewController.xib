@@ -7,9 +7,12 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ZSSHomeNavViewController" customModule="Zachary_Shakked" customModuleProvider="target">
             <connections>
                 <outlet property="appsButton" destination="GqY-KZ-hTO" id="QlU-xQ-Hgn"/>
+                <outlet property="backgroundImageView" destination="R0i-5j-SIF" id="RIE-gx-O6y"/>
+                <outlet property="buttonsView" destination="mam-lm-2bv" id="mcf-ZK-1Y7"/>
                 <outlet property="coffeeButton" destination="OFs-jV-7mB" id="kMe-9G-len"/>
                 <outlet property="nycButton" destination="8Vq-vR-kyn" id="K5e-YL-5Pv"/>
                 <outlet property="pixableButton" destination="iAa-uA-HLs" id="eMY-DM-rkE"/>
+                <outlet property="profileButton" destination="BoL-uS-PFI" id="AXY-Ua-i0n"/>
                 <outlet property="schoolButton" destination="HPy-1I-NRo" id="zUJ-ul-r9v"/>
                 <outlet property="sportsButton" destination="gNP-vv-OUM" id="02J-U5-Nib"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -20,45 +23,77 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GqY-KZ-hTO">
-                    <rect key="frame" x="50" y="410" width="70" height="70"/>
-                    <color key="backgroundColor" red="0.16078431369999999" green="0.50196078430000002" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <state key="normal" image="iPhone">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gNP-vv-OUM">
-                    <rect key="frame" x="153" y="500" width="70" height="70"/>
-                    <color key="backgroundColor" red="0.31800205650000002" green="0.81190557070000002" blue="0.403710399" alpha="1" colorSpace="calibratedRGB"/>
-                    <state key="normal" image="Sports">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HPy-1I-NRo">
-                    <rect key="frame" x="220" y="389" width="70" height="70"/>
-                    <color key="backgroundColor" red="0.41009256109999997" green="0.41009256109999997" blue="0.41009256109999997" alpha="1" colorSpace="calibratedRGB"/>
-                    <state key="normal" image="School">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iAa-uA-HLs">
-                    <rect key="frame" x="256" y="546" width="70" height="70"/>
-                    <color key="backgroundColor" red="0.60784313725490191" green="0.34901960784313724" blue="0.71372549019607845" alpha="1" colorSpace="calibratedRGB"/>
-                    <state key="normal" image="Work">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Vq-vR-kyn">
-                    <rect key="frame" x="64" y="557" width="70" height="70"/>
-                    <color key="backgroundColor" red="0.90588235294117647" green="0.29803921568627451" blue="0.23529411764705882" alpha="1" colorSpace="calibratedRGB"/>
-                    <state key="normal" image="NYC">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OFs-jV-7mB">
-                    <rect key="frame" x="86" y="309" width="70" height="70"/>
-                    <color key="backgroundColor" red="0.79470718833780163" green="0.53196361495604427" blue="0.39079837570327547" alpha="1" colorSpace="calibratedRGB"/>
-                    <state key="normal" image="Mug">
+                <imageView userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1 (4 of 10).jpg" translatesAutoresizingMaskIntoConstraints="NO" id="R0i-5j-SIF">
+                    <rect key="frame" x="-353" y="-8" width="822" height="675"/>
+                </imageView>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mam-lm-2bv">
+                    <rect key="frame" x="18" y="147" width="339" height="373"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gNP-vv-OUM">
+                            <rect key="frame" x="134" y="283" width="70" height="70"/>
+                            <color key="backgroundColor" red="0.082308825474302155" green="0.81190557070000002" blue="0.67803781489147197" alpha="1" colorSpace="calibratedRGB"/>
+                            <state key="normal" image="Sports">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="sportsButtonTapped:" destination="-1" eventType="touchUpInside" id="XI4-j5-MHQ"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iAa-uA-HLs">
+                            <rect key="frame" x="249" y="207" width="70" height="70"/>
+                            <color key="backgroundColor" red="0.81190557070000002" green="0.20715281985460107" blue="0.43360999887469548" alpha="1" colorSpace="calibratedRGB"/>
+                            <state key="normal" image="Work">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="pixableButtonTapped:" destination="-1" eventType="touchUpInside" id="qqW-4f-jPJ"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OFs-jV-7mB">
+                            <rect key="frame" x="134" y="20" width="70" height="70"/>
+                            <color key="backgroundColor" red="1" green="0.77855978724239094" blue="0.12804082167658593" alpha="1" colorSpace="calibratedRGB"/>
+                            <state key="normal" image="Mug">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="coffeeButtonTapped:" destination="-1" eventType="touchUpInside" id="eBJ-c7-OmU"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GqY-KZ-hTO">
+                            <rect key="frame" x="20" y="96" width="70" height="70"/>
+                            <color key="backgroundColor" red="0.16078431369999999" green="0.50196078430000002" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal" image="iPhone">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="appsButtonTapped:" destination="-1" eventType="touchUpInside" id="14H-U2-oJi"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Vq-vR-kyn">
+                            <rect key="frame" x="20" y="207" width="70" height="70"/>
+                            <color key="backgroundColor" red="0.90588235294117647" green="0.29803921568627451" blue="0.23529411764705882" alpha="1" colorSpace="calibratedRGB"/>
+                            <state key="normal" image="NYC">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="nycButtonPressed:" destination="-1" eventType="touchUpInside" id="sTs-DV-bbC"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HPy-1I-NRo">
+                            <rect key="frame" x="249" y="96" width="70" height="70"/>
+                            <color key="backgroundColor" red="0.41009256109999997" green="0.41009256109999997" blue="0.41009256109999997" alpha="1" colorSpace="calibratedRGB"/>
+                            <state key="normal" image="School">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="schoolButtonTapped:" destination="-1" eventType="touchUpInside" id="cp1-3p-EkE"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BoL-uS-PFI">
+                    <rect key="frame" x="137" y="284" width="100" height="100"/>
+                    <state key="normal" image="profile_cropped.jpg">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>
@@ -68,11 +103,13 @@
         </view>
     </objects>
     <resources>
+        <image name="1 (4 of 10).jpg" width="4967" height="3112"/>
         <image name="Mug" width="33" height="33"/>
         <image name="NYC" width="33" height="33"/>
         <image name="School" width="33" height="33"/>
         <image name="Sports" width="33" height="33"/>
         <image name="Work" width="33" height="33"/>
         <image name="iPhone" width="33" height="33"/>
+        <image name="profile_cropped.jpg" width="1456" height="1437"/>
     </resources>
 </document>

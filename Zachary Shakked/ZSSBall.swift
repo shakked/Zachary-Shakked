@@ -10,7 +10,6 @@ import UIKit
 
 class ZSSBall: UIView {
     var radius : CGFloat = 0;
-    var interactivityEnabled : Bool = true
     var physicsEnabled : Bool = true
     
     var gravity : UIGravityBehavior?
@@ -20,7 +19,6 @@ class ZSSBall: UIView {
     
     private var lastTouchLocation : CGPoint = CGPoint(x: 0.0, y: 0.0)
     private var lastTouchTime : NSDate = NSDate()
-    private var currentTouchVelocity : CGPoint = CGPoint(x: 0.0, y: 0.0)
 
     var lastPoint : CGPoint!
     
@@ -103,8 +101,6 @@ class ZSSBall: UIView {
         enablePhysics()
     }
     
-    
-    
     convenience init(radius: CGFloat, center: CGPoint) {
         let x = center.x - radius
         let y = center.y - radius
@@ -121,46 +117,7 @@ class ZSSBall: UIView {
         backgroundColor = color
         self.radius = radius
     }
-    
-    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
-        var theTouches = touches as NSSet
-        let touch = theTouches.anyObject()! as! UITouch
-        let touchLocation = touch.locationInView(self.superview)
-        disablePhysics()
-    }
-    
-    override func touchesMoved(touches: Set<NSObject>, withEvent event: UIEvent) {
-        if interactivityEnabled {
-            var theTouches = touches as NSSet
-            let touch = theTouches.anyObject()! as! UITouch
-            let touchLocation = touch.locationInView(self.superview!)
-            self.center = touchLocation
-        }
-        
-        calculateAndSetTouchVelocity()
-    }
-    
-    override func touchesEnded(touches: Set<NSObject>, withEvent event: UIEvent) {
-        enablePhysics()
-        if interactivityEnabled {
-            addVelocity(currentTouchVelocity)
-        }
-    }
-    
-    func calculateAndSetTouchVelocity() -> Void {
-        let currentTouchLocation = self.center
-        
-        let xDistance = currentTouchLocation.x - lastTouchLocation.x
-        let yDistance = currentTouchLocation.y - lastTouchLocation.y
-        
-        let timeSinceLastTouch = NSDate().timeIntervalSinceDate(lastTouchTime)
-        
-        let touchVelocityX = Double(xDistance) / Double(timeSinceLastTouch)
-        let touchVelocityY = Double(yDistance) / Double(timeSinceLastTouch)
-        currentTouchVelocity = CGPoint(x: touchVelocityX, y: touchVelocityY)
-        lastTouchTime = NSDate()
-        lastTouchLocation = currentTouchLocation
-    }
+
     
     
 
