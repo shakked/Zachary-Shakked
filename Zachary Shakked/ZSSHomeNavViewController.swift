@@ -25,6 +25,7 @@ class ZSSHomeNavViewController: ZSSPaintBallsViewController {
     var buttonDynamics : UIDynamicItemBehavior!
     
     var buttons : [UIButton]!
+    var subjects = [String: ZSSSubject]()
 
     init() {
         super.init(nibName: "ZSSHomeNavViewController", bundle: NSBundle.mainBundle())
@@ -37,6 +38,7 @@ class ZSSHomeNavViewController: ZSSPaintBallsViewController {
     override func viewDidLoad() {
         configureButtonAnimators()
         super.viewDidLoad()
+        setUpSubjects()
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -123,22 +125,43 @@ class ZSSHomeNavViewController: ZSSPaintBallsViewController {
         buttonAnimator.addBehavior(buttonDynamics)
     }
     
+    func setUpSubjects() -> Void {
+        var coffeeSubject = ZSSSubject()
+        coffeeSubject.titleText = "I LOVE Coffee"
+        coffeeSubject.label1Text = "Coffee is one of those things I could not live without. It can completely alter my mood. If I'm having a bad day, a nice cup of coffee can completely change my day. Some of my friends say I have a problem because I drink so much coffee. If there were such thing as a coffee chugging contest, I would probably come close to winning."
+        coffeeSubject.label2Text = "Dunkin Donut's motto is 'America Runs on Dunkin'. My transmission NEEDS Dunkin to run. 'Xtra Large with Milk and Sugar, Extra Milk'. That's my order, every single time. I love Dunkin and I love coffee."
+        coffeeSubject.backgroundImage = UIImage(named: "FlatironFilter.jpg")
+        coffeeSubject.iconImage = UIImage(named: "Mug")
+        coffeeSubject.backgroundColor = coffeeButton.backgroundColor!
+        
+        self.subjects["coffee"] = coffeeSubject
+
+        var schoolSubject = ZSSSubject()
+        schoolSubject.titleText = "My Education"
+        schoolSubject.label1Text = "After being rejected from Brown, Cornell, Tufts, and Johns Hopkins, I ended up at Stevens Institute of Technology. Although the rejections were emotional, they were the best thing that happened to me. I have a million dollar view from my dorm room and get to go to the most amazing city in the world all the time. "
+        schoolSubject.label2Text = "After a Computer Science class, I'll have dinner in the beautiful city of Hoboken with my dad and then attend an iOS meetup in the city. I've met many iOS developers who've helped me get to where I am today. None of this would've been possible if I wasnt by such a resourceful and diverse city."
+        schoolSubject.backgroundImage = UIImage(named: "NYCSunset.jpg")
+        schoolSubject.iconImage = UIImage(named: "School")
+        schoolSubject.backgroundColor = schoolButton.backgroundColor!
+        
+        self.subjects["school"] = schoolSubject
+        
+        
+        coffeeSubject.nextSubject = schoolSubject
+        schoolSubject.nextSubject = coffeeSubject
+        
+    }
+    
 
     @IBAction func coffeeButtonTapped(sender: AnyObject) {
         let civ = ZSSInfoViewController()
-        civ.titleLabel.text = "I LOVE Coffee"
-        civ.label1.text = "Coffee is one of those things I could not live without. It can completely alter my mood. If I'm having a bad day, a nice cup of coffee can completely change my day. Some of my friends say I have a problem because I drink so much coffee. If there were such thing as a coffee chugging contest, I would probably come close to winning."
-        civ.label2.text = "Dunkin Donut's motto is 'America Runs on Dunkin'. My transmission NEEDS Dunkin to run. 'Xtra Large with Milk and Sugar, Extra Milk'. That's my order, every single time. I love Dunkin and I love coffee."
-        civ.backgroundImageView.image = UIImage(named: "FlatironFilter.jpg")
+        civ.subject = subjects["coffee"]
         presentViewController(civ, animated: true, completion:nil)
     }
     
     @IBAction func schoolButtonTapped(sender: AnyObject) {
         let civ = ZSSInfoViewController()
-        civ.titleLabel.text = "My Education"
-        civ.label1.text = "After being rejected from Brown, Cornell, Tufts, and Johns Hopkins, I ended up at Stevens Institute of Technology. Although the rejections were emotional, they were the best thing that happened to me. I have a million dollar view from my dorm room and get to go to the most amazing city in the world all the time. "
-        civ.label2.text = "After a Computer Science class, I'll have dinner in the beautiful city of Hoboken with my dad and then attend an iOS meetup in the city. I've met many iOS developers who've helped me get to where I am today. None of this would've been possible if I wasnt by such a resourceful and diverse city."
-        civ.backgroundImageView.image = UIImage(named: "NYCSunset.jpg")
+        civ.subject = subjects["school"]
         presentViewController(civ, animated: true, completion:nil)
     }
 

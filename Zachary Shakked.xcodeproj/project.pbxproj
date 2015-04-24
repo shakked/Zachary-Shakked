@@ -36,6 +36,7 @@
 		4A15C3F81ADDD217004EBEC3 /* Zachary_ShakkedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A15C3F71ADDD217004EBEC3 /* Zachary_ShakkedTests.swift */; };
 		4A15C4021ADDD8FA004EBEC3 /* ZSSHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A15C4011ADDD8FA004EBEC3 /* ZSSHomeViewController.swift */; };
 		4A15C4041ADDD924004EBEC3 /* ZSSBall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A15C4031ADDD924004EBEC3 /* ZSSBall.swift */; };
+		4A56C7B81AE9FFE5007869A2 /* ZSSSubject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A56C7B71AE9FFE5007869A2 /* ZSSSubject.swift */; };
 		4A668BE61ADF25E10093CBF7 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A668BE51ADF25E10093CBF7 /* UIColor+Hex.swift */; };
 		4A668BE81AE0086D0093CBF7 /* Array+RemoveObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A668BE71AE0086D0093CBF7 /* Array+RemoveObject.swift */; };
 		4A668BEA1AE00CC70093CBF7 /* WelcomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A668BE91AE00CC70093CBF7 /* WelcomeView.xib */; };
@@ -57,7 +58,6 @@
 		4A9BB8BC1AE5F86300EE5BBF /* ZSSHomeNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9BB8BA1AE5F86300EE5BBF /* ZSSHomeNavViewController.swift */; };
 		4A9BB8BD1AE5F86300EE5BBF /* ZSSHomeNavViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A9BB8BB1AE5F86300EE5BBF /* ZSSHomeNavViewController.xib */; };
 		4ACCC05A1AE94D11004E1115 /* ZSSInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACCC0581AE94D11004E1115 /* ZSSInfoViewController.swift */; };
-		4ACCC05B1AE94D11004E1115 /* ZSSInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4ACCC0591AE94D11004E1115 /* ZSSInfoViewController.xib */; };
 		4ACCC05D1AE950D6004E1115 /* FlatironFilter.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4ACCC05C1AE950D6004E1115 /* FlatironFilter.jpg */; };
 		D3EC2F7D88200F4674CC10E8 /* libPods-Zachary Shakked.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB814F1535BC868EEBD480E /* libPods-Zachary Shakked.a */; };
 /* End PBXBuildFile section */
@@ -108,6 +108,7 @@
 		4A15C4011ADDD8FA004EBEC3 /* ZSSHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZSSHomeViewController.swift; sourceTree = "<group>"; };
 		4A15C4031ADDD924004EBEC3 /* ZSSBall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZSSBall.swift; sourceTree = "<group>"; };
 		4A2BE7261AE051C400C9F09F /* Zachary Shakked-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Zachary Shakked-Bridging-Header.h"; sourceTree = "<group>"; };
+		4A56C7B71AE9FFE5007869A2 /* ZSSSubject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZSSSubject.swift; sourceTree = "<group>"; };
 		4A668BE51ADF25E10093CBF7 /* UIColor+Hex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+Hex.swift"; path = "Zachary Shakked.xcodeproj/../UIColor+Hex.swift"; sourceTree = SOURCE_ROOT; };
 		4A668BE71AE0086D0093CBF7 /* Array+RemoveObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+RemoveObject.swift"; sourceTree = "<group>"; };
 		4A668BE91AE00CC70093CBF7 /* WelcomeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WelcomeView.xib; sourceTree = "<group>"; };
@@ -129,7 +130,6 @@
 		4A9BB8BA1AE5F86300EE5BBF /* ZSSHomeNavViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZSSHomeNavViewController.swift; sourceTree = "<group>"; };
 		4A9BB8BB1AE5F86300EE5BBF /* ZSSHomeNavViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZSSHomeNavViewController.xib; sourceTree = "<group>"; };
 		4ACCC0581AE94D11004E1115 /* ZSSInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZSSInfoViewController.swift; sourceTree = "<group>"; };
-		4ACCC0591AE94D11004E1115 /* ZSSInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZSSInfoViewController.xib; sourceTree = "<group>"; };
 		4ACCC05C1AE950D6004E1115 /* FlatironFilter.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = FlatironFilter.jpg; path = images/FlatironFilter.jpg; sourceTree = "<group>"; };
 		9AB814F1535BC868EEBD480E /* libPods-Zachary Shakked.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Zachary Shakked.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4B689C2922F317C38B3A6D3 /* Pods-Zachary Shakked.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zachary Shakked.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Zachary Shakked/Pods-Zachary Shakked.debug.xcconfig"; sourceTree = "<group>"; };
@@ -193,10 +193,10 @@
 				4A668BE51ADF25E10093CBF7 /* UIColor+Hex.swift */,
 				4A15C4011ADDD8FA004EBEC3 /* ZSSHomeViewController.swift */,
 				4A0315FD1AE55C4000EA4631 /* ZSSPaintBallsViewController.swift */,
+				4A56C7B71AE9FFE5007869A2 /* ZSSSubject.swift */,
 				4A9BB8BA1AE5F86300EE5BBF /* ZSSHomeNavViewController.swift */,
 				4A9BB8BB1AE5F86300EE5BBF /* ZSSHomeNavViewController.xib */,
 				4ACCC0581AE94D11004E1115 /* ZSSInfoViewController.swift */,
-				4ACCC0591AE94D11004E1115 /* ZSSInfoViewController.xib */,
 				4A010B891AE8A77500A3FB38 /* ZSSDraggableButton.swift */,
 				4A7ECC0E1AE0C5A900D60BFD /* ZSSCoffeeViewController.swift */,
 				4A7ECC0F1AE0C5A900D60BFD /* ZSSCoffeeViewController.xib */,
@@ -376,7 +376,6 @@
 				4A010B7F1AE8875F00A3FB38 /* Student Filled-33.png in Resources */,
 				4A7822461AE9D65F009C28BE /* BrooklynBridge.jpeg in Resources */,
 				4A010B8C1AE8B52600A3FB38 /* profile_cropped.jpg in Resources */,
-				4ACCC05B1AE94D11004E1115 /* ZSSInfoViewController.xib in Resources */,
 				4A010B841AE8875F00A3FB38 /* Cup-66.png in Resources */,
 				4A010B881AE8875F00A3FB38 /* iPhone-33.png in Resources */,
 				4A010B7E1AE8875F00A3FB38 /* Student Filled-66.png in Resources */,
@@ -459,6 +458,7 @@
 				4A0315FE1AE55C4000EA4631 /* ZSSPaintBallsViewController.swift in Sources */,
 				4A15C3E41ADDD217004EBEC3 /* ViewController.swift in Sources */,
 				4A15C3E21ADDD217004EBEC3 /* Zachary_Shakked.xcdatamodeld in Sources */,
+				4A56C7B81AE9FFE5007869A2 /* ZSSSubject.swift in Sources */,
 				4A010B8A1AE8A77500A3FB38 /* ZSSDraggableButton.swift in Sources */,
 				4A668BEC1AE01E610093CBF7 /* WelcomeView.swift in Sources */,
 				4A668BE61ADF25E10093CBF7 /* UIColor+Hex.swift in Sources */,

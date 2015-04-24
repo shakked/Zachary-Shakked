@@ -21,18 +21,21 @@ class ZSSInfoViewController: UIViewController, UIScrollViewDelegate {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+    }
+    
     var scrollView : UIScrollView!
     var titleLabel : UILabel!
     var label1 : UILabel!
     var label2 : UILabel!
     var backgroundImageView : UIImageView!
     var zachIconImageView : UIImageView!
+    var subject : ZSSSubject!
+    var nextSubjectButton : UIButton!
+    
     var isAnimatingDismissal : Bool = false
-    var nextSubjectIconImageView : UIImageView!
-    var nextSubjectBackgroundImage : UIImage!
-    var nextSubjectTitleText : String!
-    var nextSubjectLabel1Text : String!
-    var nextSubjectLabel2Text : String!
+    var isAnimatingTransition : Bool = false
     
     
     override func viewDidLoad() {
@@ -67,13 +70,20 @@ class ZSSInfoViewController: UIViewController, UIScrollViewDelegate {
         backgroundImageView.contentMode = UIViewContentMode.ScaleAspectFill
         self.view.addSubview(backgroundImageView)
         
-        zachIconImageView = UIImageView(frame: CGRectMake(150, (height / 2) - 40, 80, 80))
+        zachIconImageView = UIImageView(frame: CGRectMake(150, (height / 2.0) - 40, 80, 80))
         zachIconImageView.image = UIImage(named: "ZachIcon")
         zachIconImageView.layer.zPosition = 1
         zachIconImageView.alpha = 0.0
         self.backgroundImageView.addSubview(zachIconImageView)
         
+        nextSubjectButton = UIButton(frame: CGRectMake(self.scrollView.contentSize.width, (height/2.0) - 35, 70, 70))
+        nextSubjectButton.layer.zPosition = 1
+        nextSubjectButton.alpha = 0.0
+        nextSubjectButton.layer.cornerRadius = 35.0
+        self.backgroundImageView.addSubview(nextSubjectButton)
     }
+    
+
     
     func configureViews() -> Void {
         titleLabel.font = UIFont(name: "Avenir-Light", size: 48.0)
@@ -107,12 +117,27 @@ class ZSSInfoViewController: UIViewController, UIScrollViewDelegate {
     }
     
     override func viewWillAppear(animated: Bool) {
+        
+        self.view.alpha = 0.0
+        configureSubject()
+        UIView.animateWithDuration(0.5, animations: { () -> Void in
+            self.view.alpha = 1.0
+        })
+    }
+    
+    func configureSubject() -> Void {
+        self.backgroundImageView.image = self.subject.backgroundImage
+        self.titleLabel.text = self.subject.titleText
+        self.label1.text = self.subject.label1Text
+        self.label2.text = self.subject.label2Text
+        self.nextSubjectButton.setImage(self.subject.nextSubject.iconImage, forState: UIControlState.Normal)
+        self.nextSubjectButton.backgroundColor = self.subject.nextSubject.backgroundColor
         self.label1.sizeToFit()
         self.label2.sizeToFit()
+
     }
     
     func scrollViewDidScroll(scrollView: UIScrollView) {
-        println(scrollView.contentOffset)
         let imageFrame = self.backgroundImageView.frame
         let newFrame = CGRectMake(-200 - (0.5 * scrollView.contentOffset.x ), 0, imageFrame.size.width, imageFrame.size.height)
         self.backgroundImageView.frame = newFrame
@@ -121,24 +146,37 @@ class ZSSInfoViewController: UIViewController, UIScrollViewDelegate {
         if x < 0 && x > -100 {
             self.zachIconImageView.alpha = -0.01 * x % 100
             self.zachIconImageView.layer.transform = CATransform3DMakeRotation(0.02 * x % 100, 0, 0.0, 1.0);
-            println(-0.01 * x % 100)
         }
         
         if self.zachIconImageView.alpha > 0.950 && !self.isAnimatingDismissal {
             self.isAnimatingDismissal = true
-            runSpinAnimation(1.5)
+            runSpinAnimation(self.zachIconImageView,duration: 1.5)
+            fadeAndDismissView()
         }
+        
+        let xPastScreen = x - self.view.frame.size.width
+        if xPastScreen > 0 {
+            let alpha = 0.01 * xPastScreen
+            self.nextSubjectButton.alpha = alpha
+        }
+        
+        if self.nextSubjectButton.alpha > 0.950 && !self.isAnimatingTransition {
+            self.isAnimatingTransition = true
+            runSpinAnimation(self.nextSubjectButton, duration: 1.5)
+            fadeAndTransition()
+        }
+        
+        
     }
     
-    func runSpinAnimation(duration: CGFloat) -> Void {
+    func runSpinAnimation(view: UIView, duration: CGFloat) -> Void {
         let rotationAnimation = CABasicAnimation(keyPath: "transform.rotation.z")
         rotationAnimation.toValue = NSNumber(float: Float(M_PI * 2.0))
         rotationAnimation.duration = CFTimeInterval(duration)
         rotationAnimation.cumulative = true
         rotationAnimation.repeatCount = 5.0
         rotationAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
-        zachIconImageView.layer.addAnimation(rotationAnimation, forKey: "rotationAnimation")
-        fadeAndDismissView()
+        view.layer.addAnimation(rotationAnimation, forKey: "rotationAnimation")
     }
     
     func fadeAndDismissView() -> Void {
@@ -149,12 +187,22 @@ class ZSSInfoViewController: UIViewController, UIScrollViewDelegate {
         })
     }
     
+    func fadeAndTransition() -> Void {
+        UIView.animateWithDuration(1.5, animations: { () -> Void in
+            self.view.alpha = 0.0
+            }, completion: { (completed: Bool) -> Void in
+                let civ = ZSSInfoViewController()
+                civ.subject = self.subject.nextSubject
+                self.dismissViewControllerAnimated(false, completion: { () -> Void in
+                    UIApplication.sharedApplication().keyWindow!.rootViewController!.view.alpha = 0.0
+                    UIApplication.sharedApplication().keyWindow!.rootViewController!.presentViewController(civ, animated: false, completion: nil)
+                })
+        })
+        
+    }
+    
     func showNextView() -> Void {
-        let civ = ZSSInfoViewController()
-        civ.titleLabel.text = nextSubjectTitleText
-        civ.label1.text = nextSubjectLabel1Text
-        civ.label2.text = nextSubjectLabel2Text
-        civ.backgroundImageView.image = nextSubjectBackgroundImage
+        
     }
     
     
