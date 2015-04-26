@@ -22,12 +22,11 @@ class ZSSNYCViewController: ZSSInfoViewController {
 
     override func configureViews() {
         super.configureViews()
-
         configureSubway()
     }
     
     func configureSubway() -> Void {
-        let subwayFrame = CGRectMake(0, height - 50, 220, 20)
+        let subwayFrame = CGRectMake(0, height - 100, 220, 20)
         subwayImageView = UIImageView(frame: subwayFrame)
         subwayImageView.image = UIImage(named: "Subway")
         self.backgroundImageView.addSubview(subwayImageView)
@@ -38,10 +37,17 @@ class ZSSNYCViewController: ZSSInfoViewController {
         super.scrollViewDidScroll(scrollView)
         let x = scrollView.contentOffset.x
 
-        let newSubwayFrame = CGRectMake(0 + (2 * x), height - 50, 220, 20)
+        let newSubwayFrame = CGRectMake(0 + (2 * x), height - 100, 220, 20)
         subwayImageView.frame = newSubwayFrame
-        
-
+    }
+    
+    override func tellMeMoreButtonPressed() {
+        let nycmvc = ZSSNYCMoreViewController()
+        UIView.animateWithDuration(1.0, animations: { () -> Void in
+            self.view.alpha = 0.0
+            }) { (completed: Bool) -> Void in
+                self.presentViewController(nycmvc, animated: false, completion: nil)
+        }
     }
 
 }

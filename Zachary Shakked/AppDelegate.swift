@@ -22,7 +22,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let hvc = ZSSHomeNavViewController()
         window?.rootViewController = hvc
-        
         return true
     }
 

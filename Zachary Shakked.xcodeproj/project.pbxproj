@@ -7,35 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4A010B771AE8875F00A3FB38 /* Building Filled-99.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A010B651AE8875F00A3FB38 /* Building Filled-99.png */; };
-		4A010B781AE8875F00A3FB38 /* Building Filled-66.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A010B661AE8875F00A3FB38 /* Building Filled-66.png */; };
-		4A010B791AE8875F00A3FB38 /* Building Filled-33.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A010B671AE8875F00A3FB38 /* Building Filled-33.png */; };
-		4A010B7A1AE8875F00A3FB38 /* Golf Filled-99.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A010B681AE8875F00A3FB38 /* Golf Filled-99.png */; };
-		4A010B7B1AE8875F00A3FB38 /* Golf Filled-66.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A010B691AE8875F00A3FB38 /* Golf Filled-66.png */; };
-		4A010B7C1AE8875F00A3FB38 /* Golf Filled-33.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A010B6A1AE8875F00A3FB38 /* Golf Filled-33.png */; };
-		4A010B7D1AE8875F00A3FB38 /* Student Filled-99.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A010B6B1AE8875F00A3FB38 /* Student Filled-99.png */; };
-		4A010B7E1AE8875F00A3FB38 /* Student Filled-66.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A010B6C1AE8875F00A3FB38 /* Student Filled-66.png */; };
-		4A010B7F1AE8875F00A3FB38 /* Student Filled-33.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A010B6D1AE8875F00A3FB38 /* Student Filled-33.png */; };
-		4A010B801AE8875F00A3FB38 /* Bus Filled-99.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A010B6E1AE8875F00A3FB38 /* Bus Filled-99.png */; };
-		4A010B811AE8875F00A3FB38 /* Bus Filled-66.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A010B6F1AE8875F00A3FB38 /* Bus Filled-66.png */; };
-		4A010B821AE8875F00A3FB38 /* Bus Filled-33.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A010B701AE8875F00A3FB38 /* Bus Filled-33.png */; };
-		4A010B831AE8875F00A3FB38 /* Cup-99.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A010B711AE8875F00A3FB38 /* Cup-99.png */; };
-		4A010B841AE8875F00A3FB38 /* Cup-66.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A010B721AE8875F00A3FB38 /* Cup-66.png */; };
-		4A010B851AE8875F00A3FB38 /* Cup-33.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A010B731AE8875F00A3FB38 /* Cup-33.png */; };
-		4A010B861AE8875F00A3FB38 /* iPhone-99.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A010B741AE8875F00A3FB38 /* iPhone-99.png */; };
-		4A010B871AE8875F00A3FB38 /* iPhone-66.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A010B751AE8875F00A3FB38 /* iPhone-66.png */; };
-		4A010B881AE8875F00A3FB38 /* iPhone-33.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A010B761AE8875F00A3FB38 /* iPhone-33.png */; };
-		4A010B8A1AE8A77500A3FB38 /* ZSSDraggableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A010B891AE8A77500A3FB38 /* ZSSDraggableButton.swift */; };
-		4A010B8C1AE8B52600A3FB38 /* profile_cropped.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A010B8B1AE8B52600A3FB38 /* profile_cropped.jpg */; };
-		4A0315FE1AE55C4000EA4631 /* ZSSPaintBallsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0315FD1AE55C4000EA4631 /* ZSSPaintBallsViewController.swift */; };
 		4A15C3DF1ADDD217004EBEC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A15C3DE1ADDD217004EBEC3 /* AppDelegate.swift */; };
 		4A15C3E21ADDD217004EBEC3 /* Zachary_Shakked.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4A15C3E01ADDD217004EBEC3 /* Zachary_Shakked.xcdatamodeld */; };
-		4A15C3E41ADDD217004EBEC3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A15C3E31ADDD217004EBEC3 /* ViewController.swift */; };
 		4A15C3E91ADDD217004EBEC3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A15C3E81ADDD217004EBEC3 /* Images.xcassets */; };
 		4A15C3EC1ADDD217004EBEC3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A15C3EA1ADDD217004EBEC3 /* LaunchScreen.xib */; };
 		4A15C3F81ADDD217004EBEC3 /* Zachary_ShakkedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A15C3F71ADDD217004EBEC3 /* Zachary_ShakkedTests.swift */; };
-		4A15C4021ADDD8FA004EBEC3 /* ZSSHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A15C4011ADDD8FA004EBEC3 /* ZSSHomeViewController.swift */; };
 		4A15C4041ADDD924004EBEC3 /* ZSSBall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A15C4031ADDD924004EBEC3 /* ZSSBall.swift */; };
+		4A4AC6801AED50BB003C2608 /* ZSSPixableMoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4AC67F1AED50BB003C2608 /* ZSSPixableMoreViewController.swift */; };
+		4A4AC6831AED5E84003C2608 /* ZSSSportsMoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4AC6821AED5E84003C2608 /* ZSSSportsMoreViewController.swift */; };
+		4A4AC68D1AED6EFC003C2608 /* ZSSNYCMoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4AC68C1AED6EFC003C2608 /* ZSSNYCMoreViewController.swift */; };
+		4A4AC6921AED8F03003C2608 /* ZSSAttributeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4AC6901AED8F03003C2608 /* ZSSAttributeViewController.swift */; };
+		4A4AC6931AED8F03003C2608 /* ZSSAttributeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A4AC6911AED8F03003C2608 /* ZSSAttributeViewController.xib */; };
 		4A56C7B81AE9FFE5007869A2 /* ZSSSubject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A56C7B71AE9FFE5007869A2 /* ZSSSubject.swift */; };
 		4A56C7BA1AEBFD50007869A2 /* FlatironFilter.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A56C7B91AEBFD50007869A2 /* FlatironFilter.jpg */; };
 		4A56C7BC1AEBFF84007869A2 /* FlatironFilterWide.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4A56C7BB1AEBFF84007869A2 /* FlatironFilterWide.jpeg */; };
@@ -56,10 +38,15 @@
 		4A56C7DA1AEC2005007869A2 /* ZSSNYCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A56C7D91AEC2005007869A2 /* ZSSNYCViewController.swift */; };
 		4A56C7DC1AEC4C96007869A2 /* NYCSunsetWater.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A56C7DB1AEC4C96007869A2 /* NYCSunsetWater.png */; };
 		4A56C7DE1AEC4CDC007869A2 /* ZSSSchoolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A56C7DD1AEC4CDC007869A2 /* ZSSSchoolViewController.swift */; };
+		4A56C7E11AECBDAE007869A2 /* ZSSAppChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A56C7DF1AECBDAE007869A2 /* ZSSAppChildViewController.swift */; };
+		4A56C7E21AECBDAE007869A2 /* ZSSAppChildViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A56C7E01AECBDAE007869A2 /* ZSSAppChildViewController.xib */; };
+		4A56C7E61AECC009007869A2 /* ZSSAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A56C7E41AECC009007869A2 /* ZSSAppViewController.swift */; };
+		4A56C7E71AECC009007869A2 /* ZSSAppViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A56C7E51AECC009007869A2 /* ZSSAppViewController.xib */; };
+		4A56C7E91AECC59C007869A2 /* iPhoneFrame.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A56C7E81AECC59C007869A2 /* iPhoneFrame.png */; };
+		4A56C7EE1AECDA6E007869A2 /* ZSSAppListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A56C7EC1AECDA6E007869A2 /* ZSSAppListViewController.swift */; };
+		4A56C7EF1AECDA6E007869A2 /* ZSSAppListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A56C7ED1AECDA6E007869A2 /* ZSSAppListViewController.xib */; };
 		4A668BE61ADF25E10093CBF7 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A668BE51ADF25E10093CBF7 /* UIColor+Hex.swift */; };
 		4A668BE81AE0086D0093CBF7 /* Array+RemoveObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A668BE71AE0086D0093CBF7 /* Array+RemoveObject.swift */; };
-		4A668BEA1AE00CC70093CBF7 /* WelcomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A668BE91AE00CC70093CBF7 /* WelcomeView.xib */; };
-		4A668BEC1AE01E610093CBF7 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A668BEB1AE01E610093CBF7 /* WelcomeView.swift */; };
 		4A7822431AE9D65F009C28BE /* Alley.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4A78223A1AE9D65F009C28BE /* Alley.jpeg */; };
 		4A7822441AE9D65F009C28BE /* Bridge.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4A78223B1AE9D65F009C28BE /* Bridge.jpeg */; };
 		4A7822451AE9D65F009C28BE /* BridgeSky.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4A78223C1AE9D65F009C28BE /* BridgeSky.jpeg */; };
@@ -72,11 +59,51 @@
 		4A78224F1AE9D98F009C28BE /* ZachIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A78224C1AE9D98F009C28BE /* ZachIcon.png */; };
 		4A7822501AE9D98F009C28BE /* ZachIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A78224D1AE9D98F009C28BE /* ZachIcon@2x.png */; };
 		4A7822511AE9D98F009C28BE /* ZachIcon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A78224E1AE9D98F009C28BE /* ZachIcon@3x.png */; };
-		4A7ECC101AE0C5A900D60BFD /* ZSSCoffeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7ECC0E1AE0C5A900D60BFD /* ZSSCoffeeViewController.swift */; };
-		4A7ECC111AE0C5A900D60BFD /* ZSSCoffeeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A7ECC0F1AE0C5A900D60BFD /* ZSSCoffeeViewController.xib */; };
 		4A9BB8BC1AE5F86300EE5BBF /* ZSSHomeNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9BB8BA1AE5F86300EE5BBF /* ZSSHomeNavViewController.swift */; };
 		4A9BB8BD1AE5F86300EE5BBF /* ZSSHomeNavViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A9BB8BB1AE5F86300EE5BBF /* ZSSHomeNavViewController.xib */; };
+		4A9F7C521AED35C00013FC6D /* ZSSSchoolMoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9F7C501AED35C00013FC6D /* ZSSSchoolMoreViewController.swift */; };
+		4A9F7C531AED35C00013FC6D /* ZSSSchoolMoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A9F7C511AED35C00013FC6D /* ZSSSchoolMoreViewController.xib */; };
+		4AA158821AECECBA00340A77 /* ZSSAppsInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA158811AECECBA00340A77 /* ZSSAppsInfoViewController.swift */; };
+		4AA158871AECF39E00340A77 /* ZSSCoffeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA158851AECF39E00340A77 /* ZSSCoffeeViewController.swift */; };
+		4AA158881AECF39E00340A77 /* ZSSCoffeeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AA158861AECF39E00340A77 /* ZSSCoffeeViewController.xib */; };
+		4AA1588B1AECF5CA00340A77 /* ZSSCoffeeInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA1588A1AECF5CA00340A77 /* ZSSCoffeeInfoViewController.swift */; };
+		4AA1588D1AECF80B00340A77 /* Artwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA1588C1AECF80B00340A77 /* Artwork.swift */; };
 		4ACCC05A1AE94D11004E1115 /* ZSSInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACCC0581AE94D11004E1115 /* ZSSInfoViewController.swift */; };
+		4AD7682E1AED942300128B5D /* ShikShak1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4AD7682B1AED942300128B5D /* ShikShak1.jpeg */; };
+		4AD7682F1AED942300128B5D /* ShikShak2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AD7682C1AED942300128B5D /* ShikShak2.png */; };
+		4AD768301AED942300128B5D /* ShikShak3.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AD7682D1AED942300128B5D /* ShikShak3.png */; };
+		4AD768341AED944800128B5D /* UsernameSearcher1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AD768311AED944800128B5D /* UsernameSearcher1.png */; };
+		4AD768351AED944800128B5D /* UsernameSearcher2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AD768321AED944800128B5D /* UsernameSearcher2.png */; };
+		4AD768361AED944800128B5D /* UsernameSearcher3.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AD768331AED944800128B5D /* UsernameSearcher3.png */; };
+		4AD7683A1AED946400128B5D /* Shakd1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AD768371AED946400128B5D /* Shakd1.png */; };
+		4AD7683B1AED946400128B5D /* Shakd2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AD768381AED946400128B5D /* Shakd2.png */; };
+		4AD7683C1AED946400128B5D /* Shakd3.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AD768391AED946400128B5D /* Shakd3.png */; };
+		4AD768401AED947600128B5D /* productiv1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AD7683D1AED947600128B5D /* productiv1.png */; };
+		4AD768411AED947600128B5D /* productiv2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AD7683E1AED947600128B5D /* productiv2.png */; };
+		4AD768421AED947600128B5D /* productiv3.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AD7683F1AED947600128B5D /* productiv3.png */; };
+		4AD768441AED948900128B5D /* pigskin.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4AD768431AED948900128B5D /* pigskin.jpg */; };
+		4AD768481AED949A00128B5D /* grandcentral.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4AD768451AED949A00128B5D /* grandcentral.jpg */; };
+		4AD768491AED949A00128B5D /* icerink.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4AD768461AED949A00128B5D /* icerink.jpg */; };
+		4AD7684A1AED949A00128B5D /* tunnel.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4AD768471AED949A00128B5D /* tunnel.jpg */; };
+		4AD7685D1AED94C900128B5D /* Building Filled-99.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AD7684B1AED94C900128B5D /* Building Filled-99.png */; };
+		4AD7685E1AED94C900128B5D /* Building Filled-66.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AD7684C1AED94C900128B5D /* Building Filled-66.png */; };
+		4AD7685F1AED94C900128B5D /* Building Filled-33.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AD7684D1AED94C900128B5D /* Building Filled-33.png */; };
+		4AD768601AED94C900128B5D /* Golf Filled-99.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AD7684E1AED94C900128B5D /* Golf Filled-99.png */; };
+		4AD768611AED94C900128B5D /* Golf Filled-66.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AD7684F1AED94C900128B5D /* Golf Filled-66.png */; };
+		4AD768621AED94C900128B5D /* Golf Filled-33.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AD768501AED94C900128B5D /* Golf Filled-33.png */; };
+		4AD768631AED94C900128B5D /* Student Filled-99.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AD768511AED94C900128B5D /* Student Filled-99.png */; };
+		4AD768641AED94C900128B5D /* Student Filled-66.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AD768521AED94C900128B5D /* Student Filled-66.png */; };
+		4AD768651AED94C900128B5D /* Student Filled-33.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AD768531AED94C900128B5D /* Student Filled-33.png */; };
+		4AD768661AED94C900128B5D /* Bus Filled-99.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AD768541AED94C900128B5D /* Bus Filled-99.png */; };
+		4AD768671AED94C900128B5D /* Bus Filled-66.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AD768551AED94C900128B5D /* Bus Filled-66.png */; };
+		4AD768681AED94C900128B5D /* Bus Filled-33.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AD768561AED94C900128B5D /* Bus Filled-33.png */; };
+		4AD768691AED94C900128B5D /* Cup-99.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AD768571AED94C900128B5D /* Cup-99.png */; };
+		4AD7686A1AED94C900128B5D /* Cup-66.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AD768581AED94C900128B5D /* Cup-66.png */; };
+		4AD7686B1AED94C900128B5D /* Cup-33.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AD768591AED94C900128B5D /* Cup-33.png */; };
+		4AD7686C1AED94C900128B5D /* iPhone-99.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AD7685A1AED94C900128B5D /* iPhone-99.png */; };
+		4AD7686D1AED94C900128B5D /* iPhone-66.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AD7685B1AED94C900128B5D /* iPhone-66.png */; };
+		4AD7686E1AED94C900128B5D /* iPhone-33.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AD7685C1AED94C900128B5D /* iPhone-33.png */; };
+		4AD768701AED94DB00128B5D /* profile_cropped.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4AD7686F1AED94DB00128B5D /* profile_cropped.jpg */; };
 		D3EC2F7D88200F4674CC10E8 /* libPods-Zachary Shakked.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB814F1535BC868EEBD480E /* libPods-Zachary Shakked.a */; };
 /* End PBXBuildFile section */
 
@@ -92,40 +119,22 @@
 
 /* Begin PBXFileReference section */
 		07A20B5116CF71A2D1F89C2D /* Pods-Zachary Shakked.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zachary Shakked.release.xcconfig"; path = "Pods/Target Support Files/Pods-Zachary Shakked/Pods-Zachary Shakked.release.xcconfig"; sourceTree = "<group>"; };
-		4A010B651AE8875F00A3FB38 /* Building Filled-99.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Building Filled-99.png"; path = "../../../../Downloads/Building Filled-99.png"; sourceTree = "<group>"; };
-		4A010B661AE8875F00A3FB38 /* Building Filled-66.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Building Filled-66.png"; path = "../../../../Downloads/Building Filled-66.png"; sourceTree = "<group>"; };
-		4A010B671AE8875F00A3FB38 /* Building Filled-33.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Building Filled-33.png"; path = "../../../../Downloads/Building Filled-33.png"; sourceTree = "<group>"; };
-		4A010B681AE8875F00A3FB38 /* Golf Filled-99.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Golf Filled-99.png"; path = "../../../../Downloads/Golf Filled-99.png"; sourceTree = "<group>"; };
-		4A010B691AE8875F00A3FB38 /* Golf Filled-66.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Golf Filled-66.png"; path = "../../../../Downloads/Golf Filled-66.png"; sourceTree = "<group>"; };
-		4A010B6A1AE8875F00A3FB38 /* Golf Filled-33.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Golf Filled-33.png"; path = "../../../../Downloads/Golf Filled-33.png"; sourceTree = "<group>"; };
-		4A010B6B1AE8875F00A3FB38 /* Student Filled-99.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Student Filled-99.png"; path = "../../../../Downloads/Student Filled-99.png"; sourceTree = "<group>"; };
-		4A010B6C1AE8875F00A3FB38 /* Student Filled-66.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Student Filled-66.png"; path = "../../../../Downloads/Student Filled-66.png"; sourceTree = "<group>"; };
-		4A010B6D1AE8875F00A3FB38 /* Student Filled-33.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Student Filled-33.png"; path = "../../../../Downloads/Student Filled-33.png"; sourceTree = "<group>"; };
-		4A010B6E1AE8875F00A3FB38 /* Bus Filled-99.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Bus Filled-99.png"; path = "../../../../Downloads/Bus Filled-99.png"; sourceTree = "<group>"; };
-		4A010B6F1AE8875F00A3FB38 /* Bus Filled-66.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Bus Filled-66.png"; path = "../../../../Downloads/Bus Filled-66.png"; sourceTree = "<group>"; };
-		4A010B701AE8875F00A3FB38 /* Bus Filled-33.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Bus Filled-33.png"; path = "../../../../Downloads/Bus Filled-33.png"; sourceTree = "<group>"; };
-		4A010B711AE8875F00A3FB38 /* Cup-99.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Cup-99.png"; path = "../../../../Downloads/Cup-99.png"; sourceTree = "<group>"; };
-		4A010B721AE8875F00A3FB38 /* Cup-66.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Cup-66.png"; path = "../../../../Downloads/Cup-66.png"; sourceTree = "<group>"; };
-		4A010B731AE8875F00A3FB38 /* Cup-33.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Cup-33.png"; path = "../../../../Downloads/Cup-33.png"; sourceTree = "<group>"; };
-		4A010B741AE8875F00A3FB38 /* iPhone-99.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPhone-99.png"; path = "../../../../Downloads/iPhone-99.png"; sourceTree = "<group>"; };
-		4A010B751AE8875F00A3FB38 /* iPhone-66.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPhone-66.png"; path = "../../../../Downloads/iPhone-66.png"; sourceTree = "<group>"; };
-		4A010B761AE8875F00A3FB38 /* iPhone-33.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPhone-33.png"; path = "../../../../Downloads/iPhone-33.png"; sourceTree = "<group>"; };
-		4A010B891AE8A77500A3FB38 /* ZSSDraggableButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZSSDraggableButton.swift; sourceTree = "<group>"; };
-		4A010B8B1AE8B52600A3FB38 /* profile_cropped.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = profile_cropped.jpg; path = "../../../../Google Drive/profile_cropped.jpg"; sourceTree = "<group>"; };
-		4A0315FD1AE55C4000EA4631 /* ZSSPaintBallsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZSSPaintBallsViewController.swift; sourceTree = "<group>"; };
 		4A15C3D91ADDD217004EBEC3 /* Zachary Shakked.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Zachary Shakked.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A15C3DD1ADDD217004EBEC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A15C3DE1ADDD217004EBEC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A15C3E11ADDD217004EBEC3 /* Zachary_Shakked.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Zachary_Shakked.xcdatamodel; sourceTree = "<group>"; };
-		4A15C3E31ADDD217004EBEC3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4A15C3E81ADDD217004EBEC3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4A15C3EB1ADDD217004EBEC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		4A15C3F11ADDD217004EBEC3 /* Zachary ShakkedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Zachary ShakkedTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A15C3F61ADDD217004EBEC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A15C3F71ADDD217004EBEC3 /* Zachary_ShakkedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zachary_ShakkedTests.swift; sourceTree = "<group>"; };
-		4A15C4011ADDD8FA004EBEC3 /* ZSSHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZSSHomeViewController.swift; sourceTree = "<group>"; };
 		4A15C4031ADDD924004EBEC3 /* ZSSBall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZSSBall.swift; sourceTree = "<group>"; };
 		4A2BE7261AE051C400C9F09F /* Zachary Shakked-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Zachary Shakked-Bridging-Header.h"; sourceTree = "<group>"; };
+		4A4AC67F1AED50BB003C2608 /* ZSSPixableMoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZSSPixableMoreViewController.swift; sourceTree = "<group>"; };
+		4A4AC6821AED5E84003C2608 /* ZSSSportsMoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZSSSportsMoreViewController.swift; sourceTree = "<group>"; };
+		4A4AC68C1AED6EFC003C2608 /* ZSSNYCMoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZSSNYCMoreViewController.swift; sourceTree = "<group>"; };
+		4A4AC6901AED8F03003C2608 /* ZSSAttributeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZSSAttributeViewController.swift; sourceTree = "<group>"; };
+		4A4AC6911AED8F03003C2608 /* ZSSAttributeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZSSAttributeViewController.xib; sourceTree = "<group>"; };
 		4A56C7B71AE9FFE5007869A2 /* ZSSSubject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZSSSubject.swift; sourceTree = "<group>"; };
 		4A56C7B91AEBFD50007869A2 /* FlatironFilter.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = FlatironFilter.jpg; path = "images/NYC Pics/FlatironFilter.jpg"; sourceTree = "<group>"; };
 		4A56C7BB1AEBFF84007869A2 /* FlatironFilterWide.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = FlatironFilterWide.jpeg; path = "images/NYC Pics/FlatironFilterWide.jpeg"; sourceTree = "<group>"; };
@@ -146,10 +155,15 @@
 		4A56C7D91AEC2005007869A2 /* ZSSNYCViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZSSNYCViewController.swift; sourceTree = "<group>"; };
 		4A56C7DB1AEC4C96007869A2 /* NYCSunsetWater.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = NYCSunsetWater.png; path = "images/NYC Pics/NYCSunsetWater.png"; sourceTree = "<group>"; };
 		4A56C7DD1AEC4CDC007869A2 /* ZSSSchoolViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZSSSchoolViewController.swift; sourceTree = "<group>"; };
+		4A56C7DF1AECBDAE007869A2 /* ZSSAppChildViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZSSAppChildViewController.swift; sourceTree = "<group>"; };
+		4A56C7E01AECBDAE007869A2 /* ZSSAppChildViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZSSAppChildViewController.xib; sourceTree = "<group>"; };
+		4A56C7E41AECC009007869A2 /* ZSSAppViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZSSAppViewController.swift; sourceTree = SOURCE_ROOT; };
+		4A56C7E51AECC009007869A2 /* ZSSAppViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZSSAppViewController.xib; sourceTree = SOURCE_ROOT; };
+		4A56C7E81AECC59C007869A2 /* iPhoneFrame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iPhoneFrame.png; path = images/Other/AppPics/iPhoneFrame.png; sourceTree = "<group>"; };
+		4A56C7EC1AECDA6E007869A2 /* ZSSAppListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZSSAppListViewController.swift; sourceTree = "<group>"; };
+		4A56C7ED1AECDA6E007869A2 /* ZSSAppListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZSSAppListViewController.xib; sourceTree = "<group>"; };
 		4A668BE51ADF25E10093CBF7 /* UIColor+Hex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+Hex.swift"; path = "Zachary Shakked.xcodeproj/../UIColor+Hex.swift"; sourceTree = SOURCE_ROOT; };
 		4A668BE71AE0086D0093CBF7 /* Array+RemoveObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+RemoveObject.swift"; sourceTree = "<group>"; };
-		4A668BE91AE00CC70093CBF7 /* WelcomeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WelcomeView.xib; sourceTree = "<group>"; };
-		4A668BEB1AE01E610093CBF7 /* WelcomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		4A78223A1AE9D65F009C28BE /* Alley.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Alley.jpeg; path = "images/NYC Pics/Alley.jpeg"; sourceTree = "<group>"; };
 		4A78223B1AE9D65F009C28BE /* Bridge.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Bridge.jpeg; path = "images/NYC Pics/Bridge.jpeg"; sourceTree = "<group>"; };
 		4A78223C1AE9D65F009C28BE /* BridgeSky.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = BridgeSky.jpeg; path = "images/NYC Pics/BridgeSky.jpeg"; sourceTree = "<group>"; };
@@ -162,11 +176,51 @@
 		4A78224C1AE9D98F009C28BE /* ZachIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ZachIcon.png; path = images/ZachIcon.png; sourceTree = "<group>"; };
 		4A78224D1AE9D98F009C28BE /* ZachIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ZachIcon@2x.png"; path = "images/ZachIcon@2x.png"; sourceTree = "<group>"; };
 		4A78224E1AE9D98F009C28BE /* ZachIcon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ZachIcon@3x.png"; path = "images/ZachIcon@3x.png"; sourceTree = "<group>"; };
-		4A7ECC0E1AE0C5A900D60BFD /* ZSSCoffeeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZSSCoffeeViewController.swift; sourceTree = "<group>"; };
-		4A7ECC0F1AE0C5A900D60BFD /* ZSSCoffeeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZSSCoffeeViewController.xib; sourceTree = "<group>"; };
 		4A9BB8BA1AE5F86300EE5BBF /* ZSSHomeNavViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZSSHomeNavViewController.swift; sourceTree = "<group>"; };
 		4A9BB8BB1AE5F86300EE5BBF /* ZSSHomeNavViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZSSHomeNavViewController.xib; sourceTree = "<group>"; };
+		4A9F7C501AED35C00013FC6D /* ZSSSchoolMoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZSSSchoolMoreViewController.swift; sourceTree = "<group>"; };
+		4A9F7C511AED35C00013FC6D /* ZSSSchoolMoreViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZSSSchoolMoreViewController.xib; sourceTree = "<group>"; };
+		4AA158811AECECBA00340A77 /* ZSSAppsInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZSSAppsInfoViewController.swift; sourceTree = "<group>"; };
+		4AA158851AECF39E00340A77 /* ZSSCoffeeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZSSCoffeeViewController.swift; sourceTree = "<group>"; };
+		4AA158861AECF39E00340A77 /* ZSSCoffeeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZSSCoffeeViewController.xib; sourceTree = "<group>"; };
+		4AA1588A1AECF5CA00340A77 /* ZSSCoffeeInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZSSCoffeeInfoViewController.swift; sourceTree = "<group>"; };
+		4AA1588C1AECF80B00340A77 /* Artwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Artwork.swift; sourceTree = "<group>"; };
 		4ACCC0581AE94D11004E1115 /* ZSSInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZSSInfoViewController.swift; sourceTree = "<group>"; };
+		4AD7682B1AED942300128B5D /* ShikShak1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ShikShak1.jpeg; sourceTree = "<group>"; };
+		4AD7682C1AED942300128B5D /* ShikShak2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ShikShak2.png; sourceTree = "<group>"; };
+		4AD7682D1AED942300128B5D /* ShikShak3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ShikShak3.png; sourceTree = "<group>"; };
+		4AD768311AED944800128B5D /* UsernameSearcher1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UsernameSearcher1.png; sourceTree = "<group>"; };
+		4AD768321AED944800128B5D /* UsernameSearcher2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UsernameSearcher2.png; sourceTree = "<group>"; };
+		4AD768331AED944800128B5D /* UsernameSearcher3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UsernameSearcher3.png; sourceTree = "<group>"; };
+		4AD768371AED946400128B5D /* Shakd1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Shakd1.png; sourceTree = "<group>"; };
+		4AD768381AED946400128B5D /* Shakd2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Shakd2.png; sourceTree = "<group>"; };
+		4AD768391AED946400128B5D /* Shakd3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Shakd3.png; sourceTree = "<group>"; };
+		4AD7683D1AED947600128B5D /* productiv1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = productiv1.png; sourceTree = "<group>"; };
+		4AD7683E1AED947600128B5D /* productiv2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = productiv2.png; sourceTree = "<group>"; };
+		4AD7683F1AED947600128B5D /* productiv3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = productiv3.png; sourceTree = "<group>"; };
+		4AD768431AED948900128B5D /* pigskin.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pigskin.jpg; sourceTree = "<group>"; };
+		4AD768451AED949A00128B5D /* grandcentral.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = grandcentral.jpg; sourceTree = "<group>"; };
+		4AD768461AED949A00128B5D /* icerink.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = icerink.jpg; sourceTree = "<group>"; };
+		4AD768471AED949A00128B5D /* tunnel.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tunnel.jpg; sourceTree = "<group>"; };
+		4AD7684B1AED94C900128B5D /* Building Filled-99.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Building Filled-99.png"; sourceTree = "<group>"; };
+		4AD7684C1AED94C900128B5D /* Building Filled-66.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Building Filled-66.png"; sourceTree = "<group>"; };
+		4AD7684D1AED94C900128B5D /* Building Filled-33.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Building Filled-33.png"; sourceTree = "<group>"; };
+		4AD7684E1AED94C900128B5D /* Golf Filled-99.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Golf Filled-99.png"; sourceTree = "<group>"; };
+		4AD7684F1AED94C900128B5D /* Golf Filled-66.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Golf Filled-66.png"; sourceTree = "<group>"; };
+		4AD768501AED94C900128B5D /* Golf Filled-33.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Golf Filled-33.png"; sourceTree = "<group>"; };
+		4AD768511AED94C900128B5D /* Student Filled-99.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Student Filled-99.png"; sourceTree = "<group>"; };
+		4AD768521AED94C900128B5D /* Student Filled-66.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Student Filled-66.png"; sourceTree = "<group>"; };
+		4AD768531AED94C900128B5D /* Student Filled-33.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Student Filled-33.png"; sourceTree = "<group>"; };
+		4AD768541AED94C900128B5D /* Bus Filled-99.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Bus Filled-99.png"; sourceTree = "<group>"; };
+		4AD768551AED94C900128B5D /* Bus Filled-66.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Bus Filled-66.png"; sourceTree = "<group>"; };
+		4AD768561AED94C900128B5D /* Bus Filled-33.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Bus Filled-33.png"; sourceTree = "<group>"; };
+		4AD768571AED94C900128B5D /* Cup-99.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Cup-99.png"; sourceTree = "<group>"; };
+		4AD768581AED94C900128B5D /* Cup-66.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Cup-66.png"; sourceTree = "<group>"; };
+		4AD768591AED94C900128B5D /* Cup-33.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Cup-33.png"; sourceTree = "<group>"; };
+		4AD7685A1AED94C900128B5D /* iPhone-99.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPhone-99.png"; sourceTree = "<group>"; };
+		4AD7685B1AED94C900128B5D /* iPhone-66.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPhone-66.png"; sourceTree = "<group>"; };
+		4AD7685C1AED94C900128B5D /* iPhone-33.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPhone-33.png"; sourceTree = "<group>"; };
+		4AD7686F1AED94DB00128B5D /* profile_cropped.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = profile_cropped.jpg; sourceTree = "<group>"; };
 		9AB814F1535BC868EEBD480E /* libPods-Zachary Shakked.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Zachary Shakked.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4B689C2922F317C38B3A6D3 /* Pods-Zachary Shakked.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zachary Shakked.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Zachary Shakked/Pods-Zachary Shakked.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -225,28 +279,24 @@
 			children = (
 				4A9BB8C41AE70CF800EE5BBF /* images */,
 				4A15C3DE1ADDD217004EBEC3 /* AppDelegate.swift */,
-				4A15C3E31ADDD217004EBEC3 /* ViewController.swift */,
 				4A668BE51ADF25E10093CBF7 /* UIColor+Hex.swift */,
-				4A15C4011ADDD8FA004EBEC3 /* ZSSHomeViewController.swift */,
-				4A0315FD1AE55C4000EA4631 /* ZSSPaintBallsViewController.swift */,
 				4A56C7B71AE9FFE5007869A2 /* ZSSSubject.swift */,
 				4A9BB8BA1AE5F86300EE5BBF /* ZSSHomeNavViewController.swift */,
 				4A9BB8BB1AE5F86300EE5BBF /* ZSSHomeNavViewController.xib */,
 				4ACCC0581AE94D11004E1115 /* ZSSInfoViewController.swift */,
-				4A56C7BD1AEC012A007869A2 /* ZSSPixableViewController.swift */,
-				4A010B891AE8A77500A3FB38 /* ZSSDraggableButton.swift */,
-				4A7ECC0E1AE0C5A900D60BFD /* ZSSCoffeeViewController.swift */,
-				4A7ECC0F1AE0C5A900D60BFD /* ZSSCoffeeViewController.xib */,
-				4A668BE91AE00CC70093CBF7 /* WelcomeView.xib */,
-				4A668BEB1AE01E610093CBF7 /* WelcomeView.swift */,
+				4A4AC6811AED50CC003C2608 /* Pixable */,
+				4AA158891AECF3A800340A77 /* Coffee */,
+				4A56C7E31AECBDB4007869A2 /* App Showcase */,
 				4A15C4031ADDD924004EBEC3 /* ZSSBall.swift */,
 				4A15C3E81ADDD217004EBEC3 /* Images.xcassets */,
-				4A56C7C51AEC08E3007869A2 /* ZSSSportsViewController.swift */,
-				4A56C7D91AEC2005007869A2 /* ZSSNYCViewController.swift */,
-				4A56C7DD1AEC4CDC007869A2 /* ZSSSchoolViewController.swift */,
+				4A4AC68F1AED8118003C2608 /* Sports */,
+				4A4AC68E1AED8112003C2608 /* NYC */,
+				4A9F7C541AED35D00013FC6D /* School */,
 				4A15C3EA1ADDD217004EBEC3 /* LaunchScreen.xib */,
 				4A15C3E01ADDD217004EBEC3 /* Zachary_Shakked.xcdatamodeld */,
 				4A15C3DC1ADDD217004EBEC3 /* Supporting Files */,
+				4A4AC6901AED8F03003C2608 /* ZSSAttributeViewController.swift */,
+				4A4AC6911AED8F03003C2608 /* ZSSAttributeViewController.xib */,
 			);
 			path = "Zachary Shakked";
 			sourceTree = "<group>";
@@ -276,9 +326,67 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		4A4AC6811AED50CC003C2608 /* Pixable */ = {
+			isa = PBXGroup;
+			children = (
+				4A56C7BD1AEC012A007869A2 /* ZSSPixableViewController.swift */,
+				4A4AC67F1AED50BB003C2608 /* ZSSPixableMoreViewController.swift */,
+			);
+			name = Pixable;
+			sourceTree = "<group>";
+		};
+		4A4AC68E1AED8112003C2608 /* NYC */ = {
+			isa = PBXGroup;
+			children = (
+				4A56C7D91AEC2005007869A2 /* ZSSNYCViewController.swift */,
+				4A4AC68C1AED6EFC003C2608 /* ZSSNYCMoreViewController.swift */,
+			);
+			name = NYC;
+			sourceTree = "<group>";
+		};
+		4A4AC68F1AED8118003C2608 /* Sports */ = {
+			isa = PBXGroup;
+			children = (
+				4A56C7C51AEC08E3007869A2 /* ZSSSportsViewController.swift */,
+				4A4AC6821AED5E84003C2608 /* ZSSSportsMoreViewController.swift */,
+			);
+			name = Sports;
+			sourceTree = "<group>";
+		};
+		4A56C7E31AECBDB4007869A2 /* App Showcase */ = {
+			isa = PBXGroup;
+			children = (
+				4AA158811AECECBA00340A77 /* ZSSAppsInfoViewController.swift */,
+				4A56C7EC1AECDA6E007869A2 /* ZSSAppListViewController.swift */,
+				4A56C7ED1AECDA6E007869A2 /* ZSSAppListViewController.xib */,
+				4A56C7E41AECC009007869A2 /* ZSSAppViewController.swift */,
+				4A56C7E51AECC009007869A2 /* ZSSAppViewController.xib */,
+				4A56C7DF1AECBDAE007869A2 /* ZSSAppChildViewController.swift */,
+				4A56C7E01AECBDAE007869A2 /* ZSSAppChildViewController.xib */,
+			);
+			name = "App Showcase";
+			sourceTree = "<group>";
+		};
 		4A9BB8C41AE70CF800EE5BBF /* images */ = {
 			isa = PBXGroup;
 			children = (
+				4AD768451AED949A00128B5D /* grandcentral.jpg */,
+				4AD768461AED949A00128B5D /* icerink.jpg */,
+				4AD768471AED949A00128B5D /* tunnel.jpg */,
+				4AD768431AED948900128B5D /* pigskin.jpg */,
+				4AD7683D1AED947600128B5D /* productiv1.png */,
+				4AD7683E1AED947600128B5D /* productiv2.png */,
+				4AD7683F1AED947600128B5D /* productiv3.png */,
+				4AD768371AED946400128B5D /* Shakd1.png */,
+				4AD768381AED946400128B5D /* Shakd2.png */,
+				4AD768391AED946400128B5D /* Shakd3.png */,
+				4AD768311AED944800128B5D /* UsernameSearcher1.png */,
+				4AD768321AED944800128B5D /* UsernameSearcher2.png */,
+				4AD768331AED944800128B5D /* UsernameSearcher3.png */,
+				4AD7682B1AED942300128B5D /* ShikShak1.jpeg */,
+				4AD7682C1AED942300128B5D /* ShikShak2.png */,
+				4AD7682D1AED942300128B5D /* ShikShak3.png */,
+				4A56C7E81AECC59C007869A2 /* iPhoneFrame.png */,
 				4A56C7DB1AEC4C96007869A2 /* NYCSunsetWater.png */,
 				4A56C7C71AEC1E9B007869A2 /* Bus2 Filled-33.png */,
 				4A56C7C81AEC1E9B007869A2 /* Bus2 Filled-66.png */,
@@ -296,6 +404,24 @@
 				4A78224D1AE9D98F009C28BE /* ZachIcon@2x.png */,
 				4A78224E1AE9D98F009C28BE /* ZachIcon@3x.png */,
 				4A56C7B91AEBFD50007869A2 /* FlatironFilter.jpg */,
+				4AD7684B1AED94C900128B5D /* Building Filled-99.png */,
+				4AD7684C1AED94C900128B5D /* Building Filled-66.png */,
+				4AD7684D1AED94C900128B5D /* Building Filled-33.png */,
+				4AD7684E1AED94C900128B5D /* Golf Filled-99.png */,
+				4AD7684F1AED94C900128B5D /* Golf Filled-66.png */,
+				4AD768501AED94C900128B5D /* Golf Filled-33.png */,
+				4AD768511AED94C900128B5D /* Student Filled-99.png */,
+				4AD768521AED94C900128B5D /* Student Filled-66.png */,
+				4AD768531AED94C900128B5D /* Student Filled-33.png */,
+				4AD768541AED94C900128B5D /* Bus Filled-99.png */,
+				4AD768551AED94C900128B5D /* Bus Filled-66.png */,
+				4AD768561AED94C900128B5D /* Bus Filled-33.png */,
+				4AD768571AED94C900128B5D /* Cup-99.png */,
+				4AD768581AED94C900128B5D /* Cup-66.png */,
+				4AD768591AED94C900128B5D /* Cup-33.png */,
+				4AD7685A1AED94C900128B5D /* iPhone-99.png */,
+				4AD7685B1AED94C900128B5D /* iPhone-66.png */,
+				4AD7685C1AED94C900128B5D /* iPhone-33.png */,
 				4A78223A1AE9D65F009C28BE /* Alley.jpeg */,
 				4A78223B1AE9D65F009C28BE /* Bridge.jpeg */,
 				4A78223C1AE9D65F009C28BE /* BridgeSky.jpeg */,
@@ -306,27 +432,30 @@
 				4A7822401AE9D65F009C28BE /* NYCSunset.jpg */,
 				4A7822411AE9D65F009C28BE /* OnBridge.jpeg */,
 				4A7822421AE9D65F009C28BE /* StoneWindow.jpeg */,
-				4A010B8B1AE8B52600A3FB38 /* profile_cropped.jpg */,
-				4A010B651AE8875F00A3FB38 /* Building Filled-99.png */,
-				4A010B661AE8875F00A3FB38 /* Building Filled-66.png */,
-				4A010B671AE8875F00A3FB38 /* Building Filled-33.png */,
-				4A010B681AE8875F00A3FB38 /* Golf Filled-99.png */,
-				4A010B691AE8875F00A3FB38 /* Golf Filled-66.png */,
-				4A010B6A1AE8875F00A3FB38 /* Golf Filled-33.png */,
-				4A010B6B1AE8875F00A3FB38 /* Student Filled-99.png */,
-				4A010B6C1AE8875F00A3FB38 /* Student Filled-66.png */,
-				4A010B6D1AE8875F00A3FB38 /* Student Filled-33.png */,
-				4A010B6E1AE8875F00A3FB38 /* Bus Filled-99.png */,
-				4A010B6F1AE8875F00A3FB38 /* Bus Filled-66.png */,
-				4A010B701AE8875F00A3FB38 /* Bus Filled-33.png */,
-				4A010B711AE8875F00A3FB38 /* Cup-99.png */,
-				4A010B721AE8875F00A3FB38 /* Cup-66.png */,
-				4A010B731AE8875F00A3FB38 /* Cup-33.png */,
-				4A010B741AE8875F00A3FB38 /* iPhone-99.png */,
-				4A010B751AE8875F00A3FB38 /* iPhone-66.png */,
-				4A010B761AE8875F00A3FB38 /* iPhone-33.png */,
+				4AD7686F1AED94DB00128B5D /* profile_cropped.jpg */,
 			);
 			name = images;
+			sourceTree = "<group>";
+		};
+		4A9F7C541AED35D00013FC6D /* School */ = {
+			isa = PBXGroup;
+			children = (
+				4A9F7C501AED35C00013FC6D /* ZSSSchoolMoreViewController.swift */,
+				4A9F7C511AED35C00013FC6D /* ZSSSchoolMoreViewController.xib */,
+				4A56C7DD1AEC4CDC007869A2 /* ZSSSchoolViewController.swift */,
+			);
+			name = School;
+			sourceTree = "<group>";
+		};
+		4AA158891AECF3A800340A77 /* Coffee */ = {
+			isa = PBXGroup;
+			children = (
+				4AA158851AECF39E00340A77 /* ZSSCoffeeViewController.swift */,
+				4AA158861AECF39E00340A77 /* ZSSCoffeeViewController.xib */,
+				4AA1588A1AECF5CA00340A77 /* ZSSCoffeeInfoViewController.swift */,
+				4AA1588C1AECF80B00340A77 /* Artwork.swift */,
+			);
+			name = Coffee;
 			sourceTree = "<group>";
 		};
 		4AE490E6163CE62D8E2FC718 /* Pods */ = {
@@ -421,55 +550,76 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A7822501AE9D98F009C28BE /* ZachIcon@2x.png in Resources */,
+				4AD768681AED94C900128B5D /* Bus Filled-33.png in Resources */,
+				4A56C7EF1AECDA6E007869A2 /* ZSSAppListViewController.xib in Resources */,
 				4A56C7C41AEC05B1007869A2 /* Football@3x.png in Resources */,
-				4A010B851AE8875F00A3FB38 /* Cup-33.png in Resources */,
+				4AD7685F1AED94C900128B5D /* Building Filled-33.png in Resources */,
+				4AD768481AED949A00128B5D /* grandcentral.jpg in Resources */,
 				4A15C3EC1ADDD217004EBEC3 /* LaunchScreen.xib in Resources */,
+				4AD768421AED947600128B5D /* productiv3.png in Resources */,
+				4AD768651AED94C900128B5D /* Student Filled-33.png in Resources */,
+				4AD768621AED94C900128B5D /* Golf Filled-33.png in Resources */,
 				4A56C7D01AEC1E9B007869A2 /* Bus2 Filled-33.png in Resources */,
-				4A010B871AE8875F00A3FB38 /* iPhone-66.png in Resources */,
-				4A010B7C1AE8875F00A3FB38 /* Golf Filled-33.png in Resources */,
-				4A010B7D1AE8875F00A3FB38 /* Student Filled-99.png in Resources */,
+				4AD7683C1AED946400128B5D /* Shakd3.png in Resources */,
+				4AD768491AED949A00128B5D /* icerink.jpg in Resources */,
+				4AD7685E1AED94C900128B5D /* Building Filled-66.png in Resources */,
+				4A4AC6931AED8F03003C2608 /* ZSSAttributeViewController.xib in Resources */,
 				4A9BB8BD1AE5F86300EE5BBF /* ZSSHomeNavViewController.xib in Resources */,
 				4A56C7C31AEC05B1007869A2 /* Football@2x.png in Resources */,
 				4A56C7BC1AEBFF84007869A2 /* FlatironFilterWide.jpeg in Resources */,
-				4A010B7F1AE8875F00A3FB38 /* Student Filled-33.png in Resources */,
+				4AD7686B1AED94C900128B5D /* Cup-33.png in Resources */,
+				4A56C7E71AECC009007869A2 /* ZSSAppViewController.xib in Resources */,
 				4A56C7D81AEC1E9B007869A2 /* Railroad Car3 Filled-99.png in Resources */,
+				4AD768671AED94C900128B5D /* Bus Filled-66.png in Resources */,
 				4A7822461AE9D65F009C28BE /* BrooklynBridge.jpeg in Resources */,
 				4A56C7D41AEC1E9B007869A2 /* Cars Filled-66.png in Resources */,
 				4A56C7D51AEC1E9B007869A2 /* Cars Filled-99.png in Resources */,
-				4A010B8C1AE8B52600A3FB38 /* profile_cropped.jpg in Resources */,
+				4AD768411AED947600128B5D /* productiv2.png in Resources */,
 				4A56C7BA1AEBFD50007869A2 /* FlatironFilter.jpg in Resources */,
-				4A010B841AE8875F00A3FB38 /* Cup-66.png in Resources */,
-				4A010B881AE8875F00A3FB38 /* iPhone-33.png in Resources */,
-				4A010B7E1AE8875F00A3FB38 /* Student Filled-66.png in Resources */,
 				4A7822431AE9D65F009C28BE /* Alley.jpeg in Resources */,
-				4A010B791AE8875F00A3FB38 /* Building Filled-33.png in Resources */,
 				4A56C7C21AEC05B1007869A2 /* Football.png in Resources */,
+				4AD768631AED94C900128B5D /* Student Filled-99.png in Resources */,
 				4A7822471AE9D65F009C28BE /* Hudson.jpeg in Resources */,
-				4A010B811AE8875F00A3FB38 /* Bus Filled-66.png in Resources */,
-				4A7ECC111AE0C5A900D60BFD /* ZSSCoffeeViewController.xib in Resources */,
+				4AD7686A1AED94C900128B5D /* Cup-66.png in Resources */,
+				4A56C7E21AECBDAE007869A2 /* ZSSAppChildViewController.xib in Resources */,
 				4A78224F1AE9D98F009C28BE /* ZachIcon.png in Resources */,
 				4A7822481AE9D65F009C28BE /* NYCNight.jpeg in Resources */,
-				4A668BEA1AE00CC70093CBF7 /* WelcomeView.xib in Resources */,
 				4A7822511AE9D98F009C28BE /* ZachIcon@3x.png in Resources */,
-				4A010B7A1AE8875F00A3FB38 /* Golf Filled-99.png in Resources */,
+				4AD768691AED94C900128B5D /* Cup-99.png in Resources */,
+				4AD768351AED944800128B5D /* UsernameSearcher2.png in Resources */,
+				4AD7684A1AED949A00128B5D /* tunnel.jpg in Resources */,
+				4AD768441AED948900128B5D /* pigskin.jpg in Resources */,
+				4AD7682E1AED942300128B5D /* ShikShak1.jpeg in Resources */,
+				4AD7682F1AED942300128B5D /* ShikShak2.png in Resources */,
 				4A7822491AE9D65F009C28BE /* NYCSunset.jpg in Resources */,
+				4AD7686D1AED94C900128B5D /* iPhone-66.png in Resources */,
+				4AD768401AED947600128B5D /* productiv1.png in Resources */,
 				4A56C7D31AEC1E9B007869A2 /* Cars Filled-33.png in Resources */,
-				4A010B821AE8875F00A3FB38 /* Bus Filled-33.png in Resources */,
-				4A010B781AE8875F00A3FB38 /* Building Filled-66.png in Resources */,
-				4A010B771AE8875F00A3FB38 /* Building Filled-99.png in Resources */,
+				4A9F7C531AED35C00013FC6D /* ZSSSchoolMoreViewController.xib in Resources */,
+				4AD768301AED942300128B5D /* ShikShak3.png in Resources */,
+				4AD7683A1AED946400128B5D /* Shakd1.png in Resources */,
+				4AD768641AED94C900128B5D /* Student Filled-66.png in Resources */,
 				4A7822441AE9D65F009C28BE /* Bridge.jpeg in Resources */,
-				4A010B831AE8875F00A3FB38 /* Cup-99.png in Resources */,
-				4A010B7B1AE8875F00A3FB38 /* Golf Filled-66.png in Resources */,
+				4AD768601AED94C900128B5D /* Golf Filled-99.png in Resources */,
+				4AD768661AED94C900128B5D /* Bus Filled-99.png in Resources */,
+				4AD7686E1AED94C900128B5D /* iPhone-33.png in Resources */,
+				4AD768361AED944800128B5D /* UsernameSearcher3.png in Resources */,
+				4AD768701AED94DB00128B5D /* profile_cropped.jpg in Resources */,
+				4AD7683B1AED946400128B5D /* Shakd2.png in Resources */,
+				4AD768611AED94C900128B5D /* Golf Filled-66.png in Resources */,
 				4A56C7DC1AEC4C96007869A2 /* NYCSunsetWater.png in Resources */,
 				4A56C7D21AEC1E9B007869A2 /* Bus2 Filled-99.png in Resources */,
+				4AD7686C1AED94C900128B5D /* iPhone-99.png in Resources */,
+				4AD768341AED944800128B5D /* UsernameSearcher1.png in Resources */,
+				4A56C7E91AECC59C007869A2 /* iPhoneFrame.png in Resources */,
 				4A56C7D61AEC1E9B007869A2 /* Railroad Car3 Filled-33.png in Resources */,
-				4A010B801AE8875F00A3FB38 /* Bus Filled-99.png in Resources */,
+				4AA158881AECF39E00340A77 /* ZSSCoffeeViewController.xib in Resources */,
 				4A15C3E91ADDD217004EBEC3 /* Images.xcassets in Resources */,
 				4A56C7D71AEC1E9B007869A2 /* Railroad Car3 Filled-66.png in Resources */,
 				4A7822451AE9D65F009C28BE /* BridgeSky.jpeg in Resources */,
+				4AD7685D1AED94C900128B5D /* Building Filled-99.png in Resources */,
 				4A78224B1AE9D65F009C28BE /* StoneWindow.jpeg in Resources */,
 				4A78224A1AE9D65F009C28BE /* OnBridge.jpeg in Resources */,
-				4A010B861AE8875F00A3FB38 /* iPhone-99.png in Resources */,
 				4A56C7D11AEC1E9B007869A2 /* Bus2 Filled-66.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -521,21 +671,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A9F7C521AED35C00013FC6D /* ZSSSchoolMoreViewController.swift in Sources */,
 				4A15C4041ADDD924004EBEC3 /* ZSSBall.swift in Sources */,
 				4A56C7DE1AEC4CDC007869A2 /* ZSSSchoolViewController.swift in Sources */,
+				4A56C7E11AECBDAE007869A2 /* ZSSAppChildViewController.swift in Sources */,
 				4ACCC05A1AE94D11004E1115 /* ZSSInfoViewController.swift in Sources */,
 				4A56C7C61AEC08E3007869A2 /* ZSSSportsViewController.swift in Sources */,
-				4A0315FE1AE55C4000EA4631 /* ZSSPaintBallsViewController.swift in Sources */,
-				4A15C3E41ADDD217004EBEC3 /* ViewController.swift in Sources */,
+				4A4AC6801AED50BB003C2608 /* ZSSPixableMoreViewController.swift in Sources */,
+				4A56C7EE1AECDA6E007869A2 /* ZSSAppListViewController.swift in Sources */,
+				4AA1588B1AECF5CA00340A77 /* ZSSCoffeeInfoViewController.swift in Sources */,
 				4A15C3E21ADDD217004EBEC3 /* Zachary_Shakked.xcdatamodeld in Sources */,
+				4AA1588D1AECF80B00340A77 /* Artwork.swift in Sources */,
+				4AA158821AECECBA00340A77 /* ZSSAppsInfoViewController.swift in Sources */,
 				4A56C7B81AE9FFE5007869A2 /* ZSSSubject.swift in Sources */,
-				4A010B8A1AE8A77500A3FB38 /* ZSSDraggableButton.swift in Sources */,
-				4A668BEC1AE01E610093CBF7 /* WelcomeView.swift in Sources */,
+				4A56C7E61AECC009007869A2 /* ZSSAppViewController.swift in Sources */,
+				4A4AC6831AED5E84003C2608 /* ZSSSportsMoreViewController.swift in Sources */,
+				4AA158871AECF39E00340A77 /* ZSSCoffeeViewController.swift in Sources */,
 				4A56C7DA1AEC2005007869A2 /* ZSSNYCViewController.swift in Sources */,
+				4A4AC68D1AED6EFC003C2608 /* ZSSNYCMoreViewController.swift in Sources */,
 				4A668BE61ADF25E10093CBF7 /* UIColor+Hex.swift in Sources */,
-				4A15C4021ADDD8FA004EBEC3 /* ZSSHomeViewController.swift in Sources */,
-				4A7ECC101AE0C5A900D60BFD /* ZSSCoffeeViewController.swift in Sources */,
 				4A668BE81AE0086D0093CBF7 /* Array+RemoveObject.swift in Sources */,
+				4A4AC6921AED8F03003C2608 /* ZSSAttributeViewController.swift in Sources */,
 				4A9BB8BC1AE5F86300EE5BBF /* ZSSHomeNavViewController.swift in Sources */,
 				4A56C7BE1AEC012A007869A2 /* ZSSPixableViewController.swift in Sources */,
 				4A15C3DF1ADDD217004EBEC3 /* AppDelegate.swift in Sources */,

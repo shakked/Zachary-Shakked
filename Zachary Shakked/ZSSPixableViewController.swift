@@ -18,22 +18,20 @@ class ZSSPixableViewController: ZSSInfoViewController {
     
     override func configureViews() {
         super.configureViews()
-        configureFootball()
-    }
-    
-    func configureFootball() -> Void {
-        let width = self.view.frame.size.width
-        let height = self.view.frame.size.height
-        
-        let footballFrame = CGRectMake(200, height - 200, 75, 38)
-        footballImageView = UIImageView(frame: footballFrame)
-        footballImageView.image = UIImage(named: "Football")
-        self.backgroundImageView.addSubview(footballImageView)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func tellMeMoreButtonPressed() {
+        let pmvc = ZSSPixableMoreViewController()
+        UIView.animateWithDuration(1.0, animations: { () -> Void in
+                self.view.alpha = 0.0
+            }) { (completed: Bool) -> Void in
+                self.presentViewController(pmvc, animated: false, completion: nil)
+        }
     }
     
     override func scrollViewDidScroll(scrollView: UIScrollView) {

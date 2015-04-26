@@ -13,21 +13,11 @@ class ZSSInfoViewController: UIViewController, UIScrollViewDelegate {
     var width : CGFloat!
     var height : CGFloat!
     
-    init() {
-        super.init(nibName: "ZSSInfoViewController", bundle: NSBundle.mainBundle())
-        addScrollViewAndLabels()
-        addImageView()
-        configureAnimator()
-        configureViews()
-        
-    }
     
-    required init(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
+        
     }
     
     var scrollView : UIScrollView!
@@ -39,6 +29,7 @@ class ZSSInfoViewController: UIViewController, UIScrollViewDelegate {
     var subject : ZSSSubject!
     var nextSubjectButton : UIButton!
     var nextSubjectButtonSmall : UIButton!
+    var tellMeMoreButton : UIButton!
     
     
     var isAnimatingDismissal : Bool = false
@@ -52,14 +43,20 @@ class ZSSInfoViewController: UIViewController, UIScrollViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        addScrollViewAndLabels()
+        addImageView()
+        configureAnimator()
+        configureViews()
+
     }
     
     func addScrollViewAndLabels() -> Void {
         width = self.view.frame.size.width
         height = self.view.frame.size.height
         
-        scrollView = UIScrollView(frame: CGRectMake(8, 86, width - 16, height - 94 ))
+        scrollView = UIScrollView(frame: CGRectMake(0, 86, width, height - 94 ))
         scrollView.contentSize = CGSizeMake((2 * width) - 16, height - 94)
+        scrollView.layer.zPosition = 1
         self.view.addSubview(scrollView)
         
         titleLabel = UILabel(frame: CGRectMake(8, 8, width - 16, 70))
@@ -67,7 +64,7 @@ class ZSSInfoViewController: UIViewController, UIScrollViewDelegate {
         
         let scrollViewHeight = scrollView.frame.size.height
         label1 = UILabel(frame: CGRectMake(8, 0, width - 16, scrollViewHeight))
-        label2 = UILabel(frame: CGRectMake(label1.frame.size.width + 24, 0, width - 16, scrollViewHeight))
+        label2 = UILabel(frame: CGRectMake(label1.frame.size.width + 24, 0, width - 24, scrollViewHeight))
         
         scrollView.addSubview(label1)
         scrollView.addSubview(label2)
@@ -78,6 +75,12 @@ class ZSSInfoViewController: UIViewController, UIScrollViewDelegate {
         backgroundImageView = UIImageView(frame: CGRectMake(-200, 0, self.view.frame.size.width * 3, self.view.frame.size.height))
         backgroundImageView.contentMode = UIViewContentMode.ScaleAspectFill
         self.view.addSubview(backgroundImageView)
+        
+        let darkenView = UIView(frame: self.backgroundImageView.frame)
+        darkenView.backgroundColor = UIColor.blackColor()
+        darkenView.alpha = 0.3
+        backgroundImageView.addSubview(darkenView)
+
         
         zachIconImageView = UIImageView(frame: CGRectMake(150, (height / 2.0) - 40, 80, 80))
         zachIconImageView.image = UIImage(named: "ZachIcon")
@@ -125,8 +128,9 @@ class ZSSInfoViewController: UIViewController, UIScrollViewDelegate {
         label1.layer.zPosition = 1
         label1.layer.shadowOffset = CGSizeMake(2,2)
         label1.layer.shadowColor = UIColor.blackColor().CGColor
-        label1.layer.masksToBounds = false
+        label1.layer.masksToBounds = true
         label1.layer.shadowOpacity = 1.0
+        label1.layer.cornerRadius = 8.0
         
         label2.font = UIFont(name: "Avenir-Light", size: 22.0)
         label2.numberOfLines = 0
@@ -134,12 +138,14 @@ class ZSSInfoViewController: UIViewController, UIScrollViewDelegate {
         label2.layer.zPosition = 1
         label2.layer.shadowOffset = CGSizeMake(2,2)
         label2.layer.shadowColor = UIColor.blackColor().CGColor
-        label2.layer.masksToBounds = false
+        label2.layer.masksToBounds = true
         label2.layer.shadowOpacity = 1.0
-
+        label2.layer.cornerRadius = 8.0
+        
         scrollView.layer.zPosition = 1
         
         configureBackButton()
+        configureTellMeMore()
         configureNextSubjectButtonSmall()
     }
     
@@ -150,6 +156,27 @@ class ZSSInfoViewController: UIViewController, UIScrollViewDelegate {
         self.view.addSubview(backButton)
         
         NSTimer.scheduledTimerWithTimeInterval(5.0, target: self, selector: "rotateBackButton:", userInfo: backButton, repeats: true)
+    }
+    
+    func configureTellMeMore() -> Void {
+        tellMeMoreButton = UIButton(frame: CGRectMake(90, height - 75, (width - 85) - 100, 50))
+        tellMeMoreButton.layer.cornerRadius = 8
+        tellMeMoreButton.titleLabel!.font = UIFont(name: "Avenir", size: 24)
+        tellMeMoreButton.addTarget(self, action: "tellMeMoreButtonPressed", forControlEvents: .TouchUpInside)
+        tellMeMoreButton.setTitle("Tell Me More", forState: .Normal)
+        self.view.addSubview(tellMeMoreButton)
+        NSTimer.scheduledTimerWithTimeInterval(7.0, target: self, selector: "tadaTellMeMoreButton", userInfo: nil, repeats: true)
+    }
+    
+    func tellMeMoreButtonPressed() -> Void {
+        self.subject.presentTellMeMore(animated: true)
+        println("this was called")
+    }
+    
+    func tadaTellMeMoreButton() -> Void {
+        self.tellMeMoreButton.tada { () -> Void in
+        }
+
     }
     
     func configureNextSubjectButtonSmall() -> Void {
@@ -187,8 +214,14 @@ class ZSSInfoViewController: UIViewController, UIScrollViewDelegate {
     }
     
     func scrollRightAndShowNextSubjectButton() -> Void {
-        self.dynamics.addAngularVelocity(9.0, forItem: self.nextSubjectButtonSmall)
-        self.scrollView.setContentOffset(CGPointMake(425,0), animated: true)
+        let x = self.scrollView.contentOffset.x
+        if x < 320 {
+            self.dynamics.addAngularVelocity(9.0, forItem: self.nextSubjectButtonSmall)
+            self.scrollView.setContentOffset(CGPointMake(375,0), animated: true)
+        } else {
+            self.dynamics.addAngularVelocity(9.0, forItem: self.nextSubjectButtonSmall)
+            self.scrollView.setContentOffset(CGPointMake(500,0), animated: true)
+        }
     }
     
     func showNextSubject() -> Void {
@@ -201,7 +234,6 @@ class ZSSInfoViewController: UIViewController, UIScrollViewDelegate {
     }
     
     override func viewWillAppear(animated: Bool) {
-        
         self.view.alpha = 0.0
         configureSubject()
         UIView.animateWithDuration(0.5, animations: { () -> Void in
@@ -209,8 +241,13 @@ class ZSSInfoViewController: UIViewController, UIScrollViewDelegate {
         })
     }
     
+    override func viewWillDisappear(animated: Bool) {
+        UIView.animateWithDuration(1.0, animations: { () -> Void in
+            self.view.alpha = 0.0
+        })
+    }
+    
     func configureSubject() -> Void {
-        self.backgroundImageView.image = self.subject.backgroundImage
         self.titleLabel.text = self.subject.titleText
         self.label1.text = self.subject.label1Text
         self.label2.text = self.subject.label2Text
@@ -220,8 +257,9 @@ class ZSSInfoViewController: UIViewController, UIScrollViewDelegate {
         self.nextSubjectButtonSmall.backgroundColor = self.subject.nextSubject.backgroundColor
         self.label1.sizeToFit()
         self.label2.sizeToFit()
-
-
+        self.tellMeMoreButton.backgroundColor = self.subject.backgroundColor
+        self.backgroundImageView.image = self.subject.backgroundImage
+        
     }
     
     func scrollViewDidScroll(scrollView: UIScrollView) {
@@ -257,6 +295,9 @@ class ZSSInfoViewController: UIViewController, UIScrollViewDelegate {
         if x > 50 {
             self.userDidScrollRight = true
         }
+        
+        println(width)
+        println(scrollView.frame)
     }
     
     func runSpinAnimation(view: UIView, duration: CGFloat) -> Void {
@@ -295,7 +336,7 @@ class ZSSInfoViewController: UIViewController, UIScrollViewDelegate {
                 civ.subject = self.subject.nextSubject
                 self.dismissViewControllerAnimated(false, completion: { () -> Void in
                     UIApplication.sharedApplication().keyWindow!.rootViewController!.view.alpha = 0.0
-                    UIApplication.sharedApplication().keyWindow!.rootViewController!.presentViewController(civ, animated: false, completion: nil)
+                    civ.subject.presentSelf(animated: false)
                 })
         })
         

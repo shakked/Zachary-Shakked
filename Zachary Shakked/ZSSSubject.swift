@@ -16,5 +16,7 @@ class ZSSSubject: NSObject {
     var iconImage: UIImage!
     var nextSubject : ZSSSubject!
     var backgroundColor : UIColor!
+    var presentSelf : (animated: Bool) -> Void = {(animated: Bool) in }
+    var presentTellMeMore : (animated: Bool) -> Void = {(animated: Bool) in }
 }
 

@@ -33,6 +33,15 @@ class ZSSSportsViewController: ZSSInfoViewController {
         self.backgroundImageView.addSubview(footballImageView)
     }
     
+    override func tellMeMoreButtonPressed() {
+        let smvc = ZSSSportsMoreViewController()
+        UIView.animateWithDuration(1.0, animations: { () -> Void in
+            self.view.alpha = 0.0
+            }) { (completed: Bool) -> Void in
+                self.presentViewController(smvc, animated: false, completion: nil)
+        }
+    }
+    
     override func scrollViewDidScroll(scrollView: UIScrollView) {
         super.scrollViewDidScroll(scrollView)
         let footBallFrame = self.footballImageView.frame

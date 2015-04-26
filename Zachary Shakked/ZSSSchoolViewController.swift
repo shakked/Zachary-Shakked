@@ -44,4 +44,14 @@ class ZSSSchoolViewController: ZSSInfoViewController {
         let newFrame = CGRectMake(-200 - 0.7 * x, height - 200, width * 3, 200)
         foregroundImageView.frame = newFrame
     }
+    
+    override func tellMeMoreButtonPressed() {
+        let svc = ZSSSchoolMoreViewController()
+        UIView.animateWithDuration(0.5
+            , animations: { () -> Void in
+                self.view.alpha = 0.0
+            }) { (completed: Bool) -> Void in
+                self.presentViewController(svc, animated:false, completion: nil)
+        }
+    }
 }
