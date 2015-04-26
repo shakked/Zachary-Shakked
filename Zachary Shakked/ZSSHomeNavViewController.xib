@@ -9,10 +9,13 @@
                 <outlet property="appsButton" destination="GqY-KZ-hTO" id="QlU-xQ-Hgn"/>
                 <outlet property="backgroundImageView" destination="R0i-5j-SIF" id="RIE-gx-O6y"/>
                 <outlet property="buttonsView" destination="mam-lm-2bv" id="mcf-ZK-1Y7"/>
+                <outlet property="clickTheButtonsLabel" destination="GYv-jo-f5O" id="fg0-OE-S7F"/>
                 <outlet property="coffeeButton" destination="OFs-jV-7mB" id="kMe-9G-len"/>
+                <outlet property="hiImZachLabel" destination="X5D-6U-yJt" id="J7O-sf-DAo"/>
                 <outlet property="nycButton" destination="8Vq-vR-kyn" id="K5e-YL-5Pv"/>
                 <outlet property="pixableButton" destination="iAa-uA-HLs" id="eMY-DM-rkE"/>
-                <outlet property="profileButton" destination="BoL-uS-PFI" id="AXY-Ua-i0n"/>
+                <outlet property="profileImageView" destination="v25-uX-7Np" id="lB1-8l-vFi"/>
+                <outlet property="profileWrapperView" destination="CeV-J6-o2d" id="yl9-bb-Yeb"/>
                 <outlet property="schoolButton" destination="HPy-1I-NRo" id="zUJ-ul-r9v"/>
                 <outlet property="sportsButton" destination="gNP-vv-OUM" id="02J-U5-Nib"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -23,9 +26,30 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="FlatironFilter.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="R0i-5j-SIF">
-                    <rect key="frame" x="-353" y="-8" width="822" height="675"/>
+                <imageView opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="FlatironFilter.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="R0i-5j-SIF">
+                    <rect key="frame" x="-19" y="0.0" width="413" height="667"/>
                 </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CeV-J6-o2d">
+                    <rect key="frame" x="137" y="284" width="100" height="100"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_cropped.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="v25-uX-7Np">
+                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="100" id="E98-M1-hdz"/>
+                                <constraint firstAttribute="height" constant="100" id="FVe-Pz-p1O"/>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="rEn-DT-GL5"/>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="tfb-pw-IrI"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="v25-uX-7Np" firstAttribute="top" secondItem="CeV-J6-o2d" secondAttribute="top" id="E5a-dH-4rR"/>
+                        <constraint firstItem="v25-uX-7Np" firstAttribute="leading" secondItem="CeV-J6-o2d" secondAttribute="leading" id="gfy-CF-mQn"/>
+                        <constraint firstAttribute="height" constant="100" id="neV-Hf-BTS"/>
+                        <constraint firstAttribute="width" constant="100" id="qfK-Ox-hon"/>
+                    </constraints>
+                </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mam-lm-2bv">
                     <rect key="frame" x="18" y="147" width="339" height="373"/>
                     <subviews>
@@ -95,29 +119,44 @@
                         <constraint firstAttribute="width" constant="339" id="qC5-C5-O6A"/>
                     </constraints>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BoL-uS-PFI">
-                    <rect key="frame" x="137" y="284" width="100" height="100"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi. I'm Zach." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X5D-6U-yJt">
+                    <rect key="frame" x="8" y="24" width="359" height="43"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="100" id="XsW-zx-HGd"/>
-                        <constraint firstAttribute="height" constant="100" id="w4A-YX-KtK"/>
+                        <constraint firstAttribute="height" constant="43" id="3yj-G9-m34"/>
                     </constraints>
-                    <state key="normal" image="profile_cropped.jpg">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                </button>
+                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="44"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click the buttons to explore my life." lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GYv-jo-f5O">
+                    <rect key="frame" x="8" y="75" width="361" height="29"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="29" id="D1D-1r-gaZ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="21"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="centerY" secondItem="BoL-uS-PFI" secondAttribute="centerY" id="DiC-It-kPO"/>
+                <constraint firstItem="X5D-6U-yJt" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="2el-d6-wpZ"/>
+                <constraint firstAttribute="trailing" secondItem="X5D-6U-yJt" secondAttribute="trailing" constant="8" id="8er-QY-SW5"/>
+                <constraint firstItem="GYv-jo-f5O" firstAttribute="top" secondItem="X5D-6U-yJt" secondAttribute="bottom" constant="8" id="95E-UP-xzW"/>
+                <constraint firstAttribute="centerY" secondItem="CeV-J6-o2d" secondAttribute="centerY" id="C14-G0-HcG"/>
                 <constraint firstAttribute="centerY" secondItem="mam-lm-2bv" secondAttribute="centerY" id="QIh-d0-fwI"/>
-                <constraint firstAttribute="centerX" secondItem="BoL-uS-PFI" secondAttribute="centerX" id="UVb-wj-dtx"/>
+                <constraint firstAttribute="centerX" secondItem="CeV-J6-o2d" secondAttribute="centerX" id="TCU-Em-nL8"/>
+                <constraint firstItem="GYv-jo-f5O" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="YI6-KN-nLT"/>
                 <constraint firstAttribute="centerX" secondItem="mam-lm-2bv" secondAttribute="centerX" id="iL9-2y-mHF"/>
+                <constraint firstItem="X5D-6U-yJt" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="24" id="pKw-Jp-yB9"/>
+                <constraint firstAttribute="trailing" secondItem="GYv-jo-f5O" secondAttribute="trailing" constant="6" id="tTc-mg-7Tm"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <point key="canvasLocation" x="810.5" y="414.5"/>
         </view>
     </objects>
     <resources>
-        <image name="FlatironFilter.jpg" width="5184" height="3456"/>
+        <image name="FlatironFilter.jpg" width="1905" height="3368"/>
         <image name="Mug" width="33" height="33"/>
         <image name="NYC" width="33" height="33"/>
         <image name="School" width="33" height="33"/>

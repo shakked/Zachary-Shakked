@@ -37,6 +37,25 @@
 		4A15C4021ADDD8FA004EBEC3 /* ZSSHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A15C4011ADDD8FA004EBEC3 /* ZSSHomeViewController.swift */; };
 		4A15C4041ADDD924004EBEC3 /* ZSSBall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A15C4031ADDD924004EBEC3 /* ZSSBall.swift */; };
 		4A56C7B81AE9FFE5007869A2 /* ZSSSubject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A56C7B71AE9FFE5007869A2 /* ZSSSubject.swift */; };
+		4A56C7BA1AEBFD50007869A2 /* FlatironFilter.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4A56C7B91AEBFD50007869A2 /* FlatironFilter.jpg */; };
+		4A56C7BC1AEBFF84007869A2 /* FlatironFilterWide.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4A56C7BB1AEBFF84007869A2 /* FlatironFilterWide.jpeg */; };
+		4A56C7BE1AEC012A007869A2 /* ZSSPixableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A56C7BD1AEC012A007869A2 /* ZSSPixableViewController.swift */; };
+		4A56C7C21AEC05B1007869A2 /* Football.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A56C7BF1AEC05B1007869A2 /* Football.png */; };
+		4A56C7C31AEC05B1007869A2 /* Football@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A56C7C01AEC05B1007869A2 /* Football@2x.png */; };
+		4A56C7C41AEC05B1007869A2 /* Football@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A56C7C11AEC05B1007869A2 /* Football@3x.png */; };
+		4A56C7C61AEC08E3007869A2 /* ZSSSportsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A56C7C51AEC08E3007869A2 /* ZSSSportsViewController.swift */; };
+		4A56C7D01AEC1E9B007869A2 /* Bus2 Filled-33.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A56C7C71AEC1E9B007869A2 /* Bus2 Filled-33.png */; };
+		4A56C7D11AEC1E9B007869A2 /* Bus2 Filled-66.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A56C7C81AEC1E9B007869A2 /* Bus2 Filled-66.png */; };
+		4A56C7D21AEC1E9B007869A2 /* Bus2 Filled-99.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A56C7C91AEC1E9B007869A2 /* Bus2 Filled-99.png */; };
+		4A56C7D31AEC1E9B007869A2 /* Cars Filled-33.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A56C7CA1AEC1E9B007869A2 /* Cars Filled-33.png */; };
+		4A56C7D41AEC1E9B007869A2 /* Cars Filled-66.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A56C7CB1AEC1E9B007869A2 /* Cars Filled-66.png */; };
+		4A56C7D51AEC1E9B007869A2 /* Cars Filled-99.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A56C7CC1AEC1E9B007869A2 /* Cars Filled-99.png */; };
+		4A56C7D61AEC1E9B007869A2 /* Railroad Car3 Filled-33.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A56C7CD1AEC1E9B007869A2 /* Railroad Car3 Filled-33.png */; };
+		4A56C7D71AEC1E9B007869A2 /* Railroad Car3 Filled-66.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A56C7CE1AEC1E9B007869A2 /* Railroad Car3 Filled-66.png */; };
+		4A56C7D81AEC1E9B007869A2 /* Railroad Car3 Filled-99.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A56C7CF1AEC1E9B007869A2 /* Railroad Car3 Filled-99.png */; };
+		4A56C7DA1AEC2005007869A2 /* ZSSNYCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A56C7D91AEC2005007869A2 /* ZSSNYCViewController.swift */; };
+		4A56C7DC1AEC4C96007869A2 /* NYCSunsetWater.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A56C7DB1AEC4C96007869A2 /* NYCSunsetWater.png */; };
+		4A56C7DE1AEC4CDC007869A2 /* ZSSSchoolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A56C7DD1AEC4CDC007869A2 /* ZSSSchoolViewController.swift */; };
 		4A668BE61ADF25E10093CBF7 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A668BE51ADF25E10093CBF7 /* UIColor+Hex.swift */; };
 		4A668BE81AE0086D0093CBF7 /* Array+RemoveObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A668BE71AE0086D0093CBF7 /* Array+RemoveObject.swift */; };
 		4A668BEA1AE00CC70093CBF7 /* WelcomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A668BE91AE00CC70093CBF7 /* WelcomeView.xib */; };
@@ -58,7 +77,6 @@
 		4A9BB8BC1AE5F86300EE5BBF /* ZSSHomeNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9BB8BA1AE5F86300EE5BBF /* ZSSHomeNavViewController.swift */; };
 		4A9BB8BD1AE5F86300EE5BBF /* ZSSHomeNavViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A9BB8BB1AE5F86300EE5BBF /* ZSSHomeNavViewController.xib */; };
 		4ACCC05A1AE94D11004E1115 /* ZSSInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACCC0581AE94D11004E1115 /* ZSSInfoViewController.swift */; };
-		4ACCC05D1AE950D6004E1115 /* FlatironFilter.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4ACCC05C1AE950D6004E1115 /* FlatironFilter.jpg */; };
 		D3EC2F7D88200F4674CC10E8 /* libPods-Zachary Shakked.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB814F1535BC868EEBD480E /* libPods-Zachary Shakked.a */; };
 /* End PBXBuildFile section */
 
@@ -109,6 +127,25 @@
 		4A15C4031ADDD924004EBEC3 /* ZSSBall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZSSBall.swift; sourceTree = "<group>"; };
 		4A2BE7261AE051C400C9F09F /* Zachary Shakked-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Zachary Shakked-Bridging-Header.h"; sourceTree = "<group>"; };
 		4A56C7B71AE9FFE5007869A2 /* ZSSSubject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZSSSubject.swift; sourceTree = "<group>"; };
+		4A56C7B91AEBFD50007869A2 /* FlatironFilter.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = FlatironFilter.jpg; path = "images/NYC Pics/FlatironFilter.jpg"; sourceTree = "<group>"; };
+		4A56C7BB1AEBFF84007869A2 /* FlatironFilterWide.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = FlatironFilterWide.jpeg; path = "images/NYC Pics/FlatironFilterWide.jpeg"; sourceTree = "<group>"; };
+		4A56C7BD1AEC012A007869A2 /* ZSSPixableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZSSPixableViewController.swift; sourceTree = "<group>"; };
+		4A56C7BF1AEC05B1007869A2 /* Football.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Football.png; path = images/Other/Football.png; sourceTree = "<group>"; };
+		4A56C7C01AEC05B1007869A2 /* Football@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Football@2x.png"; path = "images/Other/Football@2x.png"; sourceTree = "<group>"; };
+		4A56C7C11AEC05B1007869A2 /* Football@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Football@3x.png"; path = "images/Other/Football@3x.png"; sourceTree = "<group>"; };
+		4A56C7C51AEC08E3007869A2 /* ZSSSportsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZSSSportsViewController.swift; sourceTree = "<group>"; };
+		4A56C7C71AEC1E9B007869A2 /* Bus2 Filled-33.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Bus2 Filled-33.png"; path = "images/Other/Bus2 Filled-33.png"; sourceTree = "<group>"; };
+		4A56C7C81AEC1E9B007869A2 /* Bus2 Filled-66.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Bus2 Filled-66.png"; path = "images/Other/Bus2 Filled-66.png"; sourceTree = "<group>"; };
+		4A56C7C91AEC1E9B007869A2 /* Bus2 Filled-99.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Bus2 Filled-99.png"; path = "images/Other/Bus2 Filled-99.png"; sourceTree = "<group>"; };
+		4A56C7CA1AEC1E9B007869A2 /* Cars Filled-33.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Cars Filled-33.png"; path = "images/Other/Cars Filled-33.png"; sourceTree = "<group>"; };
+		4A56C7CB1AEC1E9B007869A2 /* Cars Filled-66.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Cars Filled-66.png"; path = "images/Other/Cars Filled-66.png"; sourceTree = "<group>"; };
+		4A56C7CC1AEC1E9B007869A2 /* Cars Filled-99.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Cars Filled-99.png"; path = "images/Other/Cars Filled-99.png"; sourceTree = "<group>"; };
+		4A56C7CD1AEC1E9B007869A2 /* Railroad Car3 Filled-33.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Railroad Car3 Filled-33.png"; path = "images/Other/Railroad Car3 Filled-33.png"; sourceTree = "<group>"; };
+		4A56C7CE1AEC1E9B007869A2 /* Railroad Car3 Filled-66.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Railroad Car3 Filled-66.png"; path = "images/Other/Railroad Car3 Filled-66.png"; sourceTree = "<group>"; };
+		4A56C7CF1AEC1E9B007869A2 /* Railroad Car3 Filled-99.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Railroad Car3 Filled-99.png"; path = "images/Other/Railroad Car3 Filled-99.png"; sourceTree = "<group>"; };
+		4A56C7D91AEC2005007869A2 /* ZSSNYCViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZSSNYCViewController.swift; sourceTree = "<group>"; };
+		4A56C7DB1AEC4C96007869A2 /* NYCSunsetWater.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = NYCSunsetWater.png; path = "images/NYC Pics/NYCSunsetWater.png"; sourceTree = "<group>"; };
+		4A56C7DD1AEC4CDC007869A2 /* ZSSSchoolViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZSSSchoolViewController.swift; sourceTree = "<group>"; };
 		4A668BE51ADF25E10093CBF7 /* UIColor+Hex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+Hex.swift"; path = "Zachary Shakked.xcodeproj/../UIColor+Hex.swift"; sourceTree = SOURCE_ROOT; };
 		4A668BE71AE0086D0093CBF7 /* Array+RemoveObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+RemoveObject.swift"; sourceTree = "<group>"; };
 		4A668BE91AE00CC70093CBF7 /* WelcomeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WelcomeView.xib; sourceTree = "<group>"; };
@@ -130,7 +167,6 @@
 		4A9BB8BA1AE5F86300EE5BBF /* ZSSHomeNavViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZSSHomeNavViewController.swift; sourceTree = "<group>"; };
 		4A9BB8BB1AE5F86300EE5BBF /* ZSSHomeNavViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZSSHomeNavViewController.xib; sourceTree = "<group>"; };
 		4ACCC0581AE94D11004E1115 /* ZSSInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZSSInfoViewController.swift; sourceTree = "<group>"; };
-		4ACCC05C1AE950D6004E1115 /* FlatironFilter.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = FlatironFilter.jpg; path = images/FlatironFilter.jpg; sourceTree = "<group>"; };
 		9AB814F1535BC868EEBD480E /* libPods-Zachary Shakked.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Zachary Shakked.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4B689C2922F317C38B3A6D3 /* Pods-Zachary Shakked.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zachary Shakked.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Zachary Shakked/Pods-Zachary Shakked.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -197,6 +233,7 @@
 				4A9BB8BA1AE5F86300EE5BBF /* ZSSHomeNavViewController.swift */,
 				4A9BB8BB1AE5F86300EE5BBF /* ZSSHomeNavViewController.xib */,
 				4ACCC0581AE94D11004E1115 /* ZSSInfoViewController.swift */,
+				4A56C7BD1AEC012A007869A2 /* ZSSPixableViewController.swift */,
 				4A010B891AE8A77500A3FB38 /* ZSSDraggableButton.swift */,
 				4A7ECC0E1AE0C5A900D60BFD /* ZSSCoffeeViewController.swift */,
 				4A7ECC0F1AE0C5A900D60BFD /* ZSSCoffeeViewController.xib */,
@@ -204,6 +241,9 @@
 				4A668BEB1AE01E610093CBF7 /* WelcomeView.swift */,
 				4A15C4031ADDD924004EBEC3 /* ZSSBall.swift */,
 				4A15C3E81ADDD217004EBEC3 /* Images.xcassets */,
+				4A56C7C51AEC08E3007869A2 /* ZSSSportsViewController.swift */,
+				4A56C7D91AEC2005007869A2 /* ZSSNYCViewController.swift */,
+				4A56C7DD1AEC4CDC007869A2 /* ZSSSchoolViewController.swift */,
 				4A15C3EA1ADDD217004EBEC3 /* LaunchScreen.xib */,
 				4A15C3E01ADDD217004EBEC3 /* Zachary_Shakked.xcdatamodeld */,
 				4A15C3DC1ADDD217004EBEC3 /* Supporting Files */,
@@ -239,13 +279,27 @@
 		4A9BB8C41AE70CF800EE5BBF /* images */ = {
 			isa = PBXGroup;
 			children = (
+				4A56C7DB1AEC4C96007869A2 /* NYCSunsetWater.png */,
+				4A56C7C71AEC1E9B007869A2 /* Bus2 Filled-33.png */,
+				4A56C7C81AEC1E9B007869A2 /* Bus2 Filled-66.png */,
+				4A56C7C91AEC1E9B007869A2 /* Bus2 Filled-99.png */,
+				4A56C7CA1AEC1E9B007869A2 /* Cars Filled-33.png */,
+				4A56C7CB1AEC1E9B007869A2 /* Cars Filled-66.png */,
+				4A56C7CC1AEC1E9B007869A2 /* Cars Filled-99.png */,
+				4A56C7CD1AEC1E9B007869A2 /* Railroad Car3 Filled-33.png */,
+				4A56C7CE1AEC1E9B007869A2 /* Railroad Car3 Filled-66.png */,
+				4A56C7CF1AEC1E9B007869A2 /* Railroad Car3 Filled-99.png */,
+				4A56C7BF1AEC05B1007869A2 /* Football.png */,
+				4A56C7C01AEC05B1007869A2 /* Football@2x.png */,
+				4A56C7C11AEC05B1007869A2 /* Football@3x.png */,
 				4A78224C1AE9D98F009C28BE /* ZachIcon.png */,
 				4A78224D1AE9D98F009C28BE /* ZachIcon@2x.png */,
 				4A78224E1AE9D98F009C28BE /* ZachIcon@3x.png */,
-				4ACCC05C1AE950D6004E1115 /* FlatironFilter.jpg */,
+				4A56C7B91AEBFD50007869A2 /* FlatironFilter.jpg */,
 				4A78223A1AE9D65F009C28BE /* Alley.jpeg */,
 				4A78223B1AE9D65F009C28BE /* Bridge.jpeg */,
 				4A78223C1AE9D65F009C28BE /* BridgeSky.jpeg */,
+				4A56C7BB1AEBFF84007869A2 /* FlatironFilterWide.jpeg */,
 				4A78223D1AE9D65F009C28BE /* BrooklynBridge.jpeg */,
 				4A78223E1AE9D65F009C28BE /* Hudson.jpeg */,
 				4A78223F1AE9D65F009C28BE /* NYCNight.jpeg */,
@@ -367,20 +421,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A7822501AE9D98F009C28BE /* ZachIcon@2x.png in Resources */,
+				4A56C7C41AEC05B1007869A2 /* Football@3x.png in Resources */,
 				4A010B851AE8875F00A3FB38 /* Cup-33.png in Resources */,
 				4A15C3EC1ADDD217004EBEC3 /* LaunchScreen.xib in Resources */,
+				4A56C7D01AEC1E9B007869A2 /* Bus2 Filled-33.png in Resources */,
 				4A010B871AE8875F00A3FB38 /* iPhone-66.png in Resources */,
 				4A010B7C1AE8875F00A3FB38 /* Golf Filled-33.png in Resources */,
 				4A010B7D1AE8875F00A3FB38 /* Student Filled-99.png in Resources */,
 				4A9BB8BD1AE5F86300EE5BBF /* ZSSHomeNavViewController.xib in Resources */,
+				4A56C7C31AEC05B1007869A2 /* Football@2x.png in Resources */,
+				4A56C7BC1AEBFF84007869A2 /* FlatironFilterWide.jpeg in Resources */,
 				4A010B7F1AE8875F00A3FB38 /* Student Filled-33.png in Resources */,
+				4A56C7D81AEC1E9B007869A2 /* Railroad Car3 Filled-99.png in Resources */,
 				4A7822461AE9D65F009C28BE /* BrooklynBridge.jpeg in Resources */,
+				4A56C7D41AEC1E9B007869A2 /* Cars Filled-66.png in Resources */,
+				4A56C7D51AEC1E9B007869A2 /* Cars Filled-99.png in Resources */,
 				4A010B8C1AE8B52600A3FB38 /* profile_cropped.jpg in Resources */,
+				4A56C7BA1AEBFD50007869A2 /* FlatironFilter.jpg in Resources */,
 				4A010B841AE8875F00A3FB38 /* Cup-66.png in Resources */,
 				4A010B881AE8875F00A3FB38 /* iPhone-33.png in Resources */,
 				4A010B7E1AE8875F00A3FB38 /* Student Filled-66.png in Resources */,
 				4A7822431AE9D65F009C28BE /* Alley.jpeg in Resources */,
 				4A010B791AE8875F00A3FB38 /* Building Filled-33.png in Resources */,
+				4A56C7C21AEC05B1007869A2 /* Football.png in Resources */,
 				4A7822471AE9D65F009C28BE /* Hudson.jpeg in Resources */,
 				4A010B811AE8875F00A3FB38 /* Bus Filled-66.png in Resources */,
 				4A7ECC111AE0C5A900D60BFD /* ZSSCoffeeViewController.xib in Resources */,
@@ -390,19 +453,24 @@
 				4A7822511AE9D98F009C28BE /* ZachIcon@3x.png in Resources */,
 				4A010B7A1AE8875F00A3FB38 /* Golf Filled-99.png in Resources */,
 				4A7822491AE9D65F009C28BE /* NYCSunset.jpg in Resources */,
+				4A56C7D31AEC1E9B007869A2 /* Cars Filled-33.png in Resources */,
 				4A010B821AE8875F00A3FB38 /* Bus Filled-33.png in Resources */,
 				4A010B781AE8875F00A3FB38 /* Building Filled-66.png in Resources */,
 				4A010B771AE8875F00A3FB38 /* Building Filled-99.png in Resources */,
 				4A7822441AE9D65F009C28BE /* Bridge.jpeg in Resources */,
-				4ACCC05D1AE950D6004E1115 /* FlatironFilter.jpg in Resources */,
 				4A010B831AE8875F00A3FB38 /* Cup-99.png in Resources */,
 				4A010B7B1AE8875F00A3FB38 /* Golf Filled-66.png in Resources */,
+				4A56C7DC1AEC4C96007869A2 /* NYCSunsetWater.png in Resources */,
+				4A56C7D21AEC1E9B007869A2 /* Bus2 Filled-99.png in Resources */,
+				4A56C7D61AEC1E9B007869A2 /* Railroad Car3 Filled-33.png in Resources */,
 				4A010B801AE8875F00A3FB38 /* Bus Filled-99.png in Resources */,
 				4A15C3E91ADDD217004EBEC3 /* Images.xcassets in Resources */,
+				4A56C7D71AEC1E9B007869A2 /* Railroad Car3 Filled-66.png in Resources */,
 				4A7822451AE9D65F009C28BE /* BridgeSky.jpeg in Resources */,
 				4A78224B1AE9D65F009C28BE /* StoneWindow.jpeg in Resources */,
 				4A78224A1AE9D65F009C28BE /* OnBridge.jpeg in Resources */,
 				4A010B861AE8875F00A3FB38 /* iPhone-99.png in Resources */,
+				4A56C7D11AEC1E9B007869A2 /* Bus2 Filled-66.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,18 +522,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A15C4041ADDD924004EBEC3 /* ZSSBall.swift in Sources */,
+				4A56C7DE1AEC4CDC007869A2 /* ZSSSchoolViewController.swift in Sources */,
 				4ACCC05A1AE94D11004E1115 /* ZSSInfoViewController.swift in Sources */,
+				4A56C7C61AEC08E3007869A2 /* ZSSSportsViewController.swift in Sources */,
 				4A0315FE1AE55C4000EA4631 /* ZSSPaintBallsViewController.swift in Sources */,
 				4A15C3E41ADDD217004EBEC3 /* ViewController.swift in Sources */,
 				4A15C3E21ADDD217004EBEC3 /* Zachary_Shakked.xcdatamodeld in Sources */,
 				4A56C7B81AE9FFE5007869A2 /* ZSSSubject.swift in Sources */,
 				4A010B8A1AE8A77500A3FB38 /* ZSSDraggableButton.swift in Sources */,
 				4A668BEC1AE01E610093CBF7 /* WelcomeView.swift in Sources */,
+				4A56C7DA1AEC2005007869A2 /* ZSSNYCViewController.swift in Sources */,
 				4A668BE61ADF25E10093CBF7 /* UIColor+Hex.swift in Sources */,
 				4A15C4021ADDD8FA004EBEC3 /* ZSSHomeViewController.swift in Sources */,
 				4A7ECC101AE0C5A900D60BFD /* ZSSCoffeeViewController.swift in Sources */,
 				4A668BE81AE0086D0093CBF7 /* Array+RemoveObject.swift in Sources */,
 				4A9BB8BC1AE5F86300EE5BBF /* ZSSHomeNavViewController.swift in Sources */,
+				4A56C7BE1AEC012A007869A2 /* ZSSPixableViewController.swift in Sources */,
 				4A15C3DF1ADDD217004EBEC3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

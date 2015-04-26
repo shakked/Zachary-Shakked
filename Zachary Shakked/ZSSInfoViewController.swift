@@ -10,11 +10,16 @@ import UIKit
 
 class ZSSInfoViewController: UIViewController, UIScrollViewDelegate {
     
+    var width : CGFloat!
+    var height : CGFloat!
+    
     init() {
         super.init(nibName: "ZSSInfoViewController", bundle: NSBundle.mainBundle())
         addScrollViewAndLabels()
         addImageView()
+        configureAnimator()
         configureViews()
+        
     }
     
     required init(coder aDecoder: NSCoder) {
@@ -33,18 +38,25 @@ class ZSSInfoViewController: UIViewController, UIScrollViewDelegate {
     var zachIconImageView : UIImageView!
     var subject : ZSSSubject!
     var nextSubjectButton : UIButton!
+    var nextSubjectButtonSmall : UIButton!
+    
     
     var isAnimatingDismissal : Bool = false
     var isAnimatingTransition : Bool = false
+    var userDidScrollRight : Bool = false
     
+    var animator : UIDynamicAnimator!
+    var collision : UICollisionBehavior!
+    var gravity : UIGravityBehavior!
+    var dynamics : UIDynamicItemBehavior!
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     func addScrollViewAndLabels() -> Void {
-        let width = self.view.frame.size.width
-        let height = self.view.frame.size.height
+        width = self.view.frame.size.width
+        height = self.view.frame.size.height
         
         scrollView = UIScrollView(frame: CGRectMake(8, 86, width - 16, height - 94 ))
         scrollView.contentSize = CGSizeMake((2 * width) - 16, height - 94)
@@ -63,9 +75,6 @@ class ZSSInfoViewController: UIViewController, UIScrollViewDelegate {
     }
     
     func addImageView() -> Void {
-        let width = self.view.frame.size.width
-        let height = self.view.frame.size.height
-        
         backgroundImageView = UIImageView(frame: CGRectMake(-200, 0, self.view.frame.size.width * 3, self.view.frame.size.height))
         backgroundImageView.contentMode = UIViewContentMode.ScaleAspectFill
         self.view.addSubview(backgroundImageView)
@@ -83,6 +92,21 @@ class ZSSInfoViewController: UIViewController, UIScrollViewDelegate {
         self.backgroundImageView.addSubview(nextSubjectButton)
     }
     
+    func configureAnimator() -> Void {
+        self.animator = UIDynamicAnimator(referenceView: self.view)
+        self.gravity = UIGravityBehavior()
+        
+        self.collision = UICollisionBehavior()
+        self.collision.addBoundaryWithIdentifier("nextSubjectButton", fromPoint: CGPointMake(0, height - 25), toPoint: CGPointMake(width, height - 25))
+        
+        self.dynamics = UIDynamicItemBehavior()
+        self.dynamics.elasticity = 0.5
+        self.dynamics.allowsRotation = true
+        
+        self.animator.addBehavior(self.gravity)
+        self.animator.addBehavior(self.collision)
+        self.animator.addBehavior(self.dynamics)
+    }
 
     
     func configureViews() -> Void {
@@ -114,6 +138,66 @@ class ZSSInfoViewController: UIViewController, UIScrollViewDelegate {
         label2.layer.shadowOpacity = 1.0
 
         scrollView.layer.zPosition = 1
+        
+        configureBackButton()
+        configureNextSubjectButtonSmall()
+    }
+    
+    func configureBackButton() -> Void {
+        let backButton = UIButton(frame: CGRectMake(15, height - 75, 50, 50))
+        backButton.setImage(UIImage(named: "ZachIcon"), forState: UIControlState.Normal)
+        backButton.addTarget(self, action: "fadeAndDismissView", forControlEvents: .TouchUpInside)
+        self.view.addSubview(backButton)
+        
+        NSTimer.scheduledTimerWithTimeInterval(5.0, target: self, selector: "rotateBackButton:", userInfo: backButton, repeats: true)
+    }
+    
+    func configureNextSubjectButtonSmall() -> Void {
+        nextSubjectButtonSmall = UIButton(frame: CGRectMake(width - 60, height - 100, 50, 50))
+        nextSubjectButtonSmall.addTarget(self, action: "scrollRightAndShowNextSubjectButton", forControlEvents: .TouchUpInside)
+        nextSubjectButtonSmall.layer.cornerRadius = 25
+        self.view.addSubview(nextSubjectButtonSmall)
+
+        NSTimer.scheduledTimerWithTimeInterval(3.0, target: self, selector: "bounceNextSubject:", userInfo: nil, repeats: true)
+        
+        self.gravity.addItem(nextSubjectButtonSmall)
+        self.dynamics.addItem(nextSubjectButtonSmall)
+        self.collision.addItem(nextSubjectButtonSmall)
+    }
+    
+    func bounceNextSubject(timer: NSTimer) -> Void {
+        if !self.userDidScrollRight {
+            self.gravity.removeItem(nextSubjectButtonSmall)
+            self.dynamics.removeItem(nextSubjectButtonSmall)
+            self.collision.removeItem(nextSubjectButtonSmall)
+            UIView.animateWithDuration(1.0, animations: { () -> Void in
+                self.nextSubjectButtonSmall.frame = CGRectMake(self.width - 60, self.height - 100, 50, 50)
+            })
+            NSTimer.scheduledTimerWithTimeInterval(1.5, target: self, selector: "addBackToGravity", userInfo: nil, repeats: false)
+            
+        } else {
+            timer.invalidate()
+        }
+    }
+    
+    func addBackToGravity() -> Void {
+        self.gravity.addItem(nextSubjectButtonSmall)
+        self.dynamics.addItem(nextSubjectButtonSmall)
+        self.collision.addItem(nextSubjectButtonSmall)
+    }
+    
+    func scrollRightAndShowNextSubjectButton() -> Void {
+        self.dynamics.addAngularVelocity(9.0, forItem: self.nextSubjectButtonSmall)
+        self.scrollView.setContentOffset(CGPointMake(425,0), animated: true)
+    }
+    
+    func showNextSubject() -> Void {
+        
+    }
+    
+    func rotateBackButton(timer: NSTimer) -> Void {
+        let backButton = timer.userInfo! as! UIButton
+        runSpinAnimationOnce(backButton, duration: 1.0)
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -132,8 +216,11 @@ class ZSSInfoViewController: UIViewController, UIScrollViewDelegate {
         self.label2.text = self.subject.label2Text
         self.nextSubjectButton.setImage(self.subject.nextSubject.iconImage, forState: UIControlState.Normal)
         self.nextSubjectButton.backgroundColor = self.subject.nextSubject.backgroundColor
+        self.nextSubjectButtonSmall.setImage(self.subject.nextSubject.iconImage, forState: UIControlState.Normal)
+        self.nextSubjectButtonSmall.backgroundColor = self.subject.nextSubject.backgroundColor
         self.label1.sizeToFit()
         self.label2.sizeToFit()
+
 
     }
     
@@ -148,7 +235,7 @@ class ZSSInfoViewController: UIViewController, UIScrollViewDelegate {
             self.zachIconImageView.layer.transform = CATransform3DMakeRotation(0.02 * x % 100, 0, 0.0, 1.0);
         }
         
-        if self.zachIconImageView.alpha > 0.950 && !self.isAnimatingDismissal {
+        if self.zachIconImageView.alpha > 0.800 && !self.isAnimatingDismissal {
             self.isAnimatingDismissal = true
             runSpinAnimation(self.zachIconImageView,duration: 1.5)
             fadeAndDismissView()
@@ -158,15 +245,18 @@ class ZSSInfoViewController: UIViewController, UIScrollViewDelegate {
         if xPastScreen > 0 {
             let alpha = 0.01 * xPastScreen
             self.nextSubjectButton.alpha = alpha
+            self.nextSubjectButton.layer.transform = CATransform3DMakeRotation(-1.57 + (0.02 * x % 100), 0, 0.0, 1.0);
         }
         
-        if self.nextSubjectButton.alpha > 0.950 && !self.isAnimatingTransition {
+        if self.nextSubjectButton.alpha > 0.800 && !self.isAnimatingTransition {
             self.isAnimatingTransition = true
             runSpinAnimation(self.nextSubjectButton, duration: 1.5)
             fadeAndTransition()
         }
-        
-        
+
+        if x > 50 {
+            self.userDidScrollRight = true
+        }
     }
     
     func runSpinAnimation(view: UIView, duration: CGFloat) -> Void {
@@ -175,6 +265,16 @@ class ZSSInfoViewController: UIViewController, UIScrollViewDelegate {
         rotationAnimation.duration = CFTimeInterval(duration)
         rotationAnimation.cumulative = true
         rotationAnimation.repeatCount = 5.0
+        rotationAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
+        view.layer.addAnimation(rotationAnimation, forKey: "rotationAnimation")
+    }
+    
+    func runSpinAnimationOnce(view: UIView, duration: CGFloat) -> Void {
+        let rotationAnimation = CABasicAnimation(keyPath: "transform.rotation.z")
+        rotationAnimation.toValue = NSNumber(float: Float(M_PI * 2.0))
+        rotationAnimation.duration = CFTimeInterval(duration)
+        rotationAnimation.cumulative = true
+        rotationAnimation.repeatCount = 1.0
         rotationAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
         view.layer.addAnimation(rotationAnimation, forKey: "rotationAnimation")
     }
@@ -212,15 +312,4 @@ class ZSSInfoViewController: UIViewController, UIScrollViewDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

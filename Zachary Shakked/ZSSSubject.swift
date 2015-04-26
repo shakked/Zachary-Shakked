@@ -17,3 +17,4 @@ class ZSSSubject: NSObject {
     var nextSubject : ZSSSubject!
     var backgroundColor : UIColor!
 }
+
